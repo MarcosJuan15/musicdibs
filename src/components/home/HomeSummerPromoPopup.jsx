@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { Sparkles } from "lucide-react";
 
 export default function HomeSummerPromoPopup({ onClose }) {
@@ -37,34 +37,28 @@ export default function HomeSummerPromoPopup({ onClose }) {
     }
   };
 
+  const handleClose = useCallback(() => {
+    setIsOpen(false);
+    unlockScroll();
+    if (onClose) onClose();
+  }, [onClose]);
+
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsOpen(true);
-      lockScroll(); // Bloquear scroll cuando se abre
+      lockScroll();
     }, 10000);
     
     return () => clearTimeout(timer);
   }, []);
 
   useEffect(() => {
-    // Cleanup al desmontar el componente
     return () => {
       if (isOpen) {
         unlockScroll();
       }
     };
   }, [isOpen]);
-
-  const handleClose = () => {
-    setIsOpen(false);
-    unlockScroll(); // Desbloquear scroll al cerrar
-    if (onClose) onClose();
-  };
-
-  // Prevenir que el click en el contenido cierre el modal
-  const handleContentClick = (e) => {
-    e.stopPropagation();
-  };
 
   // Manejar tecla Escape
   useEffect(() => {
@@ -78,7 +72,7 @@ export default function HomeSummerPromoPopup({ onClose }) {
       document.addEventListener('keydown', handleEscape);
       return () => document.removeEventListener('keydown', handleEscape);
     }
-  }, [isOpen]);
+  }, [isOpen, handleClose]);
 
   if (!isOpen) return null;
 
@@ -92,7 +86,7 @@ export default function HomeSummerPromoPopup({ onClose }) {
     >
       <div 
         className="bg-gradient-to-br from-blue-900 via-purple-800 to-pink-600 text-white rounded-2xl shadow-2xl w-full max-w-sm sm:max-w-md md:max-w-lg relative mx-auto animate-in fade-in-90 zoom-in-90 duration-300"
-        onClick={handleContentClick}
+        onClick={(e) => e.stopPropagation()}
       >
         <button
           onClick={handleClose}

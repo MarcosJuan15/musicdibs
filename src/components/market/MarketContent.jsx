@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from "react";
+import Image from "next/image";
 
 export default function MarketContent() {
   const [songs] = useState([
@@ -153,7 +154,7 @@ export default function MarketContent() {
           {songs.map(song => (
             <div key={song.id} className="bg-white rounded-2xl shadow-lg overflow-hidden border border-purple-200 hover:shadow-xl transition duration-300">
               <div className="relative">
-                <img 
+                <Image 
                   src={song.image} 
                   alt={song.title}
                   className="w-full h-48 object-cover"
