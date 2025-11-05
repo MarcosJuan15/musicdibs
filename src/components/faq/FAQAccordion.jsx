@@ -122,7 +122,7 @@ const faqData = [
     )
   },
   {
-    question: "¿Qué pasa si un día Musicdibs 'desaparece'? ¿Perderían los certificados su validez?",
+    question: "¿Qué pasa si un día Musicdibs \"desaparece\"? ¿Perderían los certificados su validez?",
     answer: (
       <div className="space-y-3">
         <p><strong>No pasaría nada con tus obras registradas</strong> gracias a la tecnología descentralizada y pública que usamos.</p>
@@ -144,7 +144,7 @@ const faqData = [
         <div>
           <p className="font-semibold text-purple-700">Según el artículo 1 del Real Decreto Legislativo 1/1991 del 12 de abril sobre la Ley de Propiedad Intelectual:</p>
           <blockquote className="border-l-4 border-purple-500 pl-4 ml-4 italic text-gray-700 bg-purple-50 py-2 my-2">
-            "La propiedad intelectual de una obra literaria, artística o científica corresponde al autor por el solo hecho de su creación."
+            &quot;La propiedad intelectual de una obra literaria, artística o científica corresponde al autor por el solo hecho de su creación.&quot;
           </blockquote>
         </div>
 
@@ -256,7 +256,7 @@ const faqData = [
     )
   },
   {
-    question: "¿De qué tipo de contenido se pueden generar los NFTs de las suscripciones y cómo generarlos?",
+    question: "¿De que tipo de contenido se pueden generar los NFTs de las suscripciones y cómo generarlos?",
     answer: (
       <div className="space-y-4">
         <p>Para generar un NFT de tus obras registradas te hemos preparado un videotutorial en el siguiente enlace:</p>
@@ -280,7 +280,7 @@ const faqData = [
     )
   },
   {
-    question: "¿Cuánto dura el registro de mi obra?",
+    question: "¿Cuanto dura el registro de mi obra?",
     answer: (
       <div className="space-y-3">
         <p><strong>El registro en blockchain es permanente</strong>, y la duración de la protección de los derechos de autor, está supeditada a la legislación de cada país.</p>
@@ -288,7 +288,7 @@ const faqData = [
     )
   },
   {
-    question: "¿Cuáles son los documentos de identidad válidos para verificar mi identidad?",
+    question: "¿Cuales son los documentos de identidad válidos para verificar mi identidad?",
     answer: (
       <div className="space-y-4">
         <p>Para que tus registros tengan validez legal es necesario verificar tu identidad con un <strong>documento de identificación oficial válido</strong> en tu país que incluya:</p>
@@ -373,7 +373,6 @@ const faqData = [
     )
   }
 ];
-
 
   // Schema.org para todas las FAQs
   const faqSchema = {
