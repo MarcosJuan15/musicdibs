@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ESTILOS DE RESET PARA RESPONSIVE */
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Asegurar que todos los contenedores principales sean responsive */
+#__next {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Opcional: Estilos personalizados si los necesitas */
