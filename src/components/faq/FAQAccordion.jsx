@@ -122,7 +122,7 @@ const faqData = [
     )
   },
   {
-    question: "¿Qué pasa si un día Musicdibs \"desaparece\"? ¿Perderían los certificados su validez?",
+    question: "¿Qué pasa si un día Musicdibs &quot;desaparece&quot;? ¿Perderían los certificados su validez?",
     answer: (
       <div className="space-y-3">
         <p><strong>No pasaría nada con tus obras registradas</strong> gracias a la tecnología descentralizada y pública que usamos.</p>
@@ -320,7 +320,7 @@ const faqData = [
           <li><strong>Otro con toda las informaciones de los autores</strong> (Nombre y documento de identidad de cada coautor)</li>
         </ul>
         <p>Resumiendo, tendríais que subir el archivo musical y adicionalmente subir un archivo de texto o pdf con los datos anteriormente indicados.</p>
-        <p><strong>Adicionalmente hay que marcar la opción de</strong> "Quiero que esta certificación sea pública" en los dos registros.</p>
+        <p><strong>Adicionalmente hay que marcar la opción de</strong> &quot;Quiero que esta certificación sea pública&quot; en los dos registros.</p>
         <p>Registrando de esta manera podéis verificar el registro tanto de la canción como del documento de coautoría y <strong>la marca de tiempo de los registros garantiza su validez legal</strong>.</p>
       </div>
     )
@@ -343,9 +343,9 @@ const faqData = [
         <p><strong>Ejemplo:</strong> Si te registras por ejemplo el día 15 de noviembre, el siguiente ciclo de cobro se activará el día 15 de diciembre.</p>
         <p>Para su cancelación, solo tienes que ir dentro de tu perfil de cuenta a:</p>
         <ul className="list-disc list-inside ml-4 space-y-1">
-          <li>"Ajustes"</li>
-          <li>"Suscripción"</li>
-          <li>"Cancelar suscripción"</li>
+          <li>&quot;Ajustes&quot;</li>
+          <li>&quot;Suscripción&quot;</li>
+          <li>&quot;Cancelar suscripción&quot;</li>
         </ul>
         <p><strong>Al menos 24h antes</strong> de la renovación del nuevo ciclo.</p>
         <p>Si una suscripción no se renueva:</p>
@@ -364,9 +364,9 @@ const faqData = [
       <div className="space-y-3">
         <p><strong>Solo tienes que seguir estos pasos:</strong></p>
         <ul className="list-disc list-inside ml-4 space-y-1">
-          <li>Ir dentro de tu perfil de cuenta a <strong>"Ajustes"</strong></li>
-          <li>Seleccionar <strong>"Suscripción"</strong></li>
-          <li>Hacer clic en <strong>"Cancelar suscripción"</strong></li>
+          <li>Ir dentro de tu perfil de cuenta a <strong>&quot;Ajustes&quot;</strong></li>
+          <li>Seleccionar <strong>&quot;Suscripción&quot;</strong></li>
+          <li>Hacer clic en <strong>&quot;Cancelar suscripción&quot;</strong></li>
         </ul>
         <p><strong>Importante:</strong> Esto deberás hacerlo con <strong>al menos 24h antes</strong> de que venza tu actual plan y comience un nuevo periodo de suscripción.</p>
       </div>
