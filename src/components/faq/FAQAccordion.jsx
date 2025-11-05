@@ -11,7 +11,7 @@ export default function FAQAccordion() {
   // Mantén tu faqData actual, pero agreguemos IDs únicos para accesibilidad
 const faqData = [
   {
-    question: "Una vez registrada, ¿cómo puedo demostrar la autoría de mi obra frente a un tercero?",
+    question: 'Una vez registrada, ¿cómo puedo demostrar la autoría de mi obra frente a un tercero?',
     answer: (
       <div className="space-y-3">
         <p>El registro de la obra genera un <strong>hash y una marca de tiempo</strong>, donde están de forma encriptada los datos identificativos, que vinculan de manera automática al autor con su creación.</p>
@@ -21,7 +21,7 @@ const faqData = [
     )
   },
   {
-    question: "Si puedo registrar una obra ya registrada, entonces ¿cualquier persona podría registrar una obra como suya (aunque ésta ya haya sido registrada antes)?",
+    question: 'Si puedo registrar una obra ya registrada, entonces ¿cualquier persona podría registrar una obra como suya (aunque ésta ya haya sido registrada antes)?',
     answer: (
       <div className="space-y-3">
         <p><strong>Sí, pero no hay problema!</strong> Lo importante es <strong>quién lo hizo primero y cuándo</strong> (y eso es justo lo que aparece en nuestros certificados de registro).</p>
@@ -37,7 +37,7 @@ const faqData = [
     )
   },
   {
-    question: "Si no renuevo mi cuota, ¿perderé mis registros?",
+    question: 'Si no renuevo mi cuota, ¿perderé mis registros?',
     answer: (
       <div className="space-y-3">
         <p><strong>Los registros (certificados) son permanentes, no caducan jamás</strong>, pero si una cuota no se renueva:</p>
@@ -52,7 +52,7 @@ const faqData = [
     )
   },
   {
-    question: "¿Un menor puede registrar una obra?",
+    question: '¿Un menor puede registrar una obra?',
     answer: (
       <div className="space-y-3">
         <p><strong>Los menores de edad pueden solicitar</strong> a través de sus padres o representantes legales el registro de su derecho de autor.</p>
@@ -65,7 +65,7 @@ const faqData = [
     )
   },
   {
-    question: "¿Registrar mi obra en blockchain tiene validez legal?",
+    question: '¿Registrar mi obra en blockchain tiene validez legal?',
     answer: (
       <div className="space-y-3">
         <p><strong>La inscripción de tu obra en blockchain tiene validez legal en los 179 países firmantes del Convenio de Berna.</strong></p>
@@ -79,7 +79,7 @@ const faqData = [
     )
   },
   {
-    question: "¿Qué tipo de obras y archivos puedo registrar?",
+    question: '¿Qué tipo de obras y archivos puedo registrar?',
     answer: (
       <div className="space-y-4">
         <p>Con Musicdibs puedes registrar los derechos de autor de <strong>cualquier obra creativa y artística</strong>:</p>
@@ -122,7 +122,7 @@ const faqData = [
     )
   },
   {
-    question: "¿Qué pasa si un día Musicdibs 'desaparece'? ¿Perderían los certificados su validez?",
+    question: '¿Qué pasa si un día Musicdibs &quot;desaparece&quot;? ¿Perderían los certificados su validez?',
     answer: (
       <div className="space-y-3">
         <p><strong>No pasaría nada con tus obras registradas</strong> gracias a la tecnología descentralizada y pública que usamos.</p>
@@ -136,7 +136,7 @@ const faqData = [
     )
   },
   {
-    question: "¿Qué pasa si alguien registra mi canción en el registro central? ¿Puedo usar mi certificado en Musicdibs para reclamar mi autoría?",
+    question: '¿Qué pasa si alguien registra mi canción en el registro central? ¿Puedo usar mi certificado en Musicdibs para reclamar mi autoría?',
     answer: (
       <div className="space-y-4">
         <p><strong>Debes saber que la propiedad intelectual no es como la industrial.</strong> En este sentido es importante destacar que en España no es obligatorio realizar un acto administrativo para ser considerados autor de una pieza y basta con demostrar su creación previa.</p>
@@ -144,7 +144,7 @@ const faqData = [
         <div>
           <p className="font-semibold text-purple-700">Según el artículo 1 del Real Decreto Legislativo 1/1991 del 12 de abril sobre la Ley de Propiedad Intelectual:</p>
           <blockquote className="border-l-4 border-purple-500 pl-4 ml-4 italic text-gray-700 bg-purple-50 py-2 my-2">
-            "La propiedad intelectual de una obra literaria, artística o científica corresponde al autor por el solo hecho de su creación."
+            &quot;La propiedad intelectual de una obra literaria, artística o científica corresponde al autor por el solo hecho de su creación.&quot;
           </blockquote>
         </div>
 
@@ -157,7 +157,7 @@ const faqData = [
     )
   },
   {
-    question: "¿Qué pasa con mis certificaciones si me doy de baja del servicio?",
+    question: '¿Qué pasa con mis certificaciones si me doy de baja del servicio?',
     answer: (
       <div className="space-y-3">
         <p><strong>Musicdibs SOLO utiliza blockchains robustas públicas y descentralizadas</strong> (como por ejemplo Ethereum, Polygon y Solana) que no dependen de iCommunity Labs y que están soportadas por una amplia comunidad de usuarios.</p>
@@ -172,7 +172,7 @@ const faqData = [
     )
   },
   {
-    question: "¿Puedo verificar en Musicdibs canciones que hayan sido registradas con otras plataformas?",
+    question: '¿Puedo verificar en Musicdibs canciones que hayan sido registradas con otras plataformas?',
     answer: (
       <div className="space-y-3">
         <p><strong>No, solo podemos verificar registros de obras realizados con Musicdibs.</strong></p>
@@ -182,7 +182,7 @@ const faqData = [
     )
   },
   {
-    question: "¿Puedo registrar obras en nombre de otras personas con mi cuenta?",
+    question: '¿Puedo registrar obras en nombre de otras personas con mi cuenta?',
     answer: (
       <div className="space-y-3">
         <p><strong>Desgraciadamente el registro a nombre de terceros SOLO está permitido y reconocido legalmente para el caso excepcional de los menores.</strong></p>
@@ -198,7 +198,7 @@ const faqData = [
     )
   },
   {
-    question: "¿Puedo registrar obras en las que haya usado IA para su creación? ¿Qué protege el registro en Musicdibs en estos casos?",
+    question: '¿Puedo registrar obras en las que haya usado IA para su creación? ¿Qué protege el registro en Musicdibs en estos casos?',
     answer: (
       <div className="space-y-4">
         <p><strong>Sí, puedes registrar tus obras en Musicdibs aunque hayas usado IA para la musicalización</strong>, siempre que:</p>
@@ -227,7 +227,7 @@ const faqData = [
     )
   },
   {
-    question: "¿Puedo registrar creaciones parciales y luego ya registrar la definitiva?",
+    question: '¿Puedo registrar creaciones parciales y luego ya registrar la definitiva?',
     answer: (
       <div className="space-y-3">
         <p><strong>SI, con Musicdibs esto es posible y de hecho es lo recomendable</strong>, para evitar que en el proceso de creación alguien te plagie antes de terminar tu obra.</p>
@@ -240,7 +240,7 @@ const faqData = [
     )
   },
   {
-    question: "¿Los créditos de las suscripciones no gastados, son acumulables cuando se renueva anualmente?",
+    question: '¿Los créditos de las suscripciones no gastados, son acumulables cuando se renueva anualmente?',
     answer: (
       <div className="space-y-3">
         <p><strong>NO.</strong> Los créditos de las suscripciones y ofertas especiales que no se gasten en el periodo <strong>no se acumulan</strong> cuando se renueva el siguiente periodo de facturación.</p>
@@ -248,7 +248,7 @@ const faqData = [
     )
   },
   {
-    question: "¿El registro de mi obra tiene costes de renovación?",
+    question: '¿El registro de mi obra tiene costes de renovación?',
     answer: (
       <div className="space-y-3">
         <p><strong>No, solo pagarás por el registro inicial.</strong> Una vez registrada tu obra, no hay costes adicionales de renovación para mantener la certificación.</p>
@@ -256,7 +256,7 @@ const faqData = [
     )
   },
   {
-    question: "¿De que tipo de contenido se pueden generar los NFTs de las suscripciones y cómo generarlos?",
+    question: '¿De que tipo de contenido se pueden generar los NFTs de las suscripciones y cómo generarlos?',
     answer: (
       <div className="space-y-4">
         <p>Para generar un NFT de tus obras registradas te hemos preparado un videotutorial en el siguiente enlace:</p>
@@ -280,7 +280,7 @@ const faqData = [
     )
   },
   {
-    question: "¿Cuanto dura el registro de mi obra?",
+    question: '¿Cuanto dura el registro de mi obra?',
     answer: (
       <div className="space-y-3">
         <p><strong>El registro en blockchain es permanente</strong>, y la duración de la protección de los derechos de autor, está supeditada a la legislación de cada país.</p>
@@ -288,7 +288,7 @@ const faqData = [
     )
   },
   {
-    question: "¿Cuales son los documentos de identidad válidos para verificar mi identidad?",
+    question: '¿Cuales son los documentos de identidad válidos para verificar mi identidad?',
     answer: (
       <div className="space-y-4">
         <p>Para que tus registros tengan validez legal es necesario verificar tu identidad con un <strong>documento de identificación oficial válido</strong> en tu país que incluya:</p>
@@ -311,7 +311,7 @@ const faqData = [
     )
   },
   {
-    question: "¿Cómo se haría el registro de una canción cuando pertenece a dos o más autores?",
+    question: '¿Cómo se haría el registro de una canción cuando pertenece a dos o más autores?',
     answer: (
       <div className="space-y-3">
         <p>La mejor manera de registrar la coautoría o multipropiedad de una creación con Musicdibs es <strong>haciendo dos registros</strong>:</p>
@@ -320,13 +320,13 @@ const faqData = [
           <li><strong>Otro con toda las informaciones de los autores</strong> (Nombre y documento de identidad de cada coautor)</li>
         </ul>
         <p>Resumiendo, tendríais que subir el archivo musical y adicionalmente subir un archivo de texto o pdf con los datos anteriormente indicados.</p>
-        <p><strong>Adicionalmente hay que marcar la opción de</strong> "Quiero que esta certificación sea pública" en los dos registros.</p>
+        <p><strong>Adicionalmente hay que marcar la opción de</strong> &quot;Quiero que esta certificación sea pública&quot; en los dos registros.</p>
         <p>Registrando de esta manera podéis verificar el registro tanto de la canción como del documento de coautoría y <strong>la marca de tiempo de los registros garantiza su validez legal</strong>.</p>
       </div>
     )
   },
   {
-    question: "¿Cómo reducir el tamaño de mi archivo para poder subirlo?",
+    question: '¿Cómo reducir el tamaño de mi archivo para poder subirlo?',
     answer: (
       <div className="space-y-3">
         <p><strong>Sólo admitimos archivos con un peso inferior a 30MB.</strong> Por ello, en caso de que tu archivo sea mayor deberás comprimirlo.</p>
@@ -336,16 +336,16 @@ const faqData = [
     )
   },
   {
-    question: "¿Cómo funcionan las suscripciones mensuales y anuales?",
+    question: '¿Cómo funcionan las suscripciones mensuales y anuales?',
     answer: (
       <div className="space-y-3">
         <p>Tanto la suscripción mensual como anual, <strong>se renuevan de forma automática</strong> al final de cada ciclo contratado.</p>
         <p><strong>Ejemplo:</strong> Si te registras por ejemplo el día 15 de noviembre, el siguiente ciclo de cobro se activará el día 15 de diciembre.</p>
         <p>Para su cancelación, solo tienes que ir dentro de tu perfil de cuenta a:</p>
         <ul className="list-disc list-inside ml-4 space-y-1">
-          <li>"Ajustes"</li>
-          <li>"Suscripción"</li>
-          <li>"Cancelar suscripción"</li>
+          <li>&quot;Ajustes&quot;</li>
+          <li>&quot;Suscripción&quot;</li>
+          <li>&quot;Cancelar suscripción&quot;</li>
         </ul>
         <p><strong>Al menos 24h antes</strong> de la renovación del nuevo ciclo.</p>
         <p>Si una suscripción no se renueva:</p>
@@ -359,14 +359,14 @@ const faqData = [
     )
   },
   {
-    question: "¿Cómo cancelo mi suscripción?",
+    question: '¿Cómo cancelo mi suscripción?',
     answer: (
       <div className="space-y-3">
         <p><strong>Solo tienes que seguir estos pasos:</strong></p>
         <ul className="list-disc list-inside ml-4 space-y-1">
-          <li>Ir dentro de tu perfil de cuenta a <strong>"Ajustes"</strong></li>
-          <li>Seleccionar <strong>"Suscripción"</strong></li>
-          <li>Hacer clic en <strong>"Cancelar suscripción"</strong></li>
+          <li>Ir dentro de tu perfil de cuenta a <strong>&quot;Ajustes&quot;</strong></li>
+          <li>Seleccionar <strong>&quot;Suscripción&quot;</strong></li>
+          <li>Hacer clic en <strong>&quot;Cancelar suscripción&quot;</strong></li>
         </ul>
         <p><strong>Importante:</strong> Esto deberás hacerlo con <strong>al menos 24h antes</strong> de que venza tu actual plan y comience un nuevo periodo de suscripción.</p>
       </div>
