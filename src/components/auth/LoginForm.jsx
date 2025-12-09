@@ -113,8 +113,9 @@ export default function LoginForm() {
                             name="email"
                             type="email"
                             placeholder="tu@email.com"
-                            className={`w-full px-4 py-3 md:px-5 md:py-4 text-base md:text-lg border-2 rounded-xl focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent ${errors.email ? 'border-red-500 bg-red-50' : 'border-gray-300'
-                                }`}
+                            className={`w-full px-4 py-3 md:px-5 md:py-4 text-base md:text-lg border-2 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors ${
+                                errors.email ? 'border-red-500 bg-red-50' : 'border-gray-300'
+                            }`}
                             required
                             value={formData.email}
                             onChange={handleChange}
@@ -136,8 +137,9 @@ export default function LoginForm() {
                                 name="password"
                                 type={showPassword ? "text" : "password"}
                                 placeholder="Introduce tu contraseña"
-                                className={`w-full px-4 py-3 md:px-5 md:py-4 text-base md:text-lg border-2 rounded-xl pr-14 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent ${errors.password ? 'border-red-500 bg-red-50' : 'border-gray-300'
-                                    }`}
+                                className={`w-full px-4 py-3 md:px-5 md:py-4 text-base md:text-lg border-2 rounded-xl pr-14 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors ${
+                                    errors.password ? 'border-red-500 bg-red-50' : 'border-gray-300'
+                                }`}
                                 required
                                 value={formData.password}
                                 onChange={handleChange}
@@ -145,7 +147,7 @@ export default function LoginForm() {
                             <button
                                 type="button"
                                 onClick={() => setShowPassword(!showPassword)}
-                                className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700 p-2"
+                                className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700 p-2 transition-colors"
                             >
                                 {showPassword ? <EyeOff className="h-5 w-5 md:h-6 md:w-6" /> : <Eye className="h-5 w-5 md:h-6 md:w-6" />}
                             </button>
@@ -157,7 +159,7 @@ export default function LoginForm() {
 
                     {/* Forgot Password */}
                     <div className="flex justify-end">
-                        <Link href="/forgot-password" className="text-pink-500 hover:text-pink-600 text-sm md:text-base font-medium">
+                        <Link href="/forgot-password" className="text-blue-600 hover:text-blue-700 text-sm md:text-base font-medium transition-colors">
                             ¿Olvidaste tu contraseña?
                         </Link>
                     </div>
@@ -173,7 +175,7 @@ export default function LoginForm() {
                     <button
                         type="submit"
                         disabled={isSubmitting}
-                        className="w-full bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white font-bold py-3 md:py-4 rounded-xl transition-all disabled:opacity-50 text-base md:text-lg"
+                        className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-colors font-medium text-lg"
                     >
                         {isSubmitting ? 'Iniciando sesión...' : 'Iniciar Sesión'}
                     </button>
@@ -181,7 +183,7 @@ export default function LoginForm() {
                     {/* Link Signup */}
                     <p className="text-center text-gray-600 text-sm md:text-base pt-4">
                         ¿No tienes cuenta?{" "}
-                        <Link href="/auth/signup" className="text-pink-500 hover:text-pink-600 font-bold">
+                        <Link href="/auth/signup" className="text-blue-600 hover:text-blue-700 font-bold transition-colors">
                             Crear cuenta
                         </Link>
                     </p>
@@ -192,7 +194,7 @@ export default function LoginForm() {
                 <div className="mt-10 pt-6 border-t border-gray-200">
                     <p className="text-center text-gray-500 text-xs md:text-base">
                         ¿Necesitas ayuda?{" "}
-                        <Link href="/support" className="text-pink-500 hover:text-pink-600 font-medium">
+                        <Link href="/support" className="text-blue-600 hover:text-blue-700 font-medium transition-colors">
                             Contáctanos
                         </Link>
                     </p>

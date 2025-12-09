@@ -1,43 +1,57 @@
-import ResumenContent from "./sections/ResumenContent";
-import RegistrarObraContent from "./sections/RegistrarObraContent";
-import PromocionarContent from "./sections/PromocionarContent";
+// components/dashboard/MainContent.jsx
+import OverviewContent from "./sections/OverviewContent";
+import RegisterWorkContent from "./sections/RegisterWorkContent";
+import PromoteContent from "./sections/PromoteContent";
 import NFTContent from "./sections/NFTContent";
-import VerificarContent from "./sections/VerificarContent";
-import TiendaContent from "./sections/TiendaContent";
-import ConfiguracionContent from "./sections/ConfiguracionContent";
+import VerifyContent from "./sections/VerifyContent";
+import StoreContent from "./sections/StoreContent";
+import SettingsContent from "./sections/SettingsContent";
 
 export default function MainContent({ activeSection }) {
     const user = {
-        name: "Juan",
+        name: "Marcos",
         credits: 15,
-        email: "juan.perez@email.com",
-        verified: true
+        email: "martospradosmarcos@email.com",
+        verified: true,
+        worksRegistered: 8,
+        nftsCreated: 3,
+        verifications: 12
     };
 
     const renderContent = () => {
         switch (activeSection) {
-            case "resumen":
-                return <ResumenContent user={user} />;
-            case "registrar":
-                return <RegistrarObraContent />;
-            case "promocionar":
-                return <PromocionarContent />;
+            case "overview":
+                return <OverviewContent user={user} />;
+            case "register":
+                return <RegisterWorkContent />;
+            case "promote":
+                return <PromoteContent />;
             case "nft":
                 return <NFTContent />;
-            case "verificar":
-                return <VerificarContent />;
-            case "tienda":
-                return <TiendaContent user={user} />;
-            case "configuracion":
-                return <ConfiguracionContent user={user} />;
+            case "verify":
+                return <VerifyContent />;
+            case "store":
+                return <StoreContent user={user} />;
+            case "settings":
+                return <SettingsContent user={user} />;
             default:
-                return <ResumenContent user={user} />;
+                return <OverviewContent user={user} />;
         }
     };
 
     return (
-        <main className="flex-1 p-6">
-            {renderContent()}
+        <main 
+            className="flex-1 p-4 sm:p-6 lg:p-8 overflow-auto"
+            role="main"
+            aria-labelledby="main-content-title"
+        >
+            <h1 id="main-content-title" className="sr-only">
+                Musicdibs Dashboard - {activeSection}
+            </h1>
+
+            <div className="max-w-7xl mx-auto">
+                {renderContent()}
+            </div>
         </main>
     );
 }

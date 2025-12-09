@@ -17,23 +17,48 @@ import HomeTutorial from './HomeTutorial';
 import HomeSummerPromoPopup from './HomeSummerPromoPopup';
 import Footer from '@/components/common/Footer';
 
-// Structured Data para SEO - Ajusta con tus datos reales
+// Structured Data MEJORADO para SEO
 const structuredData = {
   "@context": "https://schema.org",
-  "@type": "Organization",
+  "@type": "WebSite",
   "name": "Musicdibs",
-  "description": "Plataforma de registro y distribución musical con tecnología blockchain",
+  "description": "Plataforma de registro y distribución musical con tecnología blockchain para artistas independientes",
   "url": "https://musicdibs.com",
-  "logo": "https://musicdibs.com/logo.png",
-  "sameAs": [
-    "https://instagram.com/musicdibs",
-    "https://twitter.com/musicdibs",
-    "https://facebook.com/musicdibs"
-  ],
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "email": "info@musicdibs.com",
-    "contactType": "customer service"
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://musicdibs.com/search?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Musicdibs",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://musicdibs.com/assets/images/logo.png",
+      "width": 120,
+      "height": 48
+    }
+  }
+};
+
+// Schema adicional para VideoObject (optimización del video hero)
+const videoSchema = {
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "Musicdibs - Plataforma de Registro Musical con Blockchain",
+  "description": "Demostración de la plataforma Musicdibs para registro, distribución y protección de música con tecnología blockchain",
+  "thumbnailUrl": "https://musicdibs.com/assets/images/video-thumbnail.jpg",
+  "uploadDate": "2024-01-01T00:00:00Z",
+  "duration": "PT1M",
+  "contentUrl": "https://res.cloudinary.com/dca4bxk23/video/upload/v1754417323/pieza_musicv3_1_yeve62.mp4",
+  "embedUrl": "https://musicdibs.com",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Musicdibs",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://musicdibs.com/assets/images/logo.png"
+    }
   }
 };
 
@@ -44,9 +69,12 @@ export default function HomeLayout() {
     const [isLoading, setIsLoading] = useState(true);
     const router = useRouter();
 
-    // ✅ AÑADIDO: Función para manejar scroll a precios desde query params
+    // ✅ Función para manejar scroll a precios desde query params
     useEffect(() => {
         const handleScrollToPricing = () => {
+            // Solo ejecutar en cliente
+            if (typeof window === "undefined") return;
+
             const urlParams = new URLSearchParams(window.location.search);
             const scrollTo = urlParams.get('scroll');
             
@@ -78,7 +106,6 @@ export default function HomeLayout() {
             checkWidth();
             window.addEventListener("resize", checkWidth);
 
-            // ✅ MODIFICADO: Cambiado de 'scrollTo' a 'scroll' para coincidir con el navbar
             handleScrollToPricing();
 
             return () => window.removeEventListener("resize", checkWidth);
@@ -122,31 +149,51 @@ export default function HomeLayout() {
             <div 
                 className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-900 to-purple-800"
                 role="status"
-                aria-label="Cargando página"
+                aria-label="Cargando Musicdibs - Plataforma de registro musical con blockchain"
             >
-                <div className="text-white text-xl">Cargando Musicdibs...</div>
+                <div className="text-white text-xl animate-pulse" itemScope itemType="https://schema.org/WebApplication">
+                    <span itemProp="name">Musicdibs</span> - Cargando...
+                </div>
             </div>
         );
     }
 
     return (
         <>
-            {/* Structured Data para SEO */}
+            {/* Structured Data para SEO - MEJORADO */}
             <Script
-                id="structured-data"
+                id="website-schema"
                 type="application/ld+json"
                 strategy="afterInteractive"
             >
                 {JSON.stringify(structuredData)}
             </Script>
 
+            <Script
+                id="video-schema"
+                type="application/ld+json"
+                strategy="afterInteractive"
+            >
+                {JSON.stringify(videoSchema)}
+            </Script>
+
+            {/* Preload crítico para el video */}
+            <link 
+                rel="preload" 
+                href="https://res.cloudinary.com/dca4bxk23/video/upload/v1754417323/pieza_musicv3_1_yeve62.mp4" 
+                as="video" 
+                type="video/mp4"
+            />
+
             {showPromo && <HomeSummerPromoPopup onClose={handleClosePromo} />}
 
-            {/* PRIMERA SECCIÓN - 100% VIEWPORT */}
+            {/* PRIMERA SECCIÓN - 100% VIEWPORT con Schema Markup */}
             <section 
                 className="relative w-full h-screen overflow-hidden" 
                 role="banner"
-                aria-label="Hero section de Musicdibs"
+                aria-label="Sección principal de Musicdibs - Registro y distribución musical con blockchain"
+                itemScope
+                itemType="https://schema.org/WPHeader"
             >
                 {isDesktop && (
                     <div className="fixed top-0 left-0 right-0 z-50">
@@ -163,10 +210,12 @@ export default function HomeLayout() {
                         preload="auto"
                         className="w-full h-full object-cover"
                         src="https://res.cloudinary.com/dca4bxk23/video/upload/v1754417323/pieza_musicv3_1_yeve62.mp4"
-                        aria-label="Video demostrativo de la plataforma Musicdibs"
-                        title="Musicdibs Platform Demo"
+                        aria-label="Video demostrativo de la plataforma Musicdibs para registro y distribución musical"
+                        title="Musicdibs Platform Demo - Registro Musical con Blockchain"
+                        itemProp="video"
                     >
                         <track kind="captions" srcLang="es" label="Spanish captions" />
+                        {/* Considera añadir un archivo .vtt para accesibilidad */}
                     </video>
                     <div 
                         className="absolute inset-0 bg-gradient-to-br from-blue-900/50 via-purple-800/50 to-pink-600/50"
@@ -187,16 +236,24 @@ export default function HomeLayout() {
                 </div>
             </section>
 
-            <main id="main-content" role="main">
-                {/* Secciones sin ScrollReveal - Limpio y directo */}
-                <HomeWhyChoose />
-                <HomeDistribution />
-                <HomeArtistsBanner />
-                <HomeTestimonials />
-                <HomePricing />
-                <HomeMarquee />
-                <HomeIndividualRegistration />
-                <HomeTutorial />
+            {/* Contenido principal con estructura semántica */}
+            <main 
+                id="main-content" 
+                role="main"
+                itemScope
+                itemType="https://schema.org/WebPage"
+            >
+                {/* Microdatos para cada sección */}
+                <div itemScope itemProp="mainEntity" itemType="https://schema.org/ItemList">
+                    <HomeWhyChoose />
+                    <HomeDistribution />
+                    <HomeArtistsBanner />
+                    <HomeTestimonials />
+                    <HomePricing />
+                    <HomeMarquee />
+                    <HomeIndividualRegistration />
+                    <HomeTutorial />
+                </div>
             </main>
 
             <Footer />

@@ -1,5 +1,6 @@
 // src/components/dibs-token/DibsTokenHero.jsx
-import { ArrowRight, TrendingUp, Coins } from "lucide-react";
+import { ArrowRight, TrendingUp, Coins, ShoppingBag } from "lucide-react";
+import Link from "next/link";
 
 export default function DibsTokenHero() {
     return (
@@ -20,30 +21,29 @@ export default function DibsTokenHero() {
                 </p>
                 
                 <div className="flex flex-col gap-6 items-center">
-                    <div className="text-center space-y-2">
-                        <p className="text-lg text-gray-700">
-                            <span className="font-bold text-blue-900">Compra DIBS</span> y GANA hasta un{" "}
-                            <span className="font-bold text-purple-800">32% APR en recompensas</span>
-                        </p>
-                        <p className="text-sm text-gray-500">
-                            Comparte en twitter y gana tus primeros{" "}
-                            <span className="font-bold text-pink-600">25 DIBS GRATIS</span>
-                        </p>
-                    </div>
 
-                    <div className="flex justify-center">
+                    {/* Botones de compra */}
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                        <Link 
+                            href="/shop"
+                            className="bg-gradient-to-r from-blue-900 via-purple-800 to-pink-600 hover:opacity-90 transition-opacity text-white px-8 py-4 rounded-lg font-medium inline-flex items-center justify-center space-x-2"
+                        >
+                            <ShoppingBag className="w-5 h-5 mr-2" />
+                            <span>Comprar en Tienda</span>
+                        </Link>
+
                         <a 
                             href="https://raydium.io/swap/?inputMint=Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB&outputMint=A8EmqPD96yGE2Wo2FmRBm8mzvYkVwtmgpkZZsKRXyXxK"
                             target="_blank" 
                             rel="noopener noreferrer"
-                            className="bg-gradient-to-r from-blue-900 via-purple-800 to-pink-600 hover:opacity-90 transition-opacity text-white px-8 py-4 rounded-lg font-medium inline-flex items-center justify-center space-x-2"
+                            className="border-2 border-blue-900 text-blue-900 bg-transparent hover:bg-blue-900 hover:text-white transition-colors px-8 py-4 rounded-lg font-medium inline-flex items-center justify-center space-x-2"
                         >
                             <span>Comprar en RAYDIUM</span>
-                            <ArrowRight className="ml-2 w-5 h-5" />
+                            <ArrowRight className="ml-2 w- h-5" />
                         </a>
                     </div>
 
-                    <a href="https://dexscreener.com/solana/6mymzyflqxsa5lfy6apbtp6vws9q3ecyrcqumiu88oe9" 
+                    <a href="https://dexscreener.com/solana/6mymzyflqxsa5lfy6apbtp5vws9q3ecyrcqumiu88oe9" 
                        target="_blank" 
                        rel="noopener noreferrer"
                        className="text-blue-900 hover:text-blue-800 transition-colors inline-flex items-center gap-2 text-sm">
@@ -55,7 +55,7 @@ export default function DibsTokenHero() {
                 {/* Schema.org para Product */}
                 <div itemScope itemType="https://schema.org/Product" className="hidden">
                     <meta itemProp="name" content="Token DIBS" />
-                    <meta itemProp="description" content="Token de utility para la plataforma MusicDIBS, ofrece protección de propiedad intelectual y recompensas." />
+                    <meta itemProp="description" content="Token de utility para la plataforma Musicdibs, ofrece protección de propiedad intelectual y recompensas." />
                     <meta itemProp="url" content="https://musicdibs.com/dibs-token" />
                     <div itemProp="offers" itemScope itemType="https://schema.org/Offer">
                         <meta itemProp="price" content="0.00" />

@@ -5,14 +5,14 @@ export default function SLAContent() {
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8">
       <div className="bg-white rounded-lg shadow-sm overflow-hidden border border-gray-200">
-        <div className="p-6 md:p-8 lg:p-12">
+        <div className="p-4 sm:p-6 md:p-8 lg:p-12">
           
           {/* Purpose Section */}
-          <section className="mb-10 md:mb-12">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4 md:mb-6">
+          <section className="mb-8 sm:mb-10 md:mb-12">
+            <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 md:mb-6">
               Propósito del SLA
             </h2>
-            <div className="text-gray-700 leading-relaxed">
+            <div className="text-gray-700 leading-relaxed text-sm sm:text-base">
               <p>
                 El propósito de este documento es indicar el nivel de servicio en términos de 
                 disponibilidad de los Servicios proporcionados por el sitio web de <strong>Musicdibs</strong>, 
@@ -24,40 +24,89 @@ export default function SLAContent() {
           </section>
 
           {/* Services Covered */}
-          <section className="mb-10 md:mb-12">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
+          <section className="mb-8 sm:mb-10 md:mb-12">
+            <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-4 flex items-center">
               <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
               Servicios Cubiertos
             </h3>
-            <div className="grid md:grid-cols-2 gap-4">
-              <div className="bg-gray-50 rounded-lg p-4">
-                <h4 className="font-semibold text-gray-900 mb-2">Registro Descentralizado</h4>
-                <p className="text-gray-700 text-sm md:text-base">Propiedad intelectual para obras audiovisuales, escritas o gráficas</p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+              <div className="bg-gray-50 rounded-lg p-3 sm:p-4">
+                <h4 className="font-semibold text-gray-900 mb-2 text-sm sm:text-base">Registro Descentralizado</h4>
+                <p className="text-gray-700 text-xs sm:text-sm">Propiedad intelectual para obras audiovisuales, escritas o gráficas</p>
               </div>
-              <div className="bg-gray-50 rounded-lg p-4">
-                <h4 className="font-semibold text-gray-900 mb-2">Verificación de Registros</h4>
-                <p className="text-gray-700 text-sm md:text-base">Validación de autenticidad de obras registradas</p>
+              <div className="bg-gray-50 rounded-lg p-3 sm:p-4">
+                <h4 className="font-semibold text-gray-900 mb-2 text-sm sm:text-base">Verificación de Registros</h4>
+                <p className="text-gray-700 text-xs sm:text-sm">Validación de autenticidad de obras registradas</p>
               </div>
-              <div className="bg-gray-50 rounded-lg p-4">
-                <h4 className="font-semibold text-gray-900 mb-2">Generación de NFTs</h4>
-                <p className="text-gray-700 text-sm md:text-base">Creación de tokens no fungibles para obras registradas</p>
+              <div className="bg-gray-50 rounded-lg p-3 sm:p-4">
+                <h4 className="font-semibold text-gray-900 mb-2 text-sm sm:text-base">Generación de NFTs</h4>
+                <p className="text-gray-700 text-xs sm:text-sm">Creación de tokens no fungibles para obras registradas</p>
               </div>
-              <div className="bg-gray-50 rounded-lg p-4">
-                <h4 className="font-semibold text-gray-900 mb-2">Promoción</h4>
-                <p className="text-gray-700 text-sm md:text-base">Difusión de obras en canales y redes sociales de la plataforma</p>
+              <div className="bg-gray-50 rounded-lg p-3 sm:p-4">
+                <h4 className="font-semibold text-gray-900 mb-2 text-sm sm:text-base">Promoción</h4>
+                <p className="text-gray-700 text-xs sm:text-sm">Difusión de obras en canales y redes sociales de la plataforma</p>
               </div>
             </div>
           </section>
 
           {/* SLA Categories */}
-          <section className="mb-10 md:mb-12">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4 md:mb-6 flex items-center">
+          <section className="mb-8 sm:mb-10 md:mb-12">
+            <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-4 md:mb-6 flex items-center">
               <Clock className="h-5 w-5 text-blue-500 mr-2 flex-shrink-0" />
               Categorías de SLA Ofrecidas
             </h3>
             
-            <div className="overflow-x-auto -mx-2 md:mx-0">
-              <table className="w-full border-collapse border border-gray-300 rounded-lg min-w-full">
+            {/* Versión Móvil - Cards (solo para móvil) */}
+            <div className="block sm:hidden space-y-4">
+              {[
+                {
+                  servicio: "Disponibilidad del Sistema",
+                  anual: "99.9%",
+                  mensual: "99.5%",
+                  unico: "99.0%"
+                },
+                {
+                  servicio: "Tiempo de Respuesta",
+                  anual: "< 2 segundos",
+                  mensual: "< 3 segundos", 
+                  unico: "< 5 segundos"
+                },
+                {
+                  servicio: "Soporte Técnico",
+                  anual: "24/7",
+                  mensual: "L-V 9:00-18:00",
+                  unico: "Email únicamente"
+                },
+                {
+                  servicio: "Tiempo Resolución Crítica",
+                  anual: "< 1 hora",
+                  mensual: "< 4 horas",
+                  unico: "< 24 horas"
+                }
+              ].map((item, index) => (
+                <div key={index} className="bg-gray-50 rounded-lg p-4 border border-gray-200">
+                  <h4 className="font-semibold text-gray-900 mb-3 text-sm">{item.servicio}</h4>
+                  <div className="grid grid-cols-3 gap-2 text-xs">
+                    <div className="text-center">
+                      <div className="font-semibold text-gray-600">Anual</div>
+                      <div className="text-green-600 font-bold mt-1">{item.anual}</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="font-semibold text-gray-600">Mensual</div>
+                      <div className="text-green-600 font-bold mt-1">{item.mensual}</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="font-semibold text-gray-600">Único</div>
+                      <div className="text-blue-600 font-bold mt-1">{item.unico}</div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Versión Desktop - Tabla ORIGINAL (igual que antes) */}
+            <div className="hidden sm:block overflow-x-auto -mx-2 md:mx-0">
+              <table className="w-full border-collapse border border-gray-300 rounded-lg">
                 <thead>
                   <tr className="bg-gray-100">
                     <th className="border border-gray-300 p-3 md:p-4 text-left font-semibold text-sm md:text-base">Servicio</th>
@@ -97,70 +146,70 @@ export default function SLAContent() {
           </section>
 
           {/* Incident Management */}
-          <section className="mb-10 md:mb-12">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4 md:mb-6 flex items-center">
+          <section className="mb-8 sm:mb-10 md:mb-12">
+            <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-4 md:mb-6 flex items-center">
               <AlertTriangle className="h-5 w-5 text-yellow-500 mr-2 flex-shrink-0" />
               Gestión de Incidentes
             </h3>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
-              <div className="text-center p-4 md:p-6 bg-red-50 rounded-lg border border-red-200">
-                <div className="w-10 h-10 md:w-12 md:h-12 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <span className="text-red-600 font-bold text-sm md:text-base">P1</span>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 md:gap-6">
+              <div className="text-center p-3 sm:p-4 md:p-6 bg-red-50 rounded-lg border border-red-200">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-2 sm:mb-3">
+                  <span className="text-red-600 font-bold text-xs sm:text-sm md:text-base">P1</span>
                 </div>
-                <h4 className="font-semibold text-gray-900 mb-2 text-sm md:text-base">Crítico</h4>
-                <p className="text-gray-700 text-xs md:text-sm">Servicio completamente inoperativo</p>
-                <p className="text-red-600 mt-2 font-medium text-xs md:text-sm">Respuesta: 15 min</p>
+                <h4 className="font-semibold text-gray-900 mb-2 text-sm sm:text-base">Crítico</h4>
+                <p className="text-gray-700 text-xs sm:text-sm leading-tight">Servicio completamente inoperativo</p>
+                <p className="text-red-600 mt-2 font-medium text-xs sm:text-sm">Respuesta: 15 min</p>
               </div>
               
-              <div className="text-center p-4 md:p-6 bg-yellow-50 rounded-lg border border-yellow-200">
-                <div className="w-10 h-10 md:w-12 md:h-12 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <span className="text-yellow-600 font-bold text-sm md:text-base">P2</span>
+              <div className="text-center p-3 sm:p-4 md:p-6 bg-yellow-50 rounded-lg border border-yellow-200">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-2 sm:mb-3">
+                  <span className="text-yellow-600 font-bold text-xs sm:text-sm md:text-base">P2</span>
                 </div>
-                <h4 className="font-semibold text-gray-900 mb-2 text-sm md:text-base">Alto</h4>
-                <p className="text-gray-700 text-xs md:text-sm">Funcionalidad principal afectada</p>
-                <p className="text-yellow-600 mt-2 font-medium text-xs md:text-sm">Respuesta: 1 hora</p>
+                <h4 className="font-semibold text-gray-900 mb-2 text-sm sm:text-base">Alto</h4>
+                <p className="text-gray-700 text-xs sm:text-sm leading-tight">Funcionalidad principal afectada</p>
+                <p className="text-yellow-600 mt-2 font-medium text-xs sm:text-sm">Respuesta: 1 hora</p>
               </div>
               
-              <div className="text-center p-4 md:p-6 bg-blue-50 rounded-lg border border-blue-200">
-                <div className="w-10 h-10 md:w-12 md:h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <span className="text-blue-600 font-bold text-sm md:text-base">P3</span>
+              <div className="text-center p-3 sm:p-4 md:p-6 bg-blue-50 rounded-lg border border-blue-200">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-2 sm:mb-3">
+                  <span className="text-blue-600 font-bold text-xs sm:text-sm md:text-base">P3</span>
                 </div>
-                <h4 className="font-semibold text-gray-900 mb-2 text-sm md:text-base">Normal</h4>
-                <p className="text-gray-700 text-xs md:text-sm">Impacto menor en el servicio</p>
-                <p className="text-blue-600 mt-2 font-medium text-xs md:text-sm">Respuesta: 4 horas</p>
+                <h4 className="font-semibold text-gray-900 mb-2 text-sm sm:text-base">Normal</h4>
+                <p className="text-gray-700 text-xs sm:text-sm leading-tight">Impacto menor en el servicio</p>
+                <p className="text-blue-600 mt-2 font-medium text-xs sm:text-sm">Respuesta: 4 horas</p>
               </div>
             </div>
           </section>
 
           {/* Contact Information */}
-          <section className="mb-8">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4 md:mb-6">
+          <section className="mb-6 sm:mb-8">
+            <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-4 md:mb-6">
               Contacto para Soporte
             </h3>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-              <div className="flex items-center space-x-3 p-4 bg-gray-50 rounded-lg">
-                <Mail className="h-5 w-5 text-blue-500 flex-shrink-0" />
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 md:gap-6">
+              <div className="flex items-center space-x-3 p-3 sm:p-4 bg-gray-50 rounded-lg">
+                <Mail className="h-4 w-4 sm:h-5 sm:w-5 text-blue-500 flex-shrink-0" />
                 <div>
-                  <p className="font-medium text-gray-900 text-sm md:text-base">Email de Soporte</p>
-                  <p className="text-gray-700 text-sm md:text-base">info@musicdibs.com</p>
+                  <p className="font-medium text-gray-900 text-sm sm:text-base">Email de Soporte</p>
+                  <p className="text-gray-700 text-xs sm:text-sm md:text-base">info@musicdibs.com</p>
                 </div>
               </div>
               
-              <div className="flex items-center space-x-3 p-4 bg-gray-50 rounded-lg">
-                <Phone className="h-5 w-5 text-blue-500 flex-shrink-0" />
+              <div className="flex items-center space-x-3 p-3 sm:p-4 bg-gray-50 rounded-lg">
+                <Phone className="h-4 w-4 sm:h-5 sm:w-5 text-blue-500 flex-shrink-0" />
                 <div>
-                  <p className="font-medium text-gray-900 text-sm md:text-base">Teléfono de Contacto</p>
-                  <p className="text-gray-700 text-sm md:text-base">+34 900 123 456</p>
+                  <p className="font-medium text-gray-900 text-sm sm:text-base">Teléfono de Contacto</p>
+                  <p className="text-gray-700 text-xs sm:text-sm md:text-base">+34 900 123 456</p>
                 </div>
               </div>
             </div>
           </section>
 
           {/* Footer Note */}
-          <div className="border-t border-gray-200 pt-6">
-            <p className="text-sm text-gray-600">
+          <div className="border-t border-gray-200 pt-4 sm:pt-6">
+            <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
               <strong>Nota:</strong> Este Acuerdo de Nivel de Servicio (SLA) será válido desde 
               la fecha de inicio del contrato de prestación de servicios correspondiente hasta 
               la fecha de terminación de la relación contractual para la prestación de los 

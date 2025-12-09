@@ -42,8 +42,7 @@ export default function DibsTokenTokenomics() {
                     "NFT exclusivo Musicdibs"
                 ],
                 liberacion: "0% inmediata",
-                vesting: "100% lineal durante 4 meses",
-                progress: 0
+                vesting: "100% lineal durante 4 meses"
             }
         },
         {
@@ -77,8 +76,7 @@ export default function DibsTokenTokenomics() {
                         liberacion: "20% inmediata",
                         vesting: "80% a los 30 días"
                     }
-                ],
-                progress: 10
+                ]
             }
         },
         {
@@ -95,8 +93,7 @@ export default function DibsTokenTokenomics() {
                 objetivo: "Recompensar y retener al equipo fundador, desarrolladores y asesores estratégicos",
                 liberacion: "0% inmediata",
                 cliff: "Bloqueo inicial: 12 meses",
-                vesting: "100% lineal durante 36 meses",
-                progress: 0
+                vesting: "100% lineal durante 36 meses"
             }
         },
         {
@@ -111,8 +108,7 @@ export default function DibsTokenTokenomics() {
             statusColor: "bg-green-100 text-green-800",
             details: {
                 liberacion: "100% inmediata (TGE)",
-                vesting: "No aplica vesting",
-                progress: 100
+                vesting: "No aplica vesting"
             }
         },
         {
@@ -127,8 +123,7 @@ export default function DibsTokenTokenomics() {
             statusColor: "bg-amber-100 text-amber-800",
             details: {
                 liberacion: "10% inmediata (TGE)",
-                vesting: "90% lineal durante 24 meses",
-                progress: 10
+                vesting: "90% lineal durante 24 meses"
             }
         },
         {
@@ -143,8 +138,7 @@ export default function DibsTokenTokenomics() {
             statusColor: "bg-pink-100 text-pink-800",
             details: {
                 liberacion: "10% inmediata (TGE)",
-                vesting: "90% lineal durante 24 meses",
-                progress: 10
+                vesting: "90% lineal durante 24 meses"
             }
         },
         {
@@ -160,8 +154,7 @@ export default function DibsTokenTokenomics() {
             details: {
                 objetivo: "Reservado para el ecosistema de Musicdibs (gas de registros, royalties de autores,...)",
                 liberacion: "10% inmediata (TGE)",
-                vesting: "90% lineal durante 24 meses",
-                progress: 10
+                vesting: "90% lineal durante 24 meses"
             }
         }
     ];
@@ -188,11 +181,6 @@ export default function DibsTokenTokenomics() {
     };
 
     const distributionWithAngles = calculateAngles();
-
-    // Función segura para obtener el progreso
-    const getProgressPercentage = (category) => {
-        return category.details.progress || 0;
-    };
 
     return (
         <section className="py-12 md:py-20 px-4 bg-gradient-to-br from-gray-50 to-blue-50/30" itemScope itemType="https://schema.org/WebPageElement">
@@ -453,22 +441,6 @@ export default function DibsTokenTokenomics() {
                                                 </div>
                                             )}
                                         </div>
-
-                                        {/* Progress bar for vesting - CORREGIDO */}
-                                        <div className="mt-4 md:mt-6 pt-3 md:pt-4 border-t border-gray-200">
-                                            <div className="flex justify-between text-xs md:text-sm text-gray-600 mb-1">
-                                                <span>Progreso de Liberación</span>
-                                                <span>{getProgressPercentage(category)}% disponible</span>
-                                            </div>
-                                            <div className="w-full bg-gray-200 rounded-full h-2 md:h-2.5">
-                                                <div
-                                                    className={`h-2 md:h-2.5 rounded-full ${category.progressColor}`}
-                                                    style={{
-                                                        width: `${getProgressPercentage(category)}%`
-                                                    }}
-                                                ></div>
-                                            </div>
-                                        </div>
                                     </div>
                                 )}
                             </div>
@@ -495,7 +467,7 @@ function DetailItem({ icon: Icon, title, content }) {
             <Icon size={14} className="md:size-4 text-gray-500 mt-0.5 mr-2 md:mr-3 flex-shrink-0" />
             <div>
                 <p className="font-medium text-gray-900 text-sm md:text-base">{title}</p>
-                <p className="text-gray-700 text-xs md:text-sm">{content}</p>
+                                <p className="text-gray-700 text-xs md:text-sm">{content}</p>
             </div>
         </div>
     );

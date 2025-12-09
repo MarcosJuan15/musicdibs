@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from "react";
+import Link from "next/link";
 
 export default function HomeTutorial() {
     const [currentVideo, setCurrentVideo] = useState(0);
@@ -12,7 +13,7 @@ export default function HomeTutorial() {
             description: "Aprende a registrar tus obras musicales paso a paso"
         },
         {
-            src: "https://www.youtube.com/embed/YS8euOYAdp8", 
+            src: "https://www.youtube.com/embed/YS8euOYAdp8",
             title: "Tutorial de Distribución - MusicDIBS",
             description: "Descubre cómo distribuir tu música en todas las plataformas"
         },
@@ -30,15 +31,14 @@ export default function HomeTutorial() {
             description: (
                 <>
                     Sube tu obra; generamos una huella digital y la registramos en blockchain en segundos. Descarga tu certificado de registro, con sello de tiempo.{" "}
-                    <a
-                        href="https://musicdibs.com/certification/sneaky-ways-latin/"
+                    <Link
+                        href="/certification"
                         target="_blank"
-                        rel="noopener noreferrer"
                         className="text-pink-300 hover:text-pink-200 underline transition-colors"
                         aria-label="Ver ejemplo de certificado"
                     >
                         Ver ej. certificado
-                    </a>
+                    </Link>
                     .
                 </>
             ),
@@ -66,8 +66,8 @@ export default function HomeTutorial() {
     };
 
     return (
-        <section 
-            id="tutorial-section" 
+        <section
+            id="tutorial-section"
             className="py-20 relative overflow-hidden bg-gradient-to-b from-purple-600 via-purple-700 to-purple-800"
             itemScope
             itemType="https://schema.org/HowTo"
@@ -90,7 +90,7 @@ export default function HomeTutorial() {
 
             <div className="container mx-auto px-4 relative z-10">
                 <div className="text-center mb-16">
-                    <h2 
+                    <h2
                         id="tutorial-title"
                         className="text-4xl md:text-5xl font-bold text-white mb-6"
                         itemProp="name"
@@ -103,7 +103,7 @@ export default function HomeTutorial() {
                 </div>
 
                 {/* Video Section */}
-                <div 
+                <div
                     className="max-w-2xl mx-auto mb-16 bg-white/80 backdrop-blur-sm border border-white/20 rounded-xl shadow-2xl p-4 relative"
                     itemScope
                     itemType="https://schema.org/VideoObject"
@@ -112,7 +112,7 @@ export default function HomeTutorial() {
                     <meta itemProp="description" content={videos[currentVideo].description} />
                     <meta itemProp="thumbnailUrl" content={`https://img.youtube.com/vi/${videos[currentVideo].src.split('/').pop()}/maxresdefault.jpg`} />
                     <meta itemProp="uploadDate" content="2024-01-01" />
-                    
+
                     <button
                         onClick={prevVideo}
                         className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black transition-colors z-10"
@@ -148,11 +148,10 @@ export default function HomeTutorial() {
                             <button
                                 key={index}
                                 onClick={() => setCurrentVideo(index)}
-                                className={`w-3 h-3 rounded-full transition-all ${
-                                    index === currentVideo 
-                                        ? "bg-purple-600 scale-125" 
+                                className={`w-3 h-3 rounded-full transition-all ${index === currentVideo
+                                        ? "bg-purple-600 scale-125"
                                         : "bg-gray-400 hover:bg-gray-500"
-                                }`}
+                                    }`}
                                 aria-label={`Ver video ${index + 1}`}
                             />
                         ))}
@@ -162,8 +161,8 @@ export default function HomeTutorial() {
                 {/* Steps Section */}
                 <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
                     {steps.map((step) => (
-                        <div 
-                            key={step.step} 
+                        <div
+                            key={step.step}
                             className="text-center"
                             itemScope
                             itemType="https://schema.org/HowToStep"
@@ -172,13 +171,13 @@ export default function HomeTutorial() {
                             <div className="w-20 h-20 bg-gradient-to-r from-pink-500 to-red-500 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
                                 <span className="text-2xl font-bold text-white">{step.step}</span>
                             </div>
-                            <h3 
+                            <h3
                                 className="text-2xl font-bold text-white mb-4"
                                 itemProp="name"
                             >
                                 Paso {step.step}: {step.title}
                             </h3>
-                            <p 
+                            <p
                                 className="text-lg text-white/90 leading-relaxed"
                                 itemProp="text"
                             >

@@ -3,13 +3,13 @@ export default function HomeMarquee() {
         <div className="bg-gradient-to-r from-blue-600 to-pink-600 text-white py-3 overflow-hidden relative">
             <div className="marquee-container whitespace-nowrap">
                 <div className="marquee-content animate-marquee inline-flex">
-                    <span className="mx-8 font-semibold">🎵 DISTRIBUYE TU MÚSICA EN +150 PLATAFORMAS 🎵</span>
+                    <span className="mx-8 font-semibold">🎵 DISTRIBUYE TU MÚSICA EN +200 PLATAFORMAS 🎵</span>
                     <span className="mx-8 font-semibold">🔥 MANTÉN EL 100% DE TUS REGALÍAS - SIN COMISIONES OCULTAS 🔥</span>
                     <span className="mx-8 font-semibold">⚡ TU MÚSICA ONLINE EN 24-48 HORAS ⚡</span>
                     <span className="mx-8 font-semibold">💫 PLAN PLUS: 59,90€/AÑO - HASTA 100 REGISTROS 💫</span>
                     
                     {/* Duplicado para el efecto infinito */}
-                    <span className="mx-8 font-semibold">🎵 DISTRIBUYE TU MÚSICA EN +150 PLATAFORMAS 🎵</span>
+                    <span className="mx-8 font-semibold">🎵 DISTRIBUYE TU MÚSICA EN +200 PLATAFORMAS 🎵</span>
                     <span className="mx-8 font-semibold">🔥 MANTÉN EL 100% DE TUS REGALÍAS - SIN COMISIONES OCULTAS 🔥</span>
                     <span className="mx-8 font-semibold">⚡ TU MÚSICA ONLINE EN 24-48 HORAS ⚡</span>
                     <span className="mx-8 font-semibold">💫 PLAN PLUS: 59,90€/AÑO - HASTA 100 REGISTROS 💫</span>

@@ -13,7 +13,7 @@ export default function MarketContent() {
       bpm: 128,
       price: "€49.99",
       exclusive: false,
-      image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=300&fit=crop",
+      image: "/assets/images/og.png",
     },
     {
       id: 2,
@@ -23,7 +23,7 @@ export default function MarketContent() {
       bpm: 85,
       price: "€39.99",
       exclusive: true,
-      image: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=400&h=300&fit=crop",
+      image: "/assets/images/og.png",
     },
     {
       id: 3,
@@ -33,7 +33,7 @@ export default function MarketContent() {
       bpm: 95,
       price: "€59.99",
       exclusive: false,
-      image: "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=400&h=300&fit=crop",
+      image: "/assets/images/og.png",
     },
     {
       id: 4,
@@ -43,7 +43,7 @@ export default function MarketContent() {
       bpm: 140,
       price: "€69.99",
       exclusive: true,
-      image: "https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=400&h=300&fit=crop",
+      image: "/assets/images/og.png",
     },
     {
       id: 5,
@@ -53,7 +53,7 @@ export default function MarketContent() {
       bpm: 122,
       price: "€44.99",
       exclusive: false,
-      image: "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=400&h=300&fit=crop",
+      image: "/assets/images/og.png",
     },
     {
       id: 6,
@@ -63,7 +63,7 @@ export default function MarketContent() {
       bpm: 110,
       price: "€54.99",
       exclusive: true,
-      image: "https://images.unsplash.com/photo-1498038432885-c6f3f1b912ee?w=400&h=300&fit=crop",
+      image: "/assets/images/og.png",
     }
   ]);
 
@@ -149,16 +149,23 @@ export default function MarketContent() {
           </div>
         </div>
 
-        {/* Songs Grid */}
+        {/* Songs Grid - IMÁGENES CAMBIADAS A og.png */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {songs.map(song => (
             <div key={song.id} className="bg-white rounded-2xl shadow-lg overflow-hidden border border-purple-200 hover:shadow-xl transition duration-300">
               <div className="relative">
-                <Image 
-                  src={song.image} 
-                  alt={song.title}
-                  className="w-full h-48 object-cover"
-                />
+                {/* Imagen cambiada a la ruta local */}
+                <div className="relative h-48 w-full">
+                  <Image 
+                    src={song.image} 
+                    alt={`Portada de la canción "${song.title}" por ${song.artist} - ${song.genre}`}
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    className="object-cover"
+                    placeholder="blur"
+                    blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R"
+                  />
+                </div>
                 {song.exclusive && (
                   <div className="absolute top-3 right-3 bg-purple-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
                     Exclusivo
@@ -206,7 +213,7 @@ export default function MarketContent() {
         <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl shadow-lg p-8 text-center text-white">
           <h2 className="text-3xl font-bold mb-4">¿Eres un productor?</h2>
           <p className="text-xl mb-6 opacity-90">
-            Vende tus pistas en MusicDibs Market y llega a miles de DJs y artistas
+            Vende tus pistas en Musicdibs Market y llega a miles de DJs y artistas
           </p>
           <div className="flex gap-4 justify-center">
             <button 

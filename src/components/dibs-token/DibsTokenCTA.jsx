@@ -1,6 +1,6 @@
 // src/components/dibs-token/DibsTokenCTA.jsx
 "use client";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ShoppingBag } from "lucide-react";
 import Link from "next/link";
 
 export default function DibsTokenCTA() {
@@ -24,23 +24,24 @@ export default function DibsTokenCTA() {
                                 <span>Accede</span>
                                 <ArrowRight className="ml-2 w-5 h-5" />
                             </Link>
-                            <a 
-                                href="https://raydium.io/swap/?inputMint=Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB&outputMint=A8EmqPD96yGE2Wo2FmRBm8mzvYkVwtmgpkZZsKRXyXxK"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="border border-blue-900 text-blue-900 hover:bg-blue-900/10 transition-colors px-6 py-3 rounded-lg font-medium inline-flex items-center justify-center space-x-2"
+                            <Link 
+                                href="/shop"
+                                className="bg-gradient-to-r from-blue-900 to-purple-800 hover:opacity-90 transition-opacity text-white px-6 py-3 rounded-lg font-medium inline-flex items-center justify-center space-x-2"
                             >
+                                <ShoppingBag className="w-5 h-5 mr-2" />
                                 <span>Comprar DIBS</span>
-                                <ArrowRight className="ml-2 w-5 h-5" />
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </div>
 
-                {/* Schema.org for Action */}
+                {/* Schema.org for Action - Nombre corregido a Musicdibs */}
                 <div itemScope itemType="https://schema.org/Action" className="hidden">
-                    <meta itemProp="name" content="Join MusicDIBS Revolution" />
+                    <meta itemProp="name" content="Join Musicdibs Revolution" />
                     <meta itemProp="description" content="Join the WEB3 revolution in intellectual property protection" />
+                    <div itemProp="agent" itemScope itemType="https://schema.org/Organization">
+                        <meta itemProp="name" content="Musicdibs" />
+                    </div>
                 </div>
             </div>
         </section>

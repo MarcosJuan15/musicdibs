@@ -1,103 +1,136 @@
+// components/dashboard/Sidebar.jsx
 "use client";
-import { useState } from "react";
 import { 
     BarChart3, FileText, Megaphone, Image, Shield, 
-    ShoppingCart, Settings, Zap, Menu, X 
+    ShoppingCart, Settings, Zap, X, Home 
 } from "lucide-react";
+import Link from "next/link";
 
+// IDs en inglés (internos) pero labels en español (visibles)
 const sections = [
-    { id: "resumen", label: "Resumen de la cuenta", icon: BarChart3 },
-    { id: "registrar", label: "Registrar obra", icon: FileText },
-    { id: "promocionar", label: "Promociona tus obras", icon: Megaphone },
-    { id: "nft", label: "Crea tu NFT", icon: Image },
-    { id: "verificar", label: "Verificar tu registro", icon: Shield },
-    { id: "tienda", label: "Tienda", icon: ShoppingCart },
-    { id: "configuracion", label: "Configuración", icon: Settings }
+    { 
+        id: "overview", 
+        label: "Resumen de la cuenta", 
+        icon: BarChart3,
+        description: "Vista general de tu cuenta y estadísticas"
+    },
+    { 
+        id: "register", 
+        label: "Registrar obra", 
+        icon: FileText,
+        description: "Protege tus derechos de autor registrando tus obras"
+    },
+    { 
+        id: "promote", 
+        label: "Promociona tus obras", 
+        icon: Megaphone,
+        description: "Herramientas de marketing y promoción para artistas"
+    },
+    { 
+        id: "nft", 
+        label: "Crea tu NFT", 
+        icon: Image,
+        description: "Convierte tu música en tokens no fungibles únicos"
+    },
+    { 
+        id: "verify", 
+        label: "Verificar autenticidad", 
+        icon: Shield,
+        description: "Sistema de verificación de obras y derechos"
+    },
+    { 
+        id: "store", 
+        label: "Tienda digital", 
+        icon: ShoppingCart,
+        description: "Marketplace para vender tu música y merchandising"
+    },
+    { 
+        id: "settings", 
+        label: "Configuración", 
+        icon: Settings,
+        description: "Ajustes de cuenta y preferencias de usuario"
+    }
 ];
 
-export default function Sidebar({ activeSection, setActiveSection }) {
-    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+export default function Sidebar({ activeSection, setActiveSection, sidebarOpen, setSidebarOpen }) {
     const user = { credits: 15 };
+
+    const handleMenuItemClick = (sectionId) => {
+        setActiveSection(sectionId);
+        if (window.innerWidth < 1024) {
+            setSidebarOpen(false);
+        }
+    };
 
     return (
         <>
-            {/* Mobile Menu Button */}
-            <button 
-                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="lg:hidden fixed top-4 left-4 z-50 bg-white p-2 rounded-lg shadow-lg border border-gray-200"
-            >
-                {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
-            </button>
-
-            {/* Overlay for mobile */}
-            {isMobileMenuOpen && (
+            {sidebarOpen && (
                 <div 
                     className="lg:hidden fixed inset-0 bg-black bg-opacity-50 z-40"
-                    onClick={() => setIsMobileMenuOpen(false)}
+                    onClick={() => setSidebarOpen(false)}
+                    aria-hidden="true"
                 />
             )}
 
-            {/* Sidebar */}
-            <aside className={`
-                fixed lg:static inset-y-0 left-0 z-40
-                w-64 bg-white border-r border-gray-200 min-h-screen
-                transform transition-transform duration-300 ease-in-out
-                lg:transform-none lg:translate-x-0
-                ${isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full'}
-            `}>
-                <nav className="p-4 h-full flex flex-col">
-                    {/* Close button for mobile */}
-                    <div className="flex justify-end lg:hidden mb-4">
+            <aside 
+                id="sidebar-navigation"
+                className={`
+                    fixed inset-y-0 left-0 z-50
+                    w-64 bg-white border-r border-gray-200
+                    transform transition-transform duration-300 ease-in-out
+                    lg:translate-x-0 lg:static lg:inset-0
+                    ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'}
+                `}
+                role="navigation"
+                aria-label="Navegación principal del dashboard"
+            >
+                <div className="flex flex-col h-full p-4">
+                    <div className="flex items-center justify-between mb-6 pb-4 border-b border-gray-200">
+                        <Link
+                            href="/"
+                            className="flex items-center gap-3 text-gray-600 hover:text-gray-900 transition-colors"
+                            aria-label="Volver a la página principal de Musicdibs"
+                        >
+                            <Home size={20} />
+                            <span className="font-medium">Volver al Home</span>
+                        </Link>
                         <button 
-                            onClick={() => setIsMobileMenuOpen(false)}
-                            className="p-2 hover:bg-gray-100 rounded-lg"
+                            onClick={() => setSidebarOpen(false)}
+                            className="lg:hidden p-1 rounded-lg hover:bg-gray-100 transition-colors"
+                            aria-label="Cerrar menú de navegación"
                         >
                             <X size={20} />
                         </button>
                     </div>
 
-                    {/* Navigation Sections */}
                     <div className="space-y-1 flex-1">
                         {sections.map((section) => {
                             const IconComponent = section.icon;
+                            const isActive = activeSection === section.id;
+                            
                             return (
                                 <button
                                     key={section.id}
-                                    onClick={() => {
-                                        setActiveSection(section.id);
-                                        setIsMobileMenuOpen(false);
-                                    }}
-                                    className={`w-full flex items-center space-x-3 px-3 py-3 rounded-lg text-left transition-colors ${
-                                        activeSection === section.id
-                                            ? 'bg-blue-50 text-blue-700 border border-blue-200'
-                                            : 'text-gray-700 hover:bg-gray-50'
-                                    }`}
+                                    onClick={() => handleMenuItemClick(section.id)}
+                                    className={`
+                                        w-full flex items-center space-x-3 px-3 py-3 rounded-lg text-left transition-all duration-200
+                                        ${isActive
+                                            ? 'bg-gradient-to-r from-blue-50 to-purple-50 text-blue-700 border border-blue-200 shadow-sm'
+                                            : 'text-gray-700 hover:bg-gray-50 hover:text-gray-900'
+                                        }
+                                    `}
+                                    aria-current={isActive ? "page" : undefined}
                                 >
                                     <IconComponent size={20} className="flex-shrink-0" />
-                                    <span className="font-medium text-sm sm:text-base">{section.label}</span>
+                                    <span className="font-medium text-sm sm:text-base">
+                                        {section.label}
+                                    </span>
                                 </button>
                             );
                         })}
                     </div>
-
-                    {/* Credits Card */}
-                    <div className="mt-4 sm:mt-8">
-                        <div className="p-3 sm:p-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg text-white">
-                            <div className="flex items-center justify-between mb-2">
-                                <span className="text-xs sm:text-sm font-medium">Créditos disponibles</span>
-                                <Zap size={14} className="sm:size-4 flex-shrink-0" />
-                            </div>
-                            <p className="text-xl sm:text-2xl font-bold">{user.credits}</p>
-                            <button className="w-full mt-2 sm:mt-3 bg-white text-blue-600 py-2 px-3 rounded text-xs sm:text-sm font-medium hover:bg-blue-50 transition-colors">
-                                Comprar más créditos
-                            </button>
-                        </div>
-                    </div>
-                </nav>
+                </div>
             </aside>
-
-            {/* Spacer for mobile layout */}
-            <div className="lg:hidden h-16"></div>
         </>
     );
 }

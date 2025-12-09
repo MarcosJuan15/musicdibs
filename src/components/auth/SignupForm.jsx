@@ -183,7 +183,7 @@ export default function SignupForm() {
                             name="username"
                             type="text"
                             placeholder="Elige un nombre de usuario"
-                            className={`w-full px-4 py-3 md:px-5 md:py-4 text-base md:text-lg border-2 rounded-xl focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all ${
+                            className={`w-full px-4 py-3 md:px-5 md:py-4 text-base md:text-lg border-2 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all ${
                                 errors.username && touched.username ? 'border-red-500 bg-red-50' : 'border-gray-300'
                             }`}
                             required
@@ -209,7 +209,7 @@ export default function SignupForm() {
                             name="email"
                             type="email"
                             placeholder="tu@email.com"
-                            className={`w-full px-4 py-3 md:px-5 md:py-4 text-base md:text-lg border-2 rounded-xl focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all ${
+                            className={`w-full px-4 py-3 md:px-5 md:py-4 text-base md:text-lg border-2 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all ${
                                 errors.email && touched.email ? 'border-red-500 bg-red-50' : 'border-gray-300'
                             }`}
                             required
@@ -236,7 +236,7 @@ export default function SignupForm() {
                                 name="password"
                                 type={showPassword ? "text" : "password"}
                                 placeholder="Crea una contraseña segura"
-                                className={`w-full px-4 py-3 md:px-5 md:py-4 text-base md:text-lg border-2 rounded-xl pr-14 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all ${
+                                className={`w-full px-4 py-3 md:px-5 md:py-4 text-base md:text-lg border-2 rounded-xl pr-14 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all ${
                                     errors.password && touched.password ? 'border-red-500 bg-red-50' : 'border-gray-300'
                                 }`}
                                 required
@@ -315,7 +315,7 @@ export default function SignupForm() {
                                 name="confirmPassword"
                                 type={showConfirmPassword ? "text" : "password"}
                                 placeholder="Confirma tu contraseña"
-                                className={`w-full px-4 py-3 md:px-5 md:py-4 text-base md:text-lg border-2 rounded-xl pr-14 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all ${
+                                className={`w-full px-4 py-3 md:px-5 md:py-4 text-base md:text-lg border-2 rounded-xl pr-14 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all ${
                                     errors.confirmPassword && touched.confirmPassword ? 'border-red-500 bg-red-50' : 
                                     formData.confirmPassword && formData.password === formData.confirmPassword ? 'border-green-500 bg-green-50' : 'border-gray-300'
                                 }`}
@@ -359,7 +359,7 @@ export default function SignupForm() {
                     <button
                         type="submit"
                         disabled={isSubmitting}
-                        className="w-full bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white font-bold py-3 md:py-4 rounded-xl transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed text-base md:text-lg shadow-lg hover:shadow-xl transform hover:scale-105"
+                        className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-colors font-medium text-lg"
                     >
                         {isSubmitting ? (
                             <div className="flex items-center justify-center gap-2">
@@ -375,7 +375,7 @@ export default function SignupForm() {
                     <div className="text-center pt-4">
                         <p className="text-gray-600 text-sm md:text-base">
                             ¿Ya tienes cuenta?{" "}
-                            <Link href="/auth/login" className="text-pink-500 hover:text-pink-600 font-bold transition-colors">
+                            <Link href="/auth/login" className="text-blue-600 hover:text-blue-700 font-bold transition-colors">
                                 Iniciar sesión
                             </Link>
                         </p>
@@ -385,11 +385,11 @@ export default function SignupForm() {
                     <div className="text-center pt-4">
                         <p className="text-gray-500 text-xs md:text-sm">
                             Al crear una cuenta, aceptas nuestros{" "}
-                            <Link href="/terms-and-conditions" className="text-pink-500 hover:text-pink-600 transition-colors">
+                            <Link href="/terms-and-conditions" className="text-blue-600 hover:text-blue-700 transition-colors">
                                 Términos y Condiciones
                             </Link>{" "}
                             y{" "}
-                            <Link href="/privacy-policy" className="text-pink-500 hover:text-pink-600 transition-colors">
+                            <Link href="/privacy-policy" className="text-blue-600 hover:text-blue-700 transition-colors">
                                 Política de Privacidad
                             </Link>
                         </p>
@@ -401,7 +401,7 @@ export default function SignupForm() {
                 <div className="mt-10 pt-6 border-t border-gray-200">
                     <p className="text-center text-gray-500 text-xs md:text-base">
                         ¿Necesitas ayuda?{" "}
-                        <Link href="/support" className="text-pink-500 hover:text-pink-600 font-medium transition-colors">
+                        <Link href="/support" className="text-blue-600 hover:text-blue-700 font-medium transition-colors">
                             Contáctanos
                         </Link>
                     </p>
