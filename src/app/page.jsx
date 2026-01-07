@@ -19,7 +19,7 @@ export const metadata = {
     locale: 'es_ES',
     images: [
       {
-        url: '/assets/images/og.png',
+        url: '/assets/images/logo-navbar.png',
         width: 1200,
         height: 630,
         alt: 'Musicdibs - Plataforma de Registro Musical con Blockchain y Distribución Global para Artistas',
