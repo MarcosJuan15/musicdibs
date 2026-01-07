@@ -14,7 +14,7 @@ import HomePricing from './HomePricing';
 import HomeMarquee from './HomeMarquee';
 import HomeIndividualRegistration from './HomeIndividualRegistration';
 import HomeTutorial from './HomeTutorial';
-import HomeSummerPromoPopup from './HomeSummerPromoPopup';
+import HomePromoPopup from './HomePromoPopup';  // ¡IMPORTANTE! Asegúrate de que esto existe
 import Footer from '@/components/common/Footer';
 
 // Structured Data MEJORADO para SEO
@@ -65,14 +65,11 @@ const videoSchema = {
 export default function HomeLayout() {
     const [isDesktop, setIsDesktop] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [showPromo, setShowPromo] = useState(false);
     const [isLoading, setIsLoading] = useState(true);
     const router = useRouter();
 
-    // ✅ Función para manejar scroll a precios desde query params
     useEffect(() => {
         const handleScrollToPricing = () => {
-            // Solo ejecutar en cliente
             if (typeof window === "undefined") return;
 
             const urlParams = new URLSearchParams(window.location.search);
@@ -88,7 +85,6 @@ export default function HomeLayout() {
                             behavior: "smooth"
                         });
                         
-                        // Limpiar el query param después del scroll
                         const newUrl = window.location.pathname;
                         window.history.replaceState({}, '', newUrl);
                     }
@@ -96,7 +92,6 @@ export default function HomeLayout() {
             }
         };
 
-        // Verificar si estamos en el cliente
         if (typeof window !== "undefined") {
             const checkWidth = () => {
                 setIsDesktop(window.innerWidth > 1024);
@@ -105,14 +100,12 @@ export default function HomeLayout() {
 
             checkWidth();
             window.addEventListener("resize", checkWidth);
-
             handleScrollToPricing();
 
             return () => window.removeEventListener("resize", checkWidth);
         }
     }, []);
 
-    // Cerrar menú al hacer click fuera
     useEffect(() => {
         const handleClickOutside = (e) => {
             if (isMenuOpen && !e.target.closest("nav")) {
@@ -124,35 +117,15 @@ export default function HomeLayout() {
         return () => document.removeEventListener("mousedown", handleClickOutside);
     }, [isMenuOpen]);
 
-    // Mostrar promoción una vez por sesión
-    useEffect(() => {
-        if (typeof window !== "undefined") {
-            const promoShown = sessionStorage.getItem("promoShown");
-            if (!promoShown) {
-                const timer = setTimeout(() => {
-                    setShowPromo(true);
-                }, 10000);
-                return () => clearTimeout(timer);
-            }
-        }
-    }, []);
-
-    const handleClosePromo = () => {
-        setShowPromo(false);
-        if (typeof window !== "undefined") {
-            sessionStorage.setItem("promoShown", "true");
-        }
-    };
-
     if (isLoading) {
         return (
             <div 
                 className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-900 to-purple-800"
                 role="status"
-                aria-label="Cargando Musicdibs - Plataforma de registro musical con blockchain"
+                aria-label="Cargando Musicdibs"
             >
-                <div className="text-white text-xl animate-pulse" itemScope itemType="https://schema.org/WebApplication">
-                    <span itemProp="name">Musicdibs</span> - Cargando...
+                <div className="text-white text-xl animate-pulse">
+                    Musicdibs - Cargando...
                 </div>
             </div>
         );
@@ -160,7 +133,7 @@ export default function HomeLayout() {
 
     return (
         <>
-            {/* Structured Data para SEO - MEJORADO */}
+            {/* Structured Data para SEO */}
             <Script
                 id="website-schema"
                 type="application/ld+json"
@@ -177,23 +150,14 @@ export default function HomeLayout() {
                 {JSON.stringify(videoSchema)}
             </Script>
 
-            {/* Preload crítico para el video */}
-            <link 
-                rel="preload" 
-                href="https://res.cloudinary.com/dca4bxk23/video/upload/v1754417323/pieza_musicv3_1_yeve62.mp4" 
-                as="video" 
-                type="video/mp4"
-            />
+            {/* ¡ESTA ES LA LÍNEA CLAVE! */}
+            <HomePromoPopup />
 
-            {showPromo && <HomeSummerPromoPopup onClose={handleClosePromo} />}
-
-            {/* PRIMERA SECCIÓN - 100% VIEWPORT con Schema Markup */}
+            {/* PRIMERA SECCIÓN */}
             <section 
                 className="relative w-full h-screen overflow-hidden" 
                 role="banner"
-                aria-label="Sección principal de Musicdibs - Registro y distribución musical con blockchain"
-                itemScope
-                itemType="https://schema.org/WPHeader"
+                aria-label="Sección principal de Musicdibs"
             >
                 {isDesktop && (
                     <div className="fixed top-0 left-0 right-0 z-50">
@@ -210,21 +174,12 @@ export default function HomeLayout() {
                         preload="auto"
                         className="w-full h-full object-cover"
                         src="https://res.cloudinary.com/dca4bxk23/video/upload/v1754417323/pieza_musicv3_1_yeve62.mp4"
-                        aria-label="Video demostrativo de la plataforma Musicdibs para registro y distribución musical"
-                        title="Musicdibs Platform Demo - Registro Musical con Blockchain"
-                        itemProp="video"
+                        aria-label="Video demostrativo de Musicdibs"
                     >
                         <track kind="captions" srcLang="es" label="Spanish captions" />
-                        {/* Considera añadir un archivo .vtt para accesibilidad */}
                     </video>
-                    <div 
-                        className="absolute inset-0 bg-gradient-to-br from-blue-900/50 via-purple-800/50 to-pink-600/50"
-                        aria-hidden="true"
-                    />
-                    <div 
-                        className="absolute inset-0 bg-black/20"
-                        aria-hidden="true"
-                    />
+                    <div className="absolute inset-0 bg-gradient-to-br from-blue-900/50 via-purple-800/50 to-pink-600/50" />
+                    <div className="absolute inset-0 bg-black/20" />
                 </div>
 
                 <div className={`relative z-40 ${isDesktop ? "pt-12" : "pt-0"}`}>
@@ -236,24 +191,16 @@ export default function HomeLayout() {
                 </div>
             </section>
 
-            {/* Contenido principal con estructura semántica */}
-            <main 
-                id="main-content" 
-                role="main"
-                itemScope
-                itemType="https://schema.org/WebPage"
-            >
-                {/* Microdatos para cada sección */}
-                <div itemScope itemProp="mainEntity" itemType="https://schema.org/ItemList">
-                    <HomeWhyChoose />
-                    <HomeDistribution />
-                    <HomeArtistsBanner />
-                    <HomeTestimonials />
-                    <HomePricing />
-                    <HomeMarquee />
-                    <HomeIndividualRegistration />
-                    <HomeTutorial />
-                </div>
+            {/* Contenido principal */}
+            <main id="main-content" role="main">
+                <HomeWhyChoose />
+                <HomeDistribution />
+                <HomeArtistsBanner />
+                <HomeTestimonials />
+                <HomePricing />
+                <HomeMarquee />
+                <HomeIndividualRegistration />
+                <HomeTutorial />
             </main>
 
             <Footer />

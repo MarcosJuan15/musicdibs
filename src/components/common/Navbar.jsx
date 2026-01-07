@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { FiChevronDown, FiMenu, FiX, FiUser, FiShoppingCart } from "react-icons/fi";
+import { FiChevronDown, FiMenu, FiX } from "react-icons/fi";
 import Image from "next/image";
 
 export default function Navbar() {
@@ -12,29 +12,11 @@ export default function Navbar() {
     const [isLanguageDropdownOpen, setIsLanguageDropdownOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobile, setIsMobile] = useState(false);
-    const [isLoggedIn, setIsLoggedIn] = useState(false);
     const router = useRouter();
     const pathname = usePathname();
     
     const languageDropdownRef = useRef(null);
     const mobileLanguageDropdownRef = useRef(null);
-
-    // Estado de autenticación simple
-    useEffect(() => {
-        const checkAuth = () => {
-            // Verificar autenticación real cuando tengas backend
-            const token = localStorage.getItem('auth-token');
-            const user = localStorage.getItem('user-data');
-            setIsLoggedIn(!!token && !!user);
-        };
-
-        checkAuth();
-        
-        const handleStorageChange = () => checkAuth();
-        window.addEventListener('storage', handleStorageChange);
-        
-        return () => window.removeEventListener('storage', handleStorageChange);
-    }, []);
 
     // Efecto para detectar si es móvil y manejar scroll
     useEffect(() => {
@@ -215,7 +197,7 @@ export default function Navbar() {
                     </button>
                 </div>
 
-                {/* Links Desktop - LAS 7 VISTAS */}
+                {/* Links Desktop */}
                 <div className="hidden md:flex items-center space-x-8 text-white/90 text-base font-medium">
                     <a
                         href="#pricing-toggle"
@@ -273,9 +255,27 @@ export default function Navbar() {
                         </div>
                     </div>
 
-                    <Link href="/market" className="hover:text-white transition-colors" itemProp="url">
+                    {/* Enlace Market actualizado */}
+                    <a
+                        href="https://market.musicdibs.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-white transition-colors"
+                        itemProp="url"
+                    >
                         <span itemProp="name">Market</span>
-                    </Link>
+                    </a>
+                    
+                    {/* Nueva pestaña Noticias */}
+                    <a
+                        href="https://musicdibs.com/noticias/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-white transition-colors"
+                        itemProp="url"
+                    >
+                        <span itemProp="name">Noticias</span>
+                    </a>
                     
                     <Link 
                         href="/dibs-token" 
@@ -290,7 +290,7 @@ export default function Navbar() {
                     </Link>
                 </div>
 
-                {/* Selector de Idioma + CTA/Carrito/Perfil */}
+                {/* Selector de Idioma + CTA */}
                 <div className="hidden md:flex items-center gap-3 relative">
                     {/* Selector de idioma desktop */}
                     <div 
@@ -351,39 +351,14 @@ export default function Navbar() {
                         </div>
                     </div>
 
-                    {/* SI ESTÁ LOGUEADO: Carrito + Perfil */}
-                    {isLoggedIn ? (
-                        <div className="flex items-center gap-2">
-                            {/* Icono del Carrito */}
-                            <Link
-                                href="/cart"
-                                className="p-2 rounded-full bg-white/15 border border-white/30 hover:bg-white/20 backdrop-blur-sm transition-colors flex items-center justify-center relative"
-                                aria-label="Carrito de compras"
-                            >
-                                <FiShoppingCart className="w-6 h-6 text-white" aria-hidden="true" />
-                                {/* Puedes añadir un badge si hay items en el carrito */}
-                                {/* <span className="absolute -top-1 -right-1 bg-red-500 text-white rounded-full w-5 h-5 text-xs flex items-center justify-center">3</span> */}
-                            </Link>
-
-                            {/* Icono de Perfil que lleva al Dashboard */}
-                            <Link
-                                href="/dashboard"
-                                className="p-2 rounded-full bg-white/15 border border-white/30 hover:bg-white/20 backdrop-blur-sm transition-colors flex items-center justify-center"
-                                aria-label="Ir al dashboard"
-                            >
-                                <FiUser className="w-6 h-6 text-white" aria-hidden="true" />
-                            </Link>
-                        </div>
-                    ) : (
-                        /* NO LOGUEADO: Botón Acceder */
-                        <Link
-                            href="/auth/login"
-                            className="border border-white/30 text-white px-4 py-2 text-sm rounded hover:bg-white/10 font-semibold transition-colors bg-white/15 backdrop-blur-sm shadow-lg"
-                            aria-label="Iniciar sesión en MusicDibs"
-                        >
-                            Acceder
-                        </Link>
-                    )}
+                    {/* Botón Acceder */}
+                    <Link
+                        href="/auth/login"
+                        className="border border-white/30 text-white px-4 py-2 text-sm rounded hover:bg-white/10 font-semibold transition-colors bg-white/15 backdrop-blur-sm shadow-lg"
+                        aria-label="Iniciar sesión en MusicDibs"
+                    >
+                        Acceder
+                    </Link>
                 </div>
             </div>
 
@@ -425,7 +400,7 @@ export default function Navbar() {
                     </button>
                 </div>
 
-                {/* Links con animación escalonada - LAS 7 VISTAS */}
+                {/* Links con animación escalonada */}
                 <div className="flex-1 overflow-y-auto space-y-4" role="menu" aria-label="Navegación móvil">
                     <a
                         href="#pricing-toggle"
@@ -506,8 +481,9 @@ export default function Navbar() {
                         </div>
                     </div>
 
+                    {/* Market actualizado en móvil */}
                     <button
-                        onClick={() => handleNavigation("/market")}
+                        onClick={() => handleNavigation("https://market.musicdibs.com/")}
                         className="block text-lg py-3 border-b border-gray-700 transform transition-all duration-500 ease-out hover:text-purple-300 cursor-pointer text-left w-full"
                         style={{ 
                             transitionDelay: isMenuOpen ? "0.5s" : "0s",
@@ -520,11 +496,26 @@ export default function Navbar() {
                         Market
                     </button>
                     
+                    {/* Nueva pestaña Noticias en móvil */}
+                    <button
+                        onClick={() => handleNavigation("https://musicdibs.com/noticias/")}
+                        className="block text-lg py-3 border-b border-gray-700 transform transition-all duration-500 ease-out hover:text-purple-300 cursor-pointer text-left w-full"
+                        style={{ 
+                            transitionDelay: isMenuOpen ? "0.6s" : "0s",
+                            transform: isMenuOpen ? "translateX(0)" : "translateX(-20px)",
+                            opacity: isMenuOpen ? 1 : 0
+                        }}
+                        role="menuitem"
+                        aria-label="Noticias"
+                    >
+                        Noticias
+                    </button>
+                    
                     <button
                         onClick={() => handleNavigation("/dibs-token")}
                         className="block text-lg py-3 border-b border-gray-700 transform transition-all duration-500 ease-out hover:text-purple-300 cursor-pointer text-left w-full"
                         style={{ 
-                            transitionDelay: isMenuOpen ? "0.6s" : "0s",
+                            transitionDelay: isMenuOpen ? "0.7s" : "0s",
                             transform: isMenuOpen ? "translateX(0)" : "translateX(-20px)",
                             opacity: isMenuOpen ? 1 : 0
                         }}
@@ -538,7 +529,7 @@ export default function Navbar() {
                         onClick={() => handleNavigation("/verification")}
                         className="block text-lg py-3 border-b border-gray-700 transform transition-all duration-500 ease-out hover:text-purple-300 cursor-pointer text-left w-full"
                         style={{ 
-                            transitionDelay: isMenuOpen ? "0.7s" : "0s",
+                            transitionDelay: isMenuOpen ? "0.8s" : "0s",
                             transform: isMenuOpen ? "translateX(0)" : "translateX(-20px)",
                             opacity: isMenuOpen ? 1 : 0
                         }}
@@ -553,7 +544,7 @@ export default function Navbar() {
                 <div 
                     className="mt-8 pt-6 border-t border-gray-700 space-y-4 transform transition-all duration-500 ease-out relative"
                     style={{ 
-                        transitionDelay: isMenuOpen ? "0.8s" : "0s",
+                        transitionDelay: isMenuOpen ? "0.9s" : "0s",
                         transform: isMenuOpen ? "translateY(0)" : "translateY(20px)",
                         opacity: isMenuOpen ? 1 : 0
                     }}
@@ -607,39 +598,15 @@ export default function Navbar() {
                         )}
                     </div>
 
-                    {/* SI ESTÁ LOGUEADO: Carrito + Perfil en móvil */}
-                    {isLoggedIn ? (
-                        <div className="flex gap-3">
-                            <Link
-                                href="/cart"
-                                className="flex-1 bg-white/10 border border-white/20 rounded-lg p-3 flex items-center gap-2 font-medium text-center justify-center hover:bg-white/20 transition-colors"
-                                aria-label="Carrito de compras"
-                                onClick={() => setIsMenuOpen(false)}
-                            >
-                                <FiShoppingCart className="w-5 h-5" aria-hidden="true" />
-                                <span>Carrito</span>
-                            </Link>
-                            <Link
-                                href="/dashboard"
-                                className="flex-1 bg-white/10 border border-white/20 rounded-lg p-3 flex items-center gap-2 font-medium text-center justify-center hover:bg-white/20 transition-colors"
-                                aria-label="Ir al dashboard"
-                                onClick={() => setIsMenuOpen(false)}
-                            >
-                                <FiUser className="w-5 h-5" aria-hidden="true" />
-                                <span>Perfil</span>
-                            </Link>
-                        </div>
-                    ) : (
-                        /* NO LOGUEADO: Botón Acceder en móvil */
-                        <Link
-                            href="/auth/login"
-                            className="w-full bg-purple-600 text-white px-4 py-3 text-base rounded-lg hover:bg-purple-700 font-semibold transition-colors text-center cursor-pointer block"
-                            aria-label="Iniciar sesión en MusicDibs"
-                            onClick={() => setIsMenuOpen(false)}
-                        >
-                            Acceder
-                        </Link>
-                    )}
+                    {/* Botón Acceder en móvil */}
+                    <Link
+                        href="/auth/login"
+                        className="w-full bg-purple-600 text-white px-4 py-3 text-base rounded-lg hover:bg-purple-700 font-semibold transition-colors text-center cursor-pointer block"
+                        aria-label="Iniciar sesión en MusicDibs"
+                        onClick={() => setIsMenuOpen(false)}
+                    >
+                        Acceder
+                    </Link>
                 </div>
             </div>
         </nav>

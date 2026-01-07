@@ -74,7 +74,7 @@ export default function HomeTestimonials() {
                         className="text-4xl md:text-5xl font-bold text-white mb-4 drop-shadow-lg"
                         itemProp="name"
                     >
-                        Qué dicen los profesionales sobre MusicDIBS
+                        Qué dicen los profesionales sobre Musicdibs
                     </h2>
                     <p className="text-xl text-white/90 max-w-2xl mx-auto">
                         Descubre por qué miles de artistas confían en nosotros
@@ -144,7 +144,7 @@ export default function HomeTestimonials() {
                 {/* SEO Text */}
                 <div className="mt-8 text-center text-white/80">
                     <p className="text-lg">
-                        Únete a los <strong>más de 100,000 artistas</strong> que ya protegen su música con MusicDIBS
+                        Únete a los <strong>más de 100,000 artistas</strong> que ya protegen su música con Musicdibs
                     </p>
                 </div>
             </div>

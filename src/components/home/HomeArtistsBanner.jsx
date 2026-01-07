@@ -29,7 +29,7 @@ export default function HomeArtistsBanner() {
             <div className="absolute inset-0">
                 <Image
                     src="/assets/images/artists-background.png"
-                    alt="Artistas de MusicDIBS - Plataforma de distribución musical"
+                    alt="Artistas de Musicdibs - Plataforma de distribución musical"
                     fill
                     className="object-cover"
                     priority
@@ -114,7 +114,7 @@ export default function HomeArtistsBanner() {
                     itemScope
                     itemType="https://schema.org/ItemList"
                     role="list"
-                    aria-label="Estadísticas de MusicDIBS"
+                    aria-label="Estadísticas de Musicdibs"
                 >
                     <div 
                         className="text-center"
@@ -173,7 +173,7 @@ export default function HomeArtistsBanner() {
 
                 {/* Additional SEO text - hidden but readable by search engines */}
                 <div className="sr-only" itemProp="description">
-                    MusicDIBS es la plataforma líder en distribución musical digital con más de 100,000 artistas registrados, 
+                    Musicdibs es la plataforma líder en distribución musical digital con más de 100,000 artistas registrados, 
                     1,000,000 de obras protegidas y presencia en más de 50 países. Únete a la revolución de la música urbana 
                     con nuestra tecnología blockchain para proteger tus derechos de autor.
                 </div>

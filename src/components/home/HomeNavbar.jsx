@@ -182,9 +182,26 @@ export default function HomeNavbar({ isMenuOpen, setIsMenuOpen }) {
                         </div>
                     </div>
 
-                    <Link href="/market" className="hover:text-white transition-colors">
+                    {/* Enlace Market actualizado */}
+                    <a
+                        href="https://market.musicdibs.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-white transition-colors"
+                    >
                         Market
-                    </Link>
+                    </a>
+                    
+                    {/* Nueva pestaña Noticias - CORREGIDO para apuntar a musicdibs.com/noticias/ */}
+                    <a
+                        href="https://musicdibs.com/noticias/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-white transition-colors"
+                    >
+                        Noticias
+                    </a>
+                    
                     <Link 
                         href="/dibs-token" 
                         className="hover:text-white transition-colors"
@@ -338,8 +355,9 @@ export default function HomeNavbar({ isMenuOpen, setIsMenuOpen }) {
                         </div>
                     </details>
 
+                    {/* Market actualizado en móvil */}
                     <div
-                        onClick={() => handleNavigation("/market")}
+                        onClick={() => handleNavigation("https://market.musicdibs.com/")}
                         className="block text-lg py-3 border-b border-gray-700 transform transition-all duration-500 ease-out hover:text-purple-300 cursor-pointer"
                         style={{ 
                             transitionDelay: isMenuOpen ? "0.5s" : "0s",
@@ -349,11 +367,25 @@ export default function HomeNavbar({ isMenuOpen, setIsMenuOpen }) {
                     >
                         Market
                     </div>
+                    
+                    {/* Nueva pestaña Noticias en móvil - CORREGIDO para apuntar a musicdibs.com/noticias/ */}
+                    <div
+                        onClick={() => handleNavigation("https://musicdibs.com/noticias/")}
+                        className="block text-lg py-3 border-b border-gray-700 transform transition-all duration-500 ease-out hover:text-purple-300 cursor-pointer"
+                        style={{ 
+                            transitionDelay: isMenuOpen ? "0.6s" : "0s",
+                            transform: isMenuOpen ? "translateX(0)" : "translateX(-20px)",
+                            opacity: isMenuOpen ? 1 : 0
+                        }}
+                    >
+                        Noticias
+                    </div>
+                    
                     <div
                         onClick={() => handleNavigation("/dibs-token")}
                         className="block text-lg py-3 border-b border-gray-700 transform transition-all duration-500 ease-out hover:text-purple-300 cursor-pointer"
                         style={{ 
-                            transitionDelay: isMenuOpen ? "0.6s" : "0s",
+                            transitionDelay: isMenuOpen ? "0.7s" : "0s",
                             transform: isMenuOpen ? "translateX(0)" : "translateX(-20px)",
                             opacity: isMenuOpen ? 1 : 0
                         }}
@@ -364,7 +396,7 @@ export default function HomeNavbar({ isMenuOpen, setIsMenuOpen }) {
                         onClick={() => handleNavigation("/verification")}
                         className="block text-lg py-3 border-b border-gray-700 transform transition-all duration-500 ease-out hover:text-purple-300 cursor-pointer"
                         style={{ 
-                            transitionDelay: isMenuOpen ? "0.7s" : "0s",
+                            transitionDelay: isMenuOpen ? "0.8s" : "0s",
                             transform: isMenuOpen ? "translateX(0)" : "translateX(-20px)",
                             opacity: isMenuOpen ? 1 : 0
                         }}
@@ -376,7 +408,7 @@ export default function HomeNavbar({ isMenuOpen, setIsMenuOpen }) {
                 {/* Selector + CTA Móvil */}
                 <div className="mt-8 pt-6 border-t border-gray-700 space-y-4 transform transition-all duration-500 ease-out relative"
                     style={{ 
-                        transitionDelay: isMenuOpen ? "0.8s" : "0s",
+                        transitionDelay: isMenuOpen ? "0.9s" : "0s",
                         transform: isMenuOpen ? "translateY(0)" : "translateY(20px)",
                         opacity: isMenuOpen ? 1 : 0
                     }}

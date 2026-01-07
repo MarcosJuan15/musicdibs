@@ -14,7 +14,7 @@ export default function HomeWhyChoose() {
             color: "from-pink-500 to-purple-600",
             modalContent: (
                 <>
-                    Cada registro en MusicDIBS genera un certificado digital inmutable respaldado por tecnología Blockchain, válido como prueba legal de autoría. Este certificado cumple con normativas internacionales y nacionales, incluyendo el{" "}
+                    Cada registro en Musicdibs genera un certificado digital inmutable respaldado por tecnología Blockchain, válido como prueba legal de autoría. Este certificado cumple con normativas internacionales y nacionales, incluyendo el{" "}
                     <a
                         href="https://www.wipo.int/treaties/es/ip/berne/"
                         target="_blank"
@@ -52,7 +52,7 @@ export default function HomeWhyChoose() {
             color: "from-purple-500 to-blue-600",
             modalContent: (
                 <>
-                    Protección al instante, sin complicaciones. Olvídate del papeleo y de los procesos lentos y costosos. Con MusicDIBS, registrar tu música es{" "}
+                    Protección al instante, sin complicaciones. Olvídate del papeleo y de los procesos lentos y costosos. Con Musicdibs, registrar tu música es{" "}
                     <span className="text-purple-600 font-semibold">
                         tan fácil como subir tu archivo: en solo segundos generamos una huella digital única,
                     </span>{" "}
@@ -90,7 +90,7 @@ export default function HomeWhyChoose() {
             color: "from-cyan-500 to-pink-600",
             modalContent: (
                 <>
-                    Sin Censura. Sin límites. Solo libertad creativa. En MusicDIBS creemos que el arte no debe tener fronteras. Por eso,{" "}
+                    Sin Censura. Sin límites. Solo libertad creativa. En Musicdibs creemos que el arte no debe tener fronteras. Por eso,{" "}
                     <span className="text-purple-600 font-semibold">
                         aceptamos registros de obras generadas con inteligencia artificial
                     </span>{" "}
@@ -116,7 +116,7 @@ export default function HomeWhyChoose() {
 
             <div className="max-w-6xl mx-auto px-6 text-center">
                 <h2 id="why-choose-heading" className="text-4xl md:text-5xl font-bold text-white mb-4">
-                    ¿Por qué elegir MusicDIBS?
+                    ¿Por qué elegir Musicdibs?
                 </h2>
                 <p className="text-lg text-white/80 max-w-2xl mx-auto mb-16">
                     Registra, distribuye y monetiza tus canciones en minutos. Genera ingresos reales con la solución digital más rápida y accesible creada para artistas independientes.
