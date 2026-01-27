@@ -1,7 +1,11 @@
-"use client";
-import Link from "next/link";
+'use client';
+
+import { Link } from "@/navigation";
+import { useTranslations } from "next-intl";
 
 export default function PartnersCTA() {
+    const t = useTranslations('partners.cta');
+    
     return (
         <section className="py-16" aria-labelledby="unete-partners">
             <div className="container mx-auto px-4">
@@ -10,18 +14,17 @@ export default function PartnersCTA() {
                         itemScope
                         itemType="https://schema.org/ContactPage">
                         <h2 id="unete-partners" className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-                            ¿Quieres ser nuestro próximo Partner?
+                            {t('title')}
                         </h2>
                         <p className="text-lg md:text-xl text-gray-600 mb-6 md:mb-8 max-w-2xl mx-auto">
-                            Únete a nuestra red de partners y ofrece a tu comunidad las mejores
-                            soluciones de protección de propiedad intelectual del mercado.
+                            {t('description')}
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <Link
                                 href="/support"
                                 className="bg-gradient-to-r from-blue-900 via-purple-800 to-pink-600 text-white px-6 py-3 rounded-lg font-medium hover:opacity-90 transition-opacity flex items-center justify-center space-x-2"
                             >
-                                <span>Contactar para Partnership</span>
+                                <span>{t('contact_button')}</span>
                                 <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                                 </svg>
@@ -29,9 +32,9 @@ export default function PartnersCTA() {
                             <Link
                                 href="/faq"
                                 className="border border-gray-300 text-gray-700 px-6 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors"
-                                aria-label="Más información sobre partnerships"
+                                aria-label={t('more_info_aria')}
                             >
-                                Más Información
+                                {t('more_info_button')}
                             </Link>
                         </div>
                     </div>

@@ -1,10 +1,14 @@
+// src/components/home/HomeTestimonials.jsx
 'use client';
 
 import { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 export default function HomeTestimonials() {
     const [currentVideo, setCurrentVideo] = useState(0);
+    const t = useTranslations('home.testimonials');  // ← 'home.testimonials'
+const tCommon = useTranslations('common');
 
     const testimonials = [
         {
@@ -50,34 +54,16 @@ export default function HomeTestimonials() {
             aria-labelledby="testimonials-title"
         >
             <div className="container mx-auto px-4 relative z-10">
-                {/* Schema.org structured data */}
-                <div className="hidden">
-                    {testimonials.map((testimonial, index) => (
-                        <div key={testimonial.videoId} itemScope itemType="https://schema.org/ListItem">
-                            <meta itemProp="position" content={index + 1} />
-                            <div itemProp="item" itemScope itemType="https://schema.org/Review">
-                                <div itemProp="author" itemScope itemType="https://schema.org/Person">
-                                    <meta itemProp="name" content={testimonial.name} />
-                                </div>
-                                <div itemProp="itemReviewed" itemScope itemType="https://schema.org/Service">
-                                    <meta itemProp="name" content="MusicDIBS Platform" />
-                                </div>
-                                <meta itemProp="reviewRating" content="5" />
-                            </div>
-                        </div>
-                    ))}
-                </div>
-
                 <div className="text-center mb-12">
                     <h2 
                         id="testimonials-title"
                         className="text-4xl md:text-5xl font-bold text-white mb-4 drop-shadow-lg"
                         itemProp="name"
                     >
-                        Qué dicen los profesionales sobre Musicdibs
+                        {t('title')}
                     </h2>
                     <p className="text-xl text-white/90 max-w-2xl mx-auto">
-                        Descubre por qué miles de artistas confían en nosotros
+                        {t('subtitle')}
                     </p>
                 </div>
 
@@ -101,7 +87,7 @@ export default function HomeTestimonials() {
                             <button
                                 onClick={prevVideo}
                                 className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/60 text-white p-2 rounded-full opacity-70 hover:opacity-100 transition-opacity duration-200 focus:outline-none focus:ring-2 focus:ring-white"
-                                aria-label="Testimonio anterior"
+                                aria-label={tCommon('previous')}
                             >
                                 <ChevronLeft size={20} />
                             </button>
@@ -109,7 +95,7 @@ export default function HomeTestimonials() {
                             <button
                                 onClick={nextVideo}
                                 className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/60 text-white p-2 rounded-full opacity-70 hover:opacity-100 transition-opacity duration-200 focus:outline-none focus:ring-2 focus:ring-white"
-                                aria-label="Siguiente testimonio"
+                                aria-label={tCommon('next')}
                             >
                                 <ChevronRight size={20} />
                             </button>
@@ -144,7 +130,7 @@ export default function HomeTestimonials() {
                 {/* SEO Text */}
                 <div className="mt-8 text-center text-white/80">
                     <p className="text-lg">
-                        Únete a los <strong>más de 100,000 artistas</strong> que ya protegen su música con Musicdibs
+                        {t('join_message')}
                     </p>
                 </div>
             </div>

@@ -1,0 +1,178 @@
+// src/app/[locale]/page.jsx
+'use client';
+
+import { useState, useEffect } from "react";
+import { useRouter } from "@/navigation"; // ← Router personalizado
+import Script from "next/script";
+import HomeNavbar from '../../components/home/HomeNavbar';
+import HomeHero from '../../components/home/HomeHero';
+import HomeWhyChoose from '../../components/home/HomeWhyChoose';
+import HomeDistribution from '../../components/home/HomeDistribution';
+import HomeArtistsBanner from '../../components/home/HomeArtistsBanner';
+import HomeTestimonials from '../../components/home/HomeTestimonials';
+import HomePricing from '../../components/home/HomePricing';
+import HomeMarquee from '../../components/home/HomeMarquee';
+import HomeIndividualRegistration from '../../components/home/HomeIndividualRegistration';
+import HomeTutorial from '../../components/home/HomeTutorial';
+import Footer from '../../components/common/Footer';
+
+// Structured Data MEJORADO para SEO
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Musicdibs",
+  "description": "Plataforma de registro y distribución musical con tecnología blockchain para artistas independientes",
+  "url": "https://musicdibs.com",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://musicdibs.com/search?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Musicdibs",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://musicdibs.com/assets/images/logo.png",
+      "width": 120,
+      "height": 48
+    }
+  }
+};
+
+// Schema adicional para VideoObject (optimización del video hero)
+const videoSchema = {
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "Musicdibs - Plataforma de Registro Musical con Blockchain",
+  "description": "Demostración de la plataforma Musicdibs para registro, distribución y protección de música con tecnología blockchain",
+  "thumbnailUrl": "https://musicdibs.com/assets/images/video-thumbnail.jpg",
+  "uploadDate": "2024-01-01T00:00:00Z",
+  "duration": "PT1M",
+  "contentUrl": "https://res.cloudinary.com/dca4bxk23/video/upload/v1754417323/pieza_musicv3_1_yeve62.mp4",
+  "embedUrl": "https://musicdibs.com",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Musicdibs",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://musicdibs.com/assets/images/logo.png"
+    }
+  }
+};
+
+export default function HomeLayout() {
+    const [isDesktop, setIsDesktop] = useState(false);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isLoading, setIsLoading] = useState(true);
+    const router = useRouter();
+
+    useEffect(() => {
+        const handleScrollToPricing = () => {
+            if (typeof window === "undefined") return;
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const scrollTo = urlParams.get('scroll');
+            
+            if (scrollTo === 'pricing') {
+                setTimeout(() => {
+                    const section = document.querySelector("#pricing-toggle");
+                    if (section) {
+                        const offsetTop = section.getBoundingClientRect().top + window.pageYOffset - 100;
+                        window.scrollTo({
+                            top: offsetTop,
+                            behavior: "smooth"
+                        });
+                        
+                        const newUrl = window.location.pathname;
+                        window.history.replaceState({}, '', newUrl);
+                    }
+                }, 800);
+            }
+        };
+
+        if (typeof window !== "undefined") {
+            const checkWidth = () => {
+                setIsDesktop(window.innerWidth > 1024);
+                setIsLoading(false);
+            };
+
+            checkWidth();
+            window.addEventListener("resize", checkWidth);
+            handleScrollToPricing();
+
+            return () => window.removeEventListener("resize", checkWidth);
+        }
+    }, []);
+
+    useEffect(() => {
+        const handleClickOutside = (e) => {
+            if (isMenuOpen && !e.target.closest("nav")) {
+                setIsMenuOpen(false);
+            }
+        };
+
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => document.removeEventListener("mousedown", handleClickOutside);
+    }, [isMenuOpen]);
+
+    if (isLoading) {
+        return (
+            <div 
+                className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-900 to-purple-800"
+                role="status"
+                aria-label="Cargando Musicdibs"
+            >
+                <div className="text-white text-xl animate-pulse">
+                    Musicdibs - Cargando...
+                </div>
+            </div>
+        );
+    }
+
+    return (
+        <>
+            <Script id="website-schema" type="application/ld+json" strategy="afterInteractive">
+                {JSON.stringify(structuredData)}
+            </Script>
+
+            {/* SECCIÓN HERO CORREGIDA */}
+            <section className="relative h-screen w-full overflow-hidden">
+                <div className="absolute inset-0 -z-10">
+                    <video
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        className="w-full h-full object-cover"
+                        src="https://res.cloudinary.com/dca4bxk23/video/upload/v1754417323/pieza_musicv3_1_yeve62.mp4"
+                    >
+                        {/* El track necesita un 'src' válido si lo vas a usar, si no, bórralo */}
+                    </video>
+                    <div className="absolute inset-0 bg-gradient-to-br from-blue-900/50 via-purple-800/50 to-pink-600/50" />
+                </div>
+
+                <div className={`relative z-40 ${isDesktop ? "pt-6" : "pt-0"}`}>
+                    <HomeNavbar isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
+                </div>
+
+                <div className="relative z-10 h-full flex items-center justify-center">
+                    <HomeHero />
+                </div>
+            </section>
+
+            <main id="main-content">
+                <HomeWhyChoose />
+                <HomeDistribution />
+                <HomeArtistsBanner />
+                <HomeTestimonials />
+                <HomePricing />
+                <HomeMarquee />
+                <HomeIndividualRegistration />
+                <HomeTutorial />
+            </main>
+
+            <Footer />
+        </>
+    );
+}

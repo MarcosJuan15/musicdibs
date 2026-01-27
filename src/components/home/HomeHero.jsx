@@ -1,8 +1,11 @@
 'use client';
 
-import Link from "next/link";
+import { Link } from "@/navigation";
+import { useTranslations } from "next-intl";
 
 export default function HomeHero() {
+    const t = useTranslations('home.hero');
+    
     // Función para hacer scroll suave
     const handleScroll = (id) => {
         const el = document.getElementById(id);
@@ -26,18 +29,18 @@ export default function HomeHero() {
 
                 {/* Título - COLORES EXACTAMENTE IGUALES */}
                 <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-                    Tu obra,&nbsp;
+                    {t('title_part1')}&nbsp;
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-300 to-purple-300">
-                        solo tuya
+                        {t('title_part2')}
                     </span>
                 </h1>
 
                 {/* Subtítulo - CON RUTA CORREGIDA */}
                 <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
-                    Registra, promociona y distribuye tu música con{" "}
-                    <span className="font-semibold text-white">validez legal en TODO el mundo</span>{" "}
+                    {t('subtitle_part1')}{" "}
+                    <span className="font-semibold text-white">{t('subtitle_highlight')}</span>{" "}
                     <Link href="/tech-and-legal" className="text-pink-300 hover:text-pink-200 underline transition-colors">
-                        +info
+                        {t('subtitle_link')}
                     </Link>
                 </p>
 
@@ -47,13 +50,13 @@ export default function HomeHero() {
                         onClick={() => handleScroll("pricing-toggle")}
                         className="bg-gradient-to-r from-pink-500 to-purple-500 text-white px-6 py-3 rounded-lg font-semibold shadow-lg hover:opacity-90 transition w-full max-w-[280px] sm:w-[200px] text-center text-sm sm:text-base hover:scale-105 transform duration-200"
                     >
-                        Empezar Ya
+                        {t('start_now')}
                     </button>
                     <button
                         onClick={() => handleScroll("tutorial-section")}
                         className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold shadow-lg hover:opacity-90 transition w-full max-w-[280px] sm:w-[200px] text-center text-sm sm:text-base hover:scale-105 transform duration-200 border border-cyan-300/30"
                     >
-                        Ver Cómo Funciona
+                        {t('see_how_it_works')}
                     </button>
                 </div>
             </div>

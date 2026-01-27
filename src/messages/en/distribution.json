@@ -1,0 +1,73 @@
+{
+  "hero_title": "Music Distribution",
+  "hero_subtitle": "Take your music to all digital platforms worldwide with our professional distribution service",
+  
+  "services_global_title": "Global Distribution",
+  "services_global_description": "Distribute your music to over 220 digital platforms.",
+  "services_global_list": [
+    "Spotify, Apple Music, YouTube Music",
+    "Amazon Music, Deezer, Tidal",
+    "Beatport, Traxsource, Juno Download",
+    "TikTok, Instagram, Facebook"
+  ],
+  
+  "services_management_title": "Professional Management",
+  "services_management_description": "Professional tools to manage your releases and royalties.",
+  "services_management_list": [
+    "Complete statistics dashboard",
+    "Advanced metadata management",
+    "Detailed royalty reports",
+    "Specialized technical support"
+  ],
+  
+  "features_title": "Why choose Musicdibs?",
+  "features_list": [
+    {
+      "icon": "M13 10V3L4 14h7v7l9-11h-7z",
+      "title": "Fast and Efficient",
+      "desc": "Your music will be available on all platforms within 24-48 hours"
+    },
+    {
+      "icon": "M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z",
+      "title": "100% Royalties",
+      "desc": "Keep 100% of your rights and royalties"
+    },
+    {
+      "icon": "M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z",
+      "title": "Advanced Analytics",
+      "desc": "Access detailed statistics and real-time reports"
+    }
+  ],
+  
+  "pricing_title": "Distribution Plans",
+  
+  "pricing_basic_title": "Basic Plan",
+  "pricing_basic_price": "€6.90",
+  "pricing_basic_button": "Buy",
+  "pricing_basic_features": [
+    "Registration fee only first month",
+    "Up to 3 releases/month",
+    "Continuous access to your certificates",
+    "1 Base promotion/month on TikTok",
+    "Standard support"
+  ],
+  
+  "pricing_popular_label": "Most Popular",
+  "pricing_popular_title": "Plus + Plan",
+  "pricing_popular_price": "€59.90",
+  "pricing_popular_button": "Buy",
+  "pricing_popular_features": [
+    "Protect your entire catalog (Up to 100 releases/year)",
+    "Music Distribution +220 DSPs",
+    "Earn money from streams",
+    "Continuous access to certificates",
+    "2 NFTs/month*",
+    "2 Plus promotions/month on social media",
+    "Priority support",
+    "Dispute assistance"
+  ],
+  
+  "cta_title": "Ready to distribute your music?",
+  "cta_subtitle": "Start today and take your music worldwide",
+  "cta_button": "Start Distribution"
+}

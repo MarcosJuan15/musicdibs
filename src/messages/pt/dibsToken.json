@@ -1,0 +1,677 @@
+{
+  "hero": {
+    "title_part1": "Token",
+    "title_part2": "DIBS",
+    "description": "A nova era da proteção musical na WEB3",
+    "buy_in_store": "Comprar na Loja",
+    "buy_on_raydium": "Comprar no RAYDIUM",
+    "check_price": "Consulte AQUI a cotação do DIBS em tempo real",
+    "schema_description": "Token de utilidade para a plataforma Musicdibs, oferece proteção de propriedade intelectual e recompensas."
+  },
+
+  "whatIs": {
+    "title": "O que é o Musicdibs?",
+    "description1": "O <strong>Musicdibs</strong> é a principal plataforma mundial de registo descentralizado de propriedade intelectual no sector musical, utilizando tecnologia blockchain de última geração.",
+    "description2": "Concebida para proteger as criações de todos os tipos de artistas musicais e audiovisuais, o Musicdibs garante a segurança e autenticidade das obras em mais de <strong>175 países</strong>.",
+    "description3": "Com um sistema acessível e sem interrupções, permite que criadores contemporâneos registem as suas obras de forma permanente e sem custos de manutenção, garantindo a verificação e defesa da autoria em qualquer jurisdição aderente à Convenção de Berna.",
+    "feature1_title": "Proteção Global",
+    "feature1_subtitle": "175+ países",
+    "feature2_title": "Blockchain",
+    "feature2_subtitle": "Imutável",
+    "feature3_title": "Descentralizado",
+    "feature3_subtitle": "Sem intermediários",
+    "feature4_title": "32% APR",
+    "feature4_subtitle": "Recompensas",
+    "image_alt": "Arquitetura da Plataforma MusicDIBS - Plataforma Blogchain com ID Digital, Painel de Administração, Composição Musical e Plataformas de Streaming",
+    "schema_description": "Plataforma descentralizada para registo e proteção de propriedade intelectual musical usando tecnologia blockchain"
+  },
+
+  "about": {
+    "title": "Utilidade do Token DIBS",
+    "description": "O token <strong>DIBS</strong> é o coração do ecossistema MusicDIBS, facilitando o registo, proteção, monetização e promoção descentralizada da propriedade intelectual.",
+    "benefits_title": "Benefícios Exclusivos",
+    "benefits_subtitle": "Vantagens únicas para os detentores do token DIBS",
+    "features": [
+      {
+        "icon": "Shield",
+        "title": "Registo de Obras",
+        "description": "Os artistas podem usar DIBS para pagar as taxas de registo das suas obras na plataforma"
+      },
+      {
+        "icon": "Sparkles",
+        "title": "Criação de Conteúdos",
+        "description": "Aceda a módulos de inteligência artificial para a criação e edição de todo o tipo de obras"
+      },
+      {
+        "icon": "Award",
+        "title": "Criação de NFTs",
+        "description": "Converta as suas obras registadas em tokens não fungíveis (NFTs) utilizando DIBS"
+      },
+      {
+        "icon": "TrendingUp",
+        "title": "Distribuição e Royalties",
+        "description": "Aceda a serviços de distribuição musical e gestão de royalties"
+      },
+      {
+        "icon": "Zap",
+        "title": "Funcionalidades Premium",
+        "description": "Aceda a ferramentas avançadas de promoção e marketing"
+      },
+      {
+        "icon": "Globe",
+        "title": "Acessibilidade Global",
+        "description": "Disponível em mercados centralizados (CEX) e descentralizados (DEX)"
+      }
+    ],
+    "benefits": [
+      {
+        "icon": "Crown",
+        "title": "Descontos em Taxas",
+        "description": "Obtenha descontos exclusivos nas taxas de registo e outros serviços premium"
+      },
+      {
+        "icon": "Users",
+        "title": "Participação na Governação",
+        "description": "Participe em decisões-chave sobre o desenvolvimento e futuro do Musicdibs"
+      },
+      {
+        "icon": "Award",
+        "title": "Programas de Fidelização",
+        "description": "Obtenha recompensas exclusivas pela sua participação ativa na plataforma"
+      },
+      {
+        "icon": "Coins",
+        "title": "Recompensas e Airdrops",
+        "description": "Receba recompensas periódicas na forma de DIBS através de airdrops exclusivos"
+      }
+    ],
+    "schema_description": "Token de utilidade para a plataforma MusicDIBS que permite a proteção da propriedade intelectual e recompensas"
+  },
+
+  "statistics": {
+    "stats": [
+      {
+        "number": 100,
+        "label": "artistas de 57 países",
+        "suffix": "K+"
+      },
+      {
+        "number": 300,
+        "label": "seguidores nas redes sociais",
+        "suffix": "K+"
+      },
+      {
+        "number": 1000000,
+        "label": "obras registadas",
+        "suffix": "M+"
+      }
+    ]
+  },
+
+  "tokenomics": {
+    "title": "Distribuição e Utilizações do Token DIBS",
+    "description": "A economia do token DIBS está concebida para fomentar o crescimento sustentável e a adoção massiva do ecossistema Musicdibs.",
+    "distribution_title": "Distribuição de 100M Tokens",
+    "token_info": [
+      {
+        "icon": "Coins",
+        "label": "Símbolo",
+        "value": "DIBS"
+      },
+      {
+        "icon": "Target",
+        "label": "Emissão total",
+        "value": "100M (limitada)"
+      },
+      {
+        "icon": "PieChart",
+        "label": "Tipo",
+        "value": "Solana-SPL"
+      },
+      {
+        "icon": "TrendingUp",
+        "label": "Decimais",
+        "value": "9 dígitos"
+      },
+      {
+        "icon": "Globe",
+        "label": "Rede blockchain",
+        "value": "Solana"
+      }
+    ],
+    "distribution": [
+      {
+        "title": "Pré-venda",
+        "percentage": "10%",
+        "percentageValue": 10,
+        "amount": "10.000.000 DIBS",
+        "colorClass": "text-purple-500",
+        "legendColor": "bg-purple-500",
+        "progressColor": "bg-purple-400",
+        "status": "Vendida!",
+        "statusColor": "bg-green-100 text-green-800",
+        "details": {
+          "fecha": "14-OUTUBRO-2024 (Concluída)",
+          "precio": "0,05€",
+          "fases": [
+            "Fase 1: 5.000.000 DIBS",
+            "Fase 2: 5.000.000 DIBS"
+          ],
+          "bonus": [
+            "10% extra: compras ≥ 1.000€",
+            "15% extra: compras ≥ 5.000€",
+            "20% extra: compras ≥ 10.000€",
+            "NFT exclusivo Musicdibs"
+          ],
+          "liberacion": "0% imediata",
+          "vesting": "100% linear durante 4 meses"
+        }
+      },
+      {
+        "title": "Venda Pública",
+        "percentage": "20%",
+        "percentageValue": 20,
+        "amount": "20.000.000 DIBS",
+        "colorClass": "text-blue-500",
+        "legendColor": "bg-blue-500",
+        "progressColor": "bg-blue-400",
+        "status": "2 Rondas",
+        "statusColor": "bg-blue-100 text-blue-800",
+        "details": {
+          "fecha": "INÍCIO: 9-Dezembro-2024",
+          "listado": "LISTAGEM (TGE): 1-Março-2025",
+          "hardCap": "Hard Cap: $2.250.000",
+          "rondas": [
+            {
+              "nombre": "Ronda 1 (Concluída)",
+              "cantidad": "10.000.000 DIBS",
+              "precio": "0,075$",
+              "bonus": ["5% extra: ≥ $1.000", "10% extra: ≥ $5.000"],
+              "liberacion": "0% imediata",
+              "vesting": "100% linear durante 2 meses"
+            },
+            {
+              "nombre": "Ronda 2 (Concluída)",
+              "cantidad": "10.000.000 DIBS",
+              "precio": "0,10$",
+              "bonus": ["5% extra: ≥ $1.000", "10% extra: ≥ $5.000"],
+              "liberacion": "20% imediata",
+              "vesting": "80% após 30 dias"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Equipa e consultores",
+        "percentage": "10%",
+        "percentageValue": 10,
+        "amount": "10.000.000 DIBS",
+        "colorClass": "text-cyan-500",
+        "legendColor": "bg-cyan-500",
+        "progressColor": "bg-cyan-400",
+        "status": "Vesting 36 meses",
+        "statusColor": "bg-cyan-100 text-cyan-800",
+        "details": {
+          "objetivo": "Recompensar e reter a equipa fundadora, programadores e consultores estratégicos",
+          "liberacion": "0% imediata",
+          "cliff": "Bloqueio inicial: 12 meses",
+          "vesting": "100% linear durante 36 meses"
+        }
+      },
+      {
+        "title": "Liquidez CEX/DEX",
+        "percentage": "10%",
+        "percentageValue": 10,
+        "amount": "10.000.000 DIBS",
+        "colorClass": "text-green-500",
+        "legendColor": "bg-green-500",
+        "progressColor": "bg-green-400",
+        "status": "Liberação imediata",
+        "statusColor": "bg-green-100 text-green-800",
+        "details": {
+          "liberacion": "100% imediata (TGE)",
+          "vesting": "Não aplica vesting"
+        }
+      },
+      {
+        "title": "Marketing",
+        "percentage": "10%",
+        "percentageValue": 10,
+        "amount": "10.000.000 DIBS",
+        "colorClass": "text-amber-500",
+        "legendColor": "bg-amber-500",
+        "progressColor": "bg-amber-400",
+        "status": "Vesting 24 meses",
+        "statusColor": "bg-amber-100 text-amber-800",
+        "details": {
+          "liberacion": "10% imediata (TGE)",
+          "vesting": "90% linear durante 24 meses"
+        }
+      },
+      {
+        "title": "Recompensas e fidelização",
+        "percentage": "10%",
+        "percentageValue": 10,
+        "amount": "10.000.000 DIBS",
+        "colorClass": "text-pink-500",
+        "legendColor": "bg-pink-500",
+        "progressColor": "bg-pink-400",
+        "status": "Vesting 24 meses",
+        "statusColor": "bg-pink-100 text-pink-800",
+        "details": {
+          "liberacion": "10% imediata (TGE)",
+          "vesting": "90% linear durante 24 meses"
+        }
+      },
+      {
+        "title": "Tokenomics Musicdibs",
+        "percentage": "30%",
+        "percentageValue": 30,
+        "amount": "30.000.000 DIBS",
+        "colorClass": "text-indigo-500",
+        "legendColor": "bg-indigo-500",
+        "progressColor": "bg-indigo-400",
+        "status": "Ecossistema",
+        "statusColor": "bg-indigo-100 text-indigo-800",
+        "details": {
+          "objetivo": "Reservado para o ecossistema Musicdibs (gas de registos, royalties de autores,...)",
+          "liberacion": "10% imediata (TGE)",
+          "vesting": "90% linear durante 24 meses"
+        }
+      }
+    ],
+    "detail_labels": {
+      "fecha": "Data",
+      "precio": "Preço",
+      "listado": "Listagem",
+      "hardCap": "Hard Cap",
+      "objetivo": "Objetivo",
+      "fases": "Fases de Pré-venda",
+      "rondas": "Rondas de Venda",
+      "bonus": "Bónus",
+      "liberacion_inmediata": "Liberação Imediata",
+      "vesting": "Vesting",
+      "cliff": "Período de Bloqueio (Cliff)"
+    },
+    "details": {
+      "cantidad": "Quantidade",
+      "precio": "Preço",
+      "liberacion": "Liberação",
+      "vesting": "Vesting"
+    },
+    "schema_description": "Fornecimento total: 100.000.000 tokens DIBS"
+  },
+
+  "ia": {
+    "title": "IA aplicada em Propriedade Intelectual",
+    "description": "A nova atualização do DIBS apresentará uma integração como <strong>Agente IA</strong>, uma ferramenta avançada que transforma a forma como os artistas gerem os seus direitos e ativos.",
+    "features": [
+      {
+        "icon": "Shield",
+        "title": "Monitorização de direitos de autor",
+        "description": "O DIBS IA Agent garantirá o acompanhamento da utilização e distribuição das músicas, assegurando uma gestão precisa e transparente dos direitos."
+      },
+      {
+        "icon": "TrendingUp",
+        "title": "Otimização de rendimentos",
+        "description": "O DIBS IA ajudará a maximizar os rendimentos dos artistas ao fornecer recomendações personalizadas sobre a monetização e promoção das suas músicas."
+      },
+      {
+        "icon": "Lock",
+        "title": "Deteção de infrações",
+        "description": "O agente IA identificará possíveis utilizações não autorizadas das obras, alertando os artistas sobre possíveis infrações de direitos."
+      },
+      {
+        "icon": "Sparkles",
+        "title": "Análise de tendências",
+        "description": "A IA analisará o comportamento do público e as tendências do mercado musical, fornecendo aos artistas informações-chave para melhorar a sua estratégia de lançamento."
+      }
+    ],
+    "highlight": "Com o <blue>DIBS IA Agent</blue>, a tecnologia blockchain e a inteligência artificial unem-se para levar a indústria musical a um novo nível de <purple>eficiência</purple> e <pink>transparência</pink>.",
+    "schema_description": "Inteligência Artificial aplicada à proteção de propriedade intelectual musical"
+  },
+
+  "depin": {
+    "title": "Infraestrutura Descentralizada",
+    "description": "A abordagem <strong>DePIN</strong> (Redes de Infraestruturas Físicas Descentralizadas) do Musicdibs centra-se na descentralização da gestão e proteção da propriedade intelectual.",
+    "characteristics_title": "Características da abordagem DePIN",
+    "benefits_title": "Benefícios da abordagem DePIN",
+    "characteristics": [
+      {
+        "title": "Descentralização da Gestão",
+        "description": "A rede blockchain permite que artistas e criadores registem as suas obras sem depender de intermediários."
+      },
+      {
+        "title": "Token DIBS como Ferramenta de Acesso",
+        "description": "O token DIBS é um ativo digital que concede aos utilizadores o direito de acesso aos serviços do Musicdibs."
+      },
+      {
+        "title": "Registo Imutável de Obras",
+        "description": "Todas as transações e registos de obras no Musicdibs são imutáveis e não podem ser alterados."
+      },
+      {
+        "title": "Sustentabilidade e Escalabilidade",
+        "description": "Ao utilizar uma rede descentralizada, o Musicdibs escala sem depender de uma entidade centralizada."
+      }
+    ],
+    "benefits": [
+      {
+        "icon": "Globe",
+        "title": "Transparência Total",
+        "description": "A rede pública permite que qualquer utilizador possa verificar o estado e os direitos das obras registadas."
+      },
+      {
+        "icon": "Users",
+        "title": "Acesso Global",
+        "description": "O Musicdibs quebra barreiras geográficas ao permitir que criadores de todo o mundo protejam os seus direitos."
+      },
+      {
+        "icon": "Shield",
+        "title": "Empoderamento de Criadores",
+        "description": "Os artistas e criadores têm controlo total sobre a gestão da sua propriedade intelectual."
+      }
+    ],
+    "highlight": "A abordagem <blue>DePIN</blue> do Musicdibs cria um <purple>ecossistema mais inclusivo e seguro</purple> para a gestão da propriedade intelectual.",
+    "schema_description": "Infraestrutura descentralizada para proteção de propriedade intelectual musical"
+  },
+
+  "roadmap": {
+    "title": "Conquistas e próximos objetivos",
+    "description": "Descubra os marcos alcançados e os emocionantes objetivos que temos pela frente no desenvolvimento do Musicdibs e do ecossistema DIBS.",
+    "milestones": [
+      {
+        "year": "2022",
+        "items": [
+          "Lançamento do Musicdibs v1.0",
+          "Implementação de registo de obras com tecnologia blockchain",
+          "Início da comunidade e campanhas",
+          "+5K artistas registados"
+        ]
+      },
+      {
+        "year": "2023",
+        "items": [
+          "Programa de embaixadores e parcerias estratégicas",
+          "Desenvolvimento do módulo de NFTs",
+          "Expansão do mercado latino-americano",
+          "+25K artistas registados"
+        ]
+      },
+      {
+        "year": "2024",
+        "items": [
+          "Módulo de distribuição musical descentralizada",
+          "Lançamento do token DIBS na rede Solana",
+          "Listagem em exchanges (CEX e DEX)",
+          "+100K artistas registados"
+        ]
+      },
+      {
+        "year": "2025",
+        "items": [
+          "Módulo IA",
+          "Marketplace NFT/Fiat",
+          "Promoção do token Dibs: eventos, festivais",
+          "+500K artistas registados"
+        ]
+      },
+      {
+        "year": "2026",
+        "items": [
+          "Mercado Global de Direitos",
+          "Novas soluções de escalabilidade",
+          "Serviço de streaming",
+          "+2M artistas registados"
+        ]
+      },
+      {
+        "year": "2027",
+        "items": [
+          "Ecossistema DePIN Ampliado",
+          "Plataforma de Criação de Conteúdos Avançada",
+          "Monetização de Experiências ao Vivo",
+          "+5M artistas registados"
+        ]
+      }
+    ],
+    "highlight": "O nosso roadmap reflete um <blue>crescimento exponencial</blue> e uma <purple>visão clara</purple> para revolucionar a indústria musical através da <pink>tecnologia blockchain</pink>.",
+    "schema_description": "Linha temporal de desenvolvimento estratégico para a plataforma MusicDIBS e token DIBS"
+  },
+
+  "acceleration": {
+    "title": "Aceleração WEB3",
+    "description": "O Musicdibs foi considerado pelos programas de aceleração mais prestigiados do ecossistema blockchain e web3",
+    "programs": [
+      {
+        "name": "Binance Labs",
+        "logo": "https://musicdibs.com/dibs/wp-content/uploads/2025/02/binance-labs-200x52.png"
+      },
+      {
+        "name": "Coinbase Ventures",
+        "logo": "https://musicdibs.com/wp-content/uploads/2024/07/coinbase_ventures.png"
+      },
+      {
+        "name": "a16z crypto",
+        "logo": "https://musicdibs.com/wp-content/uploads/2024/07/a16z_crypto-1.png"
+      }
+    ],
+    "logo_alt": "Logótipo {name}",
+    "schema_description": "Participação em programas de aceleração web3 líderes na indústria"
+  },
+
+  "partners": {
+    "title": "Os Nossos Parceiros",
+    "description": "Colaboramos com organizações líderes para oferecer soluções abrangentes de proteção de propriedade intelectual e serviços musicais de alta qualidade.",
+    "partners": [
+      {
+        "name": "LANZADERA",
+        "logo": "https://icommunity.io/icom/wp-content/uploads/2021/07/lanzadera200.png"
+      },
+      {
+        "name": "Amazon Web Services",
+        "logo": "https://icommunity.io/icom/wp-content/uploads/2021/07/amazonWS.png"
+      },
+      {
+        "name": "Alastria",
+        "logo": "https://icommunity.io/icom/wp-content/uploads/2021/07/alastriagray-300x93.png"
+      },
+      {
+        "name": "Telefónica",
+        "logo": "https://icommunity.io/icom/wp-content/uploads/2021/07/telefonica200.png"
+      },
+      {
+        "name": "Sopra Steria",
+        "logo": "https://musicdibs.com/dibs/wp-content/uploads/2024/09/Logo_Sopra_Steria_1.webp"
+      },
+      {
+        "name": "Eurecat",
+        "logo": "https://icommunity.io/icom/wp-content/uploads/2021/07/eurecat.png"
+      },
+      {
+        "name": "IBM",
+        "logo": "https://icommunity.io/icom/wp-content/uploads/2021/07/ibmHLgray-300x137.png"
+      },
+      {
+        "name": "Ardor",
+        "logo": "https://icommunity.io/icom/wp-content/uploads/2021/07/ardor2.png"
+      }
+    ],
+    "partner_alt": "Parceiro {name}",
+    "schema_description": "Parceiros estratégicos do MusicDIBS"
+  },
+
+  "team": {
+    "title": "Conheça a Nossa Equipa",
+    "description": "O Musicdibs e o token DIBS contam com a equipa fundadora da iCommunity. Uma equipa empreendedora e multidisciplinar com uma média de mais de 20 anos de experiência comprovada no mundo tecnológico e inovação corporativa. Profissionais apaixonados, dinâmicos e com grande capacidade para alcançar os objetivos traçados.",
+    "extended_description": "A eles junta-se um grupo experiente de profissionais de topo: programadores Full Stack, especialistas em blockchain e especialistas em comunicação e promoção nos mercados asiático, europeu, norte-americano e latino-americano.",
+    "founding_team": [
+      {
+        "name": "Miguel Pérez",
+        "role": "CEO",
+        "description": "Doutoramento em Telecomunicações e Engenharia de Computação. +20 anos em projetos e negócios TIC",
+        "companies": ["OTAN", "ISDEFE", "EALDE"],
+        "image": "/assets/team/miguel-pérez.png",
+        "linkedin": "https://www.linkedin.com/in/mapg1972/"
+      },
+      {
+        "name": "Álvaro Chico",
+        "role": "CTO",
+        "description": "Engenheiro de software full-stack e especialista em Blockchain. +15 anos em projetos TI",
+        "companies": ["IBM", "Telefónica", "Ericsson"],
+        "image": "/assets/team/álvaro-chico.jpg",
+        "linkedin": "https://www.linkedin.com/in/%C3%A1lvaro-chico-gonz%C3%A1lez-024501285/"
+      },
+      {
+        "name": "Mario García",
+        "role": "CMO",
+        "description": "Especialista em marketing de negócio Blockchain. +10 anos em marketing",
+        "companies": ["Welov Labs", "SCI Films"],
+        "image": "/assets/team/mario-garcía.jpg",
+        "linkedin": "https://www.linkedin.com/in/mario-garcia-prados/"
+      },
+      {
+        "name": "Luis Couto",
+        "role": "COO",
+        "description": "MBA, BBA e Administração de Empresas. Auditor certificado. +20 anos em operações e finanças",
+        "companies": ["Abengoa", "PwC", "IE"],
+        "image": "/assets/team/luis-couto.jpg",
+        "linkedin": "https://www.linkedin.com/in/luismcouto/"
+      }
+    ],
+    "team_members": [
+      {
+        "name": "Pablo Cumpián",
+        "role": "Engenheiro de Software",
+        "image": "/assets/team/pablo-cumpián.png"
+      },
+      {
+        "name": "Fernanda Gomes",
+        "role": "Programador Fullstack",
+        "image": "/assets/team/fernanda-gomes.png"
+      },
+      {
+        "name": "Salvador Roig",
+        "role": "Programador Fullstack",
+        "image": "/assets/team/salvador-roig.png"
+      },
+      {
+        "name": "Ricardo Campos",
+        "role": "Programador Fullstack",
+        "image": "/assets/team/ricardo-campos.png"
+      },
+      {
+        "name": "Pedro Gil",
+        "role": "Gestor de Desenvolvimento de Negócio",
+        "image": "/assets/team/pedro-gil.png"
+      },
+      {
+        "name": "Ana Isabel Rodado",
+        "role": "Líder de Desenvolvimento de Negócio",
+        "image": "/assets/team/ana-isabel-rodado.png"
+      },
+      {
+        "name": "Clara Sánchez de Toca",
+        "role": "Assistente de Desenvolvimento de Negócio",
+        "image": "/assets/team/clara-sánchez.png"
+      },
+      {
+        "name": "Noélia Rodríguez",
+        "role": "Assistente de Desenvolvimento de Negócio",
+        "image": "/assets/team/noelia-rodríguez.png"
+      },
+      {
+        "name": "Marta Escabias",
+        "role": "Gestora de Marketing",
+        "image": "/assets/team/marta-escabias.png"
+      },
+      {
+        "name": "Jorge Gomes Durán",
+        "role": "Consultor Técnico",
+        "image": "/assets/team/jorge-gomes.png"
+      },
+      {
+        "name": "David Pestana",
+        "role": "Consultor Técnico",
+        "image": "/assets/team/david-pestana.png"
+      },
+      {
+        "name": "José Bravo",
+        "role": "Consultor Jurídico",
+        "image": "/assets/team/josé-bravo.png"
+      }
+    ],
+    "member_alt": "Foto de {name}",
+    "linkedin_aria_label": "LinkedIn de {name}",
+    "schema_description": "Equipa experiente por trás do MusicDIBS e do token DIBS"
+  },
+
+  "testimonials": {
+    "title": "O que dizem os especialistas sobre o Token DIBS",
+    "description": "Descubra porque é que investidores e artistas confiam na nossa tokenómica",
+    "testimonials": [
+      {
+        "name": "Carlos Lozano",
+        "title": "Plan BTC",
+        "videoId": "r5v_kPZLzOM",
+        "role": "Especialista em Bitcoin"
+      },
+      {
+        "name": "Erika Bada",
+        "title": "Bada Sessions",
+        "videoId": "CnS6IblpMzY",
+        "role": "Artista e Produtora Musical"
+      },
+      {
+        "name": "Javier Sierra",
+        "title": "Javier Sierra",
+        "videoId": "xrsiFHJUGSk",
+        "role": "Profissional Musical"
+      },
+      {
+        "name": "Dorrego",
+        "title": "Dorrego",
+        "videoId": "l1RIZvKCvhE",
+        "role": "Artista"
+      },
+      {
+        "name": "Christian",
+        "title": "ChristianVib",
+        "videoId": "KodixKxB0C8",
+        "role": "Criador de Conteúdo Musical"
+      },
+      {
+        "name": "Vocalissama",
+        "title": "Vocalissama",
+        "videoId": "dtsGdtsv3eQ",
+        "role": "Coach Vocal"
+      },
+      {
+        "name": "Malurina",
+        "title": "Malurina",
+        "videoId": "FzDva0GalOc",
+        "role": "Artista Musical"
+      }
+    ],
+    "stats": {
+      "tokens": "100M+",
+      "tokens_label": "Tokens em circulação",
+      "experts": "7",
+      "experts_label": "Especialistas apoiam"
+    },
+    "previous": "Testemunho anterior",
+    "next": "Próximo testemunho",
+    "view_testimonial": "Ver testemunho {number} - {name}",
+    "video_title": "Testemunho de {name} sobre o Token DIBS - {title}"
+  },
+
+  "cta": {
+    "title": "Junte-se à (r)evolução da proteção da propriedade intelectual na WEB3",
+    "description": "Proteja as suas obras, ganhe recompensas e faça parte do futuro da indústria musical",
+    "access_button": "Aceder",
+    "buy_button": "Comprar DIBS",
+    "schema_name": "Junte-se à Revolução Musicdibs",
+    "schema_description": "Junte-se à revolução WEB3 na proteção da propriedade intelectual"
+  }
+
+  
+}

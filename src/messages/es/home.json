@@ -1,0 +1,145 @@
+{
+  "navbar": {
+    "distribution": "Distribución",
+    "distribution_access": "Acceso Plataforma",
+    "distribution_info": "Información",
+    "market": "Market",
+    "news": "Noticias",
+    "dibs_token": "DIBS Token",
+    "verification": "Verificador",
+    "faq": "Preguntas Frecuentes",
+    "pricing": "Precios",
+    "support": "Soporte",
+    "login": "Acceder",
+    "language": "Idioma",
+    "spanish": "Español",
+    "english": "Inglés",
+    "portuguese": "Portugués"
+  },
+
+  "hero": {
+    "title_part1": "Tu obra,",
+    "title_part2": "solo tuya",
+    "subtitle_part1": "Registra, promociona y distribuye tu música con",
+    "subtitle_highlight": "validez legal en TODO el mundo",
+    "subtitle_link": "+info",
+    "start_now": "Comenzar ahora",
+    "see_how_it_works": "Ver cómo funciona"
+  },
+
+  "artists_banner": {
+    "title_part1": "¡MÁS DE 100.000 ARTISTAS YA",
+    "title_part2": "UTILIZAN MUSICDIBS!",
+    "subtitle": "Impulsando el futuro de la música urbana con tecnología blockchain",
+    "artists_registered": "Artistas registrados",
+    "works_protected": "Obras protegidas",
+    "countries_reached": "Países alcanzados",
+    "join_now": "Únete ahora",
+    "see_testimonials": "Ver testimonios"
+  },
+
+  "distribution": {
+    "title": "Distribución y Promoción",
+    "subtitle": "Lleva tu música al mundo entero y conecta con millones de fans",
+    "world_distribution_title": "Distribución Mundial",
+    "world_distribution_description": "Despliega tus obras a nivel mundial en todas las plataformas digitales +220 DSPs y GANA Royalties",
+    "social_promotion_title": "Promoción en Redes Sociales",
+    "social_promotion_description": "Promociónate en nuestras redes sociales con ¡+300.000 seguidores!",
+    "marketplace_title": "Marketplace",
+    "marketplace_description": "Vende tus creaciones en nuestro market y GANA dinero",
+    "nfts_marketing_title": "NFTs & Marketing",
+    "nfts_marketing_description": "Genera NFTs para ofrecerlos a tus seguidores como parte de tus campañas de marketing"
+  },
+
+  "individual_registration": {
+    "title": "¿REGISTROS INDIVIDUALES?",
+    "subtitle": "También puedes registrar una obra por",
+    "price": "11,90€",
+    "contact_message": "¿Eres un profesional, empresa o academia? <contact>Contáctanos</contact> y solicita detalles para paquetes personalizados o licenciamientos (marca blanca).",
+    "terms_note": "* Condiciones de la oferta\nImpuestos NO incluidos (se aplicará el 21% de IVA para países UE). Las suscripciones mensuales y anuales se renuevan automáticamente al finalizar el período de suscripción. Más información en FAQ y en términos de uso y compra.",
+    "buy": "Comprar",
+    "contact_us": "Contáctanos"
+  },
+
+  "marquee": {
+    "line1": "🎵 DISTRIBUYE TU MÚSICA EN +200 PLATAFORMAS 🎵",
+    "line2": "🔥 MANTÉN EL 100% DE TUS REGALÍAS - SIN COMISIONES OCULTAS 🔥",
+    "line3": "⚡ TU MÚSICA ONLINE EN 24-48 HORAS ⚡",
+    "line4": "💫 PLAN PLUS: 59,90€/AÑO - HASTA 100 REGISTROS 💫"
+  },
+
+  "testimonials": {
+    "title": "Qué dicen los profesionales sobre Musicdibs",
+    "subtitle": "Descubre por qué miles de artistas confían en nosotros",
+    "join_message": "Únete a los más de 100,000 artistas que ya protegen su música con Musicdibs"
+  },
+  
+"tutorial": {
+  "title": "¿Cómo funciona?",
+  "subtitle": "Ve los 2 tutoriales de registro y distribución y verás lo sencillo que es.",
+  "video1_title": "Tutorial de Registro - MusicDIBS",
+  "video1_description": "Aprende a registrar tus obras musicales paso a paso",
+  "video2_title": "Tutorial de Distribución - MusicDIBS",
+  "video2_description": "Descubre cómo distribuir tu música en todas las plataformas",
+  "step1_title": "Date de alta",
+  "step1_description": "Regístrate y verifica tu identidad para dar validez legal a tus registros.",
+  "step2_title": "Registra tu canción",
+  "step2_description": "Sube tu obra; generamos una huella digital y la registramos en blockchain en segundos. Descarga tu certificado de registro, con sello de tiempo. <link>Ver ej. certificado.</link>",
+  "step2_link": "Ver ej. certificado",
+  "step3_title": "Distribuye tu música",
+  "step3_description": "Llega a Spotify, Apple Music, YouTube y más de 200 plataformas con un solo clic. Controla y monetiza tus lanzamientos desde tu panel.",
+  "cta_title": "Empieza hoy mismo a proteger y monetizar tu música",
+  "cta_button": "Comenzar ahora"
+},
+  
+  "why_choose": {
+    "title": "¿Por qué elegir Musicdibs?",
+    "subtitle": "Registra, distribuye y monetiza tus canciones en minutos. Genera ingresos reales con la solución digital más rápida y accesible creada para artistas independientes.",
+    "feature1_title": "Protección Legal Global",
+    "feature1_description": "Validez jurídica internacional respaldada por blockchain",
+    "feature1_modal": "Cada registro en Musicdibs genera un certificado digital inmutable respaldado por tecnología Blockchain, válido como prueba legal de autoría. Este certificado cumple con normativas internacionales y nacionales, incluyendo el Convenio de Berna, el Tratado de la OMPI, la Directiva sobre Derechos de Autor en la Era Digital y regulaciones sobre Blockchain aplicadas a la propiedad intelectual.",
+    "feature2_title": "Registro Instantáneo",
+    "feature2_description": "Protege tu obra en segundos, no en semanas. SIN burocracia.",
+    "feature2_modal": "Protección al instante, sin complicaciones. Olvídate del papeleo y de los procesos lentos y costosos. Con Musicdibs, registrar tu música es tan fácil como subir tu archivo: en solo segundos generamos una huella digital única, y la registramos en blockchain con validez legal internacional. Sin intermediarios y por una fracción del coste de un registro tradicional.",
+    "feature3_title": "Distribución Mundial",
+    "feature3_description": "Lanza en todas las plataformas digitales. GANA royalties",
+    "feature3_modal": "Distribución Mundial. Lanza tu música en las plataformas digitales más importantes del mundo: Spotify, Apple Music, Amazon Music, YouTube Music y muchas más, hasta 220. Gana royalties desde el primer stream y haz que tu talento cruce fronteras sin intermediarios ni comisiones ocultas. Controla todo desde una sola plataforma, con estadísticas en tiempo real y soporte personalizado.",
+    "feature4_title": "SIN Censura",
+    "feature4_description": "Registra y vende tus creaciones con IA",
+    "feature4_modal": "Sin Censura. Sin límites. Solo libertad creativa. En Musicdibs creemos que el arte no debe tener fronteras. Por eso, aceptamos registros de obras generadas con inteligencia artificial o experimentales, sin restricciones ni filtros, siempre que tengas todos los derechos de las mismas y no sean plagios."
+  },
+  
+  "pricing": {
+    "title": "Precios",
+    "subtitle": "¡Ahorra grandes costes que tendrías en los servicios por separado que ofrece el mercado, contratando nuestro plan Plus+!",
+    "basic_title": "Basic",
+    "plus_title": "Plan Plus+",
+    "basic_price": "6,90 €",
+    "basic_period": "/ mes",
+    "basic_enrollment_fee": "y 6,90 € cuota de inscripción",
+    "plus_price": "59,90 €",
+    "plus_period": "/ año",
+    "plus_special_offer": "Cuota registro + 4 meses GRATIS",
+    "additional_note": "* Los servicios de promoción y NFTs están sujetos a disponibilidad y términos específicos.",
+    "buy": "Comprar",
+    
+    "basic_features": [
+      "Cuota de inscripción sólo primer mes",
+      "Hasta 3 registros/mes",
+      "Acceso continuo a tus certificados",
+      "1 Promoción base/mes en TikTok (+245k seguidores)*",
+      "Soporte estándar"
+    ],
+    "plus_features": [
+      "Protege tu catálogo completo (Hasta 100 registros al año, SIN costes extra)",
+      "Distribución Musical +220 DSPs (Spotify, Apple Music, ...)",
+      "Genera dinero con las escuchas de tus canciones",
+      "Acceso continuo a certificados",
+      "2 NFT/mes*",
+      "2 Promoción Plus/mes en TikTok (+245k seguidores) – Instagram (+100k)*",
+      "Market MusicDibs – Promociona y vende tus obras",
+      "Soporte prioritario",
+      "Ayuda ante disputas"
+    ]
+  }
+}

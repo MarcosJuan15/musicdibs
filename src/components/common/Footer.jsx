@@ -1,16 +1,20 @@
-import Link from "next/link";
+'use client';
+
+import { useTranslations } from "next-intl";
+import { Link } from "@/navigation";
 import Image from "next/image";
 import { FaInstagram, FaTiktok, FaYoutube } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
 export default function Footer() {
     const currentYear = new Date().getFullYear();
+    const t = useTranslations('footer');
 
     return (
         <footer 
             className="w-full relative bg-gradient-to-br from-blue-900 via-purple-800 to-pink-600 text-white overflow-hidden"
             role="contentinfo"
-            aria-label="Pie de página de Musicdibs"
+            aria-label={t('aria_label')}
             itemScope
             itemType="https://schema.org/Organization"
         >
@@ -45,11 +49,11 @@ export default function Footer() {
                                 href="https://icommunity.io/"
                                 target="_blank" 
                                 rel="noopener noreferrer"
-                                aria-label="Visitar iCommunity - Sitio web principal"
+                                aria-label={t('visit_icommunity')}
                             >
                                 <Image
                                     src="/assets/images/logo-footer.png"
-                                    alt="Musicdibs - Plataforma de distribución musical y registro de derechos de autor con blockchain"
+                                    alt={t('logo_alt')}
                                     className="h-16 w-auto"
                                     width={160}
                                     height={64}
@@ -58,174 +62,179 @@ export default function Footer() {
                                 />
                             </a>
                         </div>
-                        <nav className="space-y-3" aria-label="Enlaces rápidos de MusicDIBS">
-                            <Link
-                                href="/verification"
+                        <h3 className="text-xl font-semibold">{t('quick_links')}</h3>
+                        <nav className="space-y-3" aria-label={t('quick_links')}>
+                            {/* Verificar registro - ENLACE EXTERNO */}
+                            <a
+                                href="https://checker.icommunitylabs.com/?brand=music"
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="block text-white/80 hover:text-white transition-colors"
-                                aria-label="Verificar registro de música y derechos de autor"
+                                aria-label={t('verify_registration')}
                                 itemProp="url"
                             >
-                                <span itemProp="name">Verificar registro</span>
-                            </Link>
+                                <span itemProp="name">{t('verify_registration')}</span>
+                            </a>
                             <Link
                                 href="/tech-and-legal"
                                 className="block text-white/80 hover:text-white transition-colors"
-                                aria-label="Información sobre tecnología blockchain y validez legal"
+                                aria-label={t('tech_and_legal')}
                                 itemProp="url"
                             >
-                                <span itemProp="name">Tecnología y validez legal</span>
+                                <span itemProp="name">{t('tech_and_legal')}</span>
                             </Link>
                             <Link
                                 href="/support"
                                 className="block text-white/80 hover:text-white transition-colors"
-                                aria-label="Contactar con soporte técnico de MusicDIBS"
+                                aria-label={t('support')}
                                 itemProp="url"
                             >
-                                <span itemProp="name">Soporte</span>
+                                <span itemProp="name">{t('support')}</span>
                             </Link>
                             <Link
                                 href="/partners"
                                 className="block text-white/80 hover:text-white transition-colors"
-                                aria-label="Conoce a nuestros partners y colaboradores"
+                                aria-label={t('partners')}
                                 itemProp="url"
                             >
-                                <span itemProp="name">Partners</span>
+                                <span itemProp="name">{t('partners')}</span>
                             </Link>
                             <a
                                 href="/musicdibs-media-kit.zip"
                                 download="MusicDIBS-Media-Kit.zip"
                                 className="block text-white/80 hover:text-white transition-colors"
-                                aria-label="Descargar Media Kit de MusicDIBS"
+                                aria-label={t('media_kit')}
                                 itemProp="url"
                             >
-                                <span itemProp="name">Media Kit</span>
+                                <span itemProp="name">{t('media_kit')}</span>
                             </a>
                         </nav>
                     </div>
 
                     {/* Columna central - Corporativo */}
                     <div className="space-y-6 text-left">
-                        <h3 className="text-xl font-semibold mb-4" itemProp="name">Corporativo</h3>
-                        <nav className="space-y-3" aria-label="Enlaces corporativos de MusicDIBS">
+                        <h3 className="text-xl font-semibold mb-4" itemProp="name">{t('corporate')}</h3>
+                        <nav className="space-y-3" aria-label={t('corporate')}>
                             <Link
                                 href="/support"
                                 className="block text-white/80 hover:text-white transition-colors"
-                                aria-label="Información de contacto de MusicDIBS"
+                                aria-label={t('contact')}
                                 itemProp="url"
                             >
-                                <span itemProp="name">Contacto</span>
+                                <span itemProp="name">{t('contact')}</span>
                             </Link>
-                            <a
+                            {/* Dibs token - ENLACE INTERNO CON Link para mantener idioma */}
+                            <Link
                                 href="/dibs-token"
                                 className="block text-white/80 hover:text-white transition-colors"
-                                aria-label="Información sobre DIBS Token y criptomoneda"
+                                aria-label={t('dibs_token')}
                                 itemProp="url"
                             >
-                                <span itemProp="name">DIBS Token</span>
-                            </a>
+                                <span itemProp="name">{t('dibs_token')}</span>
+                            </Link>
                             <Link
                                 href="/sla"
                                 className="block text-white/80 hover:text-white transition-colors"
-                                aria-label="Acuerdo de nivel de servicios de MusicDIBS"
+                                aria-label={t('service_level_agreement')}
                                 itemProp="url"
                             >
-                                <span itemProp="name">Acuerdo de nivel de servicios</span>
+                                <span itemProp="name">{t('service_level_agreement')}</span>
                             </Link>
                             <Link
                                 href="/privacy-policy"
                                 className="block text-white/80 hover:text-white transition-colors"
-                                aria-label="Política de privacidad y protección de datos de MusicDIBS"
+                                aria-label={t('privacy_policy')}
                                 itemProp="url"
                             >
-                                <span itemProp="name">Política de privacidad y protección de datos</span>
+                                <span itemProp="name">{t('privacy_policy')}</span>
                             </Link>
                             <Link
                                 href="/terms-and-conditions"
                                 className="block text-white/80 hover:text-white transition-colors"
-                                aria-label="Términos y condiciones de uso de MusicDIBS"
+                                aria-label={t('terms_and_conditions')}
                                 itemProp="url"
                             >
-                                <span itemProp="name">Términos y condiciones</span>
+                                <span itemProp="name">{t('terms_and_conditions')}</span>
                             </Link>
                             <Link
                                 href="/cookie-policy"
                                 className="block text-white/80 hover:text-white transition-colors"
-                                aria-label="Política de cookies de MusicDIBS"
+                                aria-label={t('cookie_policy')}
                                 itemProp="url"
                             >
-                                <span itemProp="name">Política de cookies</span>
+                                <span itemProp="name">{t('cookie_policy')}</span>
                             </Link>
                         </nav>
                     </div>
 
-                    {/* Columna derecha - Redes sociales - CORREGIDO */}
+                    {/* Columna derecha - Redes sociales */}
                     <div className="space-y-6">
-                        <h3 className="text-xl font-semibold mb-4">Síguenos en redes sociales</h3>
+                        <h3 className="text-xl font-semibold mb-4">{t('follow_us')}</h3>
                         <div 
                             className="flex space-x-4" 
                             role="list" 
-                            aria-label="Redes sociales de MusicDIBS"
+                            aria-label={t('follow_us')}
                         >
                             <a
                                 href="https://twitter.com/musicdibs"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                aria-label="Síguenos en Twitter - MusicDIBS"
+                                aria-label={`${t('twitter')} - ${t('official')}`}
                                 className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors text-white focus:ring-2 focus:ring-white focus:outline-none"
                                 role="listitem"
                                 itemProp="sameAs"
                             >
                                 <FaXTwitter size={18} aria-hidden="true" />
-                                <span className="sr-only">Twitter oficial de MusicDIBS</span>
+                                <span className="sr-only">{t('twitter')} {t('official')}</span>
                             </a>
 
                             <a
                                 href="https://www.instagram.com/musicdibs/"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                aria-label="Síguenos en Instagram - MusicDIBS"
+                                aria-label={`${t('instagram')} - ${t('official')}`}
                                 className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors text-white focus:ring-2 focus:ring-white focus:outline-none"
                                 role="listitem"
                                 itemProp="sameAs"
                             >
                                 <FaInstagram size={18} aria-hidden="true" />
-                                <span className="sr-only">Instagram oficial de MusicDIBS</span>
+                                <span className="sr-only">{t('instagram')} {t('official')}</span>
                             </a>
 
                             <a
                                 href="https://www.tiktok.com/@musicdibs_"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                aria-label="Síguenos en TikTok - MusicDIBS"
+                                aria-label={`${t('tiktok')} - ${t('official')}`}
                                 className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors text-white focus:ring-2 focus:ring-white focus:outline-none"
                                 role="listitem"
                                 itemProp="sameAs"
                             >
                                 <FaTiktok size={18} aria-hidden="true" />
-                                <span className="sr-only">TikTok oficial de MusicDIBS</span>
+                                <span className="sr-only">{t('tiktok')} {t('official')}</span>
                             </a>
 
                             <a
                                 href="https://www.youtube.com/@Musicdibs"
                                 target="_blank" 
                                 rel="noopener noreferrer"
-                                aria-label="Síguenos en YouTube - MusicDIBS"
+                                aria-label={`${t('youtube')} - ${t('official')}`}
                                 className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors text-white focus:ring-2 focus:ring-white focus:outline-none"
                                 role="listitem"
                                 itemProp="sameAs"
                             >
                                 <FaYoutube size={18} aria-hidden="true" />
-                                <span className="sr-only">YouTube oficial de MusicDIBS</span>
+                                <span className="sr-only">{t('youtube')} {t('official')}</span>
                             </a>
                         </div>
                         
                         {/* Información adicional para SEO */}
                         <div className="mt-6 text-white/70 text-sm">
                             <p className="mb-2">
-                                <strong itemProp="name">Musicdibs</strong> - Plataforma líder en distribución musical digital y protección de derechos de autor con blockchain
+                                <strong itemProp="name">Musicdibs</strong> - {t('description')}
                             </p>
                             <p itemProp="description">
-                                Distribución global, protección de derechos con tecnología blockchain y registro musical para artistas independientes.
+                                {t('description_details')}
                             </p>
                         </div>
                     </div>
@@ -234,13 +243,13 @@ export default function Footer() {
                 {/* Línea separadora */}
                 <div className="border-t border-white/20 pt-6">
                     <p className="text-center text-white/50 text-sm" itemProp="copyrightNotice">
-                        © {currentYear} Musicdibs. Todos los derechos reservados.
+                        © {currentYear} Musicdibs. {t('all_rights_reserved')}.
                     </p>
                     
                     {/* Microdata mejorado para SEO */}
                     <div className="hidden" itemScope itemType="https://schema.org/Organization">
                         <meta itemProp="name" content="MusicDIBS" />
-                        <meta itemProp="description" content="Plataforma de distribución musical digital con tecnología blockchain para registro y protección de derechos de autor" />
+                        <meta itemProp="description" content={t('description')} />
                         <meta itemProp="url" content="https://musicdibs.com" />
                         <meta itemProp="email" content="soporte@musicdibs.com" />
                         <div itemProp="address" itemScope itemType="https://schema.org/PostalAddress">

@@ -1,0 +1,531 @@
+{
+  "terms_and_conditions": {
+    "title": "Terms and Conditions",
+    "last_updated": "Last updated",
+    "last_updated_date": "February 28, 2022",
+    "schema": {
+      "name": "Terms and Conditions - Musicdibs",
+      "description": "Terms and conditions of use of the Musicdibs platform",
+      "date_modified": "2022-02-28",
+      "publisher": "Musicdibs"
+    },
+    "sections": {
+      "general_terms": {
+        "title": "General Terms",
+        "content": "<strong>Musicdibs</strong> is a product of iCommunity Labs Tech S.L. (hereinafter \"iCommunity Labs\" or \"iCommunity\"), a company governed by Spanish law, with registered office in Madrid, at C/Colmenares, nº3, Bajo-D, CP 28004, Madrid, with C.I.F. B88350897 and registered in the Commercial Registry of Madrid in volume 39.161, Folio 40, Section 8, Page M-695696."
+      },
+      "refund_policy": {
+        "title": "Refund and Cancellation Policy",
+        "online_purchase": {
+          "title": "Online Purchase Process",
+          "content": "The validation of an order on our website implies knowledge and acceptance of the terms of use and purchase as expressed on this page. After completing the purchase, the customer will receive an email with the record of their order within a period of less than 24 hours."
+        },
+        "warranty": {
+          "title": "Warranty",
+          "content": "Our customer service department has an after-sales service to resolve any problems with our certification and verification service. If you have any questions about the use of Musicdibs, contact us at <email>info@musicdibs.com</email>.",
+          "email_aria_label": "Send email to info@musicdibs.com"
+        },
+        "cancel_purchase": {
+          "title": "Cancel Purchase",
+          "content": "Given the customized and individualized nature of the services offered, it will not be possible to exercise the right of purchase cancellation, except in the case of purchasing credits for registrations \"without subscription\". To request cancellation within 14 days after purchase, send an email to <email>info@musicdibs.com</email> including: full name, ID of the identification document used in the registration process, username or email and order number.",
+          "email_aria_label": "Send email to info@musicdibs.com"
+        },
+        "refunds": {
+          "title": "Refunds",
+          "content": "Customers have up to 30 calendar days to request a refund for their credit purchases, provided they have not used them. If more than 30 days have passed since your purchase or if part of the credits from the purchased package have been used, you will not be entitled to any type of refund."
+        }
+      },
+      "subscription_conditions": {
+        "title": "Subscription Conditions",
+        "content": "By confirming your subscription, you authorize iCommunity Labs Tech S.L. to make future charges to your card in accordance with these terms and conditions. You can cancel it at any time, but with a minimum of 24 hours before its renewal.",
+        "important": {
+          "title": "Important:",
+          "aria_label": "Important points about subscriptions",
+          "items": [
+            "If you wish to cancel the renewal of a subscription, you must do so at least 24 hours before it is automatically renewed",
+            "The right of purchase cancellation does NOT apply to subscriptions"
+          ]
+        }
+      },
+      "abuse_use": {
+        "title": "Abuse of Use",
+        "content": "The resale or unauthorized use of credits acquired by third parties who are not the account owner is prohibited. In the case of unlimited subscriptions, monthly consumption will be monitored and use may be restricted if abusive use is detected."
+      },
+      "nfts": {
+        "title": "NFTs",
+        "content": "NFTs are limited as established in each subscription, with a maximum minting of up to 1,000 units per NFT. It is the sole responsibility of the user to provide the address of a wallet compatible with the Polygon network."
+      },
+      "icom_tokens": {
+        "title": "Purchase using ICOM Tokens",
+        "content": "ICOMs are the utility tokens of iCommunity and can be used to purchase Musicdibs credits with a <strong>20% discount</strong> on the original price of the chosen product."
+      },
+      "offers_promotions": {
+        "title": "Offers and Promotions",
+        "content": "Offers available on the website are limited to the first 1000 purchases that pay for the product on offer, except in exceptional situations explicitly indicated in the promotion. Any offer will end when its defined time ends, or the available packages, whichever comes first."
+      },
+      "contact": {
+        "title": "Contact",
+        "description": "<strong>Musicdibs</strong> is a registered trademark of iCommunity Labs Tech S.L.",
+        "address": {
+          "label": "Address",
+          "street": "Gran Vía 26",
+          "postal_code": "28005",
+          "city": "Madrid",
+          "country": "Spain"
+        },
+        "email": {
+          "label": "Email",
+          "value": "info@musicdibs.com",
+          "aria_label": "Send email to info@musicdibs.com"
+        }
+      }
+    },
+    "footer": {
+      "copyright": "©iCommunity Labs Tech S.L. All rights reserved."
+    }
+  },
+
+  "privacy_policy": {
+    "title": "Privacy and Data Protection Policy",
+    "last_updated": "Last updated",
+    "last_updated_date": "February 28, 2022",
+    "schema": {
+      "name": "Privacy Policy - Musicdibs",
+      "description": "Musicdibs privacy and data protection policy",
+      "date_modified": "2022-02-28",
+      "publisher": "Musicdibs"
+    },
+    "sections": {
+      "general_information": {
+        "title": "1. General Information",
+        "content": "<strong>Musicdibs</strong> is a product of iCommunity Labs Tech S.L. (hereinafter \"iCommunity Labs\" or \"iCommunity\"), a company governed by Spanish law, with registered office in Madrid, at C/Colmenares, nº3, Bajo-D, CP 28004, Madrid, with C.I.F. B88350897 and registered in the Commercial Registry of Madrid in volume 39.161, Folio 40, Section 8, Page M-695696."
+      },
+      "collected_data": {
+        "title": "2. Data We Collect",
+        "personal_information": {
+          "title": "Personal Information",
+          "aria_label": "List of personal information collected",
+          "items": [
+            "Full name and contact details",
+            "Email address",
+            "Billing and payment information",
+            "Service usage information"
+          ]
+        }
+      },
+      "purpose_of_processing": {
+        "title": "3. Purpose of Processing",
+        "intro": "The personal data we collect is used for:",
+        "aria_label": "Purposes of data processing",
+        "items": [
+          "Providing and maintaining our services",
+          "Processing payments and managing subscriptions",
+          "Communicating with you about the service",
+          "Improving our services and user experience",
+          "Complying with legal obligations"
+        ]
+      },
+      "legal_basis": {
+        "title": "4. Legal Basis",
+        "intro": "The processing of your personal data is based on:",
+        "items": [
+          {
+            "title": "Consent:",
+            "description": "For marketing communications"
+          },
+          {
+            "title": "Contract execution:",
+            "description": "To provide our services"
+          },
+          {
+            "title": "Legitimate interest:",
+            "description": "To improve our services"
+          },
+          {
+            "title": "Legal obligation:",
+            "description": "To comply with tax and legal requirements"
+          }
+        ]
+      },
+      "user_rights": {
+        "title": "5. User Rights",
+        "intro": "You have the right to:",
+        "items": [
+          {
+            "title": "Access:",
+            "description": "Request information about your personal data"
+          },
+          {
+            "title": "Rectification:",
+            "description": "Correct inaccurate data"
+          },
+          {
+            "title": "Erasure:",
+            "description": "Request deletion of your data"
+          },
+          {
+            "title": "Portability:",
+            "description": "Receive your data in a structured format"
+          },
+          {
+            "title": "Objection:",
+            "description": "Object to the processing of your data"
+          },
+          {
+            "title": "Restriction:",
+            "description": "Restrict the processing of your data"
+          }
+        ]
+      },
+      "data_security": {
+        "title": "6. Data Security",
+        "content": "We implement appropriate technical and organizational security measures to protect your personal data against unauthorized access, alteration, disclosure, or destruction."
+      },
+      "data_retention": {
+        "title": "7. Data Retention",
+        "content": "We retain your personal data for as long as necessary to fulfill the purposes for which it was collected, including any retention period required by law."
+      },
+      "contact": {
+        "title": "8. Contact",
+        "description": "For any questions about this privacy policy, contact us:",
+        "email": {
+          "label": "Email",
+          "value": "info@musicdibs.com",
+          "aria_label": "Send email to info@musicdibs.com"
+        },
+        "address": {
+          "label": "Address",
+          "street": "C/Colmenares, nº3, Bajo-D",
+          "postal_code": "28004",
+          "city": "Madrid"
+        }
+      }
+    },
+    "footer": {
+      "copyright": "©iCommunity Labs Tech S.L. All rights reserved."
+    }
+  },
+
+  "cookie_policy": {
+    "title": "Cookie Policy",
+    "last_updated": "Last updated",
+    "last_updated_date": "February 28, 2022",
+    "schema": {
+      "name": "Cookie Policy - Musicdibs",
+      "description": "Musicdibs cookie policy",
+      "date_modified": "2022-02-28",
+      "publisher": "Musicdibs"
+    },
+    "sections": {
+      "policy": {
+        "title": "Cookie Policy",
+        "content": "The purpose of this cookie policy is to inform you clearly and accurately about the cookies used on the Musicdibs website, owned by iCommunity Labs Techs S.L."
+      },
+      "what_are_cookies": {
+        "title": "What are Cookies?",
+        "content": "A cookie is a small piece of text that the websites you visit send to the browser and that allows the website to remember information about your visit, such as your preferred language and other options, in order to facilitate your next visit and make the site more useful to you. Cookies play a very important role and contribute to a better browsing experience for the user."
+      },
+      "types_of_cookies": {
+        "title": "Types of Cookies",
+        "by_management": {
+          "title": "By Management",
+          "aria_label": "Types of cookies by management",
+          "items": [
+            {
+              "title": "Own cookies:",
+              "description": "Sent from our domain"
+            },
+            {
+              "title": "Third-party cookies:",
+              "description": "Sent from external domains"
+            }
+          ]
+        },
+        "by_duration": {
+          "title": "By Duration",
+          "aria_label": "Types of cookies by duration",
+          "items": [
+            {
+              "title": "Session cookies:",
+              "description": "They are deleted when you close the browser"
+            },
+            {
+              "title": "Persistent cookies:",
+              "description": "They remain for a set period of time"
+            }
+          ]
+        },
+        "by_purpose": {
+          "title": "By Purpose",
+          "aria_label": "Types of cookies by purpose",
+          "items": [
+            {
+              "title": "Technical cookies:",
+              "description": "Allow navigation and use of the website"
+            },
+            {
+              "title": "Personalization cookies:",
+              "description": "Allow access to the service with predefined characteristics"
+            },
+            {
+              "title": "Analytical cookies:",
+              "description": "Allow tracking and analysis of user behavior"
+            },
+            {
+              "title": "Advertising cookies:",
+              "description": "Allow management of advertising spaces"
+            },
+            {
+              "title": "Behavioral advertising cookies:",
+              "description": "Store information about user behavior"
+            }
+          ]
+        }
+      },
+      "cookies_used": {
+        "title": "Cookies Used on the Website",
+        "technical": {
+          "title": "Technical Cookies",
+          "content": "These are those that allow the user to navigate through a web page, platform or application and use the different options or services that exist there, such as, for example, controlling traffic and data communication, identifying the session, accessing restricted access parts, remembering the elements that make up an order, carrying out the purchase process of an order, making the request for registration or participation in an event, using security elements during navigation."
+        },
+        "personalization": {
+          "title": "Personalization Cookies",
+          "content": "These are those that allow the user to access the service with some general predefined characteristics based on a series of criteria on the user's terminal, such as the language, the service, the regional configuration from where the service is accessed, etc."
+        }
+      },
+      "acceptance": {
+        "title": "Acceptance of the Cookie Policy",
+        "content": "By pressing the \"I Accept\" button, it is assumed that you accept the use of cookies. However, you can modify the cookie settings at any time from your browser."
+      },
+      "configuration": {
+        "title": "How to Modify Cookie Settings",
+        "intro": "You can restrict, block or delete cookies from the Musicdibs website or any other website using your browser. In each browser the operation is different, the \"Help\" function will show you how to do it.",
+        "browsers": {
+          "title": "Main Browsers:",
+          "aria_label": "Cookie settings in main browsers",
+          "items": [
+            "Chrome: Settings → Privacy and security → Cookies",
+            "Firefox: Options → Privacy and security",
+            "Safari: Preferences → Privacy",
+            "Edge: Settings → Cookies and site permissions"
+          ]
+        },
+        "additional_info": {
+          "title": "Additional Information:",
+          "content": "For more information about cookies, you can consult the Guide on the use of cookies from the <link>Spanish Data Protection Agency</link>.",
+          "link_aria_label": "Guide on the use of cookies from the Spanish Data Protection Agency"
+        }
+      },
+      "updates": {
+        "title": "Updates and Changes to the Cookie Policy",
+        "content_part1": "iCommunity Labs Techs SL reserves the right to modify this Cookie Policy based on legislative, regulatory requirements, or in order to adapt said policy to the instructions issued by the Spanish Data Protection Agency, therefore it is recommended that users visit it periodically.",
+        "content_part2": "When significant changes occur in this Cookie Policy, they will be communicated to users either through the website or via email to registered users."
+      }
+    },
+    "footer": {
+      "copyright": "©iCommunity Labs Tech S.L. All rights reserved."
+    }
+  },
+
+  "tech_and_legal": {
+    "title": "Technology and Legal Validity",
+    "last_updated": "Last updated",
+    "last_updated_date": "February 28, 2022",
+    "schema": {
+      "name": "Technology and Legal Validity - Musicdibs",
+      "description": "Blockchain technology and legal validity of Musicdibs",
+      "date_modified": "2022-02-28",
+      "publisher": "Musicdibs"
+    },
+    "sections": {
+      "hero": {
+        "title": "Technology and {span}Legal Validity{/span}",
+        "description": "Blockchain certification with worldwide legal validity for your musical works. Guarantees the authenticity, security and immutability of your creations."
+      },
+      "blockchain_technology": {
+        "title": "Blockchain Technology: The Basis of Our Certification",
+        "items": [
+          {
+            "title": "Decentralization",
+            "description": "Does not depend on a central authority, which eliminates single points of failure and corruption."
+          },
+          {
+            "title": "Cryptographic Timestamp",
+            "description": "Each record includes a cryptographically secure and immutable timestamp."
+          },
+          {
+            "title": "Mathematical Proof",
+            "description": "Data integrity is guaranteed by advanced cryptographic algorithms."
+          },
+          {
+            "title": "Permanent Accessibility",
+            "description": "Your records will be available as long as the blockchain network exists, guaranteeing perpetual access."
+          }
+        ],
+        "vanguard_tech": {
+          "title": "Cutting-Edge Technology",
+          "description": "We use the most advanced and secure blockchain protocols on the market to guarantee maximum protection of your intellectual property."
+        }
+      },
+      "certification": {
+        "title": "International Legal Certification",
+        "description": "Our blockchain certification system provides legally binding digital evidence recognized in more than 180 countries.",
+        "items": [
+          {
+            "title": "Legal Certification",
+            "description": "Documentation with legal validity before international courts and tribunals"
+          },
+          {
+            "title": "Global Recognition",
+            "description": "Legal validity in all countries signatory to the Berne Convention"
+          },
+          {
+            "title": "Complete Protection",
+            "description": "Defend your copyright against third parties and digital platforms"
+          }
+        ]
+      },
+      "advantages": {
+        "title": "Advantages of Blockchain Technology",
+        "description": "The perfect combination between technological innovation and legal security",
+        "items": [
+          {
+            "title": "Immutability",
+            "description": "Once your work is registered on the blockchain, it cannot be altered or deleted, guaranteeing permanent integrity."
+          },
+          {
+            "title": "Global Reach",
+            "description": "Your certification is internationally recognized, without borders or geographical limitations."
+          },
+          {
+            "title": "Total Transparency",
+            "description": "Anyone can verify the authenticity of your registration through our platform."
+          }
+        ]
+      }
+    },
+    "footer": {
+      "copyright": "©iCommunity Labs Tech S.L. All rights reserved."
+    }
+  },
+
+  "service_level_agreement": {
+    "title": "Service Level Agreement (SLA)",
+    "last_updated": "Last updated",
+    "last_updated_date": "February 28, 2022",
+    "schema": {
+      "name": "Service Level Agreement - Musicdibs",
+      "description": "Musicdibs service level agreement",
+      "date_modified": "2022-02-28",
+      "publisher": "Musicdibs"
+    },
+    "sections": {
+      "hero": {
+        "title": "Service Level {span}Agreement{/span}",
+        "description": "Committed to excellence in service and availability of our intellectual property registration services."
+      },
+      "purpose": {
+        "title": "Purpose of the Agreement",
+        "content": "The purpose of this document is to indicate the level of service in terms of availability of the Services provided by the {strong}Musicdibs{/strong} website, belonging to {strong}iCommunity Labs & Tech SL{/strong}, as well as describe the processes for reporting, cataloging, escalating and resolving incidents in the services offered and their corresponding response times."
+      },
+      "services_covered": {
+        "title": "Services Covered",
+        "items": [
+          {
+            "title": "Decentralized Registration",
+            "description": "Intellectual property for audiovisual, written or graphic works"
+          },
+          {
+            "title": "Registration Verification",
+            "description": "Validation of authenticity of registered works"
+          },
+          {
+            "title": "NFT Generation",
+            "description": "Creation of non-fungible tokens for registered works"
+          },
+          {
+            "title": "Promotion",
+            "description": "Dissemination of works on the platform's channels and social networks"
+          }
+        ]
+      },
+      "sla_categories": {
+        "title": "SLA Categories Offered",
+        "table": {
+          "headers": ["Service", "Annual", "Monthly", "One-Time Payment"],
+          "rows": [
+            {
+              "service": "System Availability",
+              "annual": "99.9%",
+              "monthly": "99.5%",
+              "one_time": "99.0%"
+            },
+            {
+              "service": "Response Time",
+              "annual": "< 2 seconds",
+              "monthly": "< 3 seconds",
+              "one_time": "< 5 seconds"
+            },
+            {
+              "service": "Technical Support",
+              "annual": "24/7",
+              "monthly": "Mon-Fri 9:00-18:00",
+              "one_time": "Email only"
+            },
+            {
+              "service": "Critical Resolution Time",
+              "annual": "< 1 hour",
+              "monthly": "< 4 hours",
+              "one_time": "< 24 hours"
+            }
+          ]
+        }
+      },
+      "incident_management": {
+        "title": "Incident Management",
+        "response_label": "Response",
+        "items": [
+          {
+            "level": "Critical",
+            "code": "P1",
+            "description": "Service completely inoperative",
+            "response_time": "15 min"
+          },
+          {
+            "level": "High",
+            "code": "P2",
+            "description": "Main functionality affected",
+            "response_time": "1 hour"
+          },
+          {
+            "level": "Normal",
+            "code": "P3",
+            "description": "Minor impact on service",
+            "response_time": "4 hours"
+          }
+        ]
+      },
+      "contact": {
+        "title": "Support Contact",
+        "description": "To report incidents or request technical support:",
+        "items": [
+          {
+            "type": "Support Email",
+            "value": "info@musicdibs.com"
+          },
+          {
+            "type": "Contact Phone",
+            "value": "+34 900 123 456"
+          }
+        ]
+      },
+      "note": {
+        "strong": "Note:",
+        "content": "This Service Level Agreement (SLA) will be valid from the start date of the corresponding service provision contract until the termination date of the contractual relationship for the provision of the services covered by this document."
+      }
+    },
+    "footer": {
+      "copyright": "©iCommunity Labs Tech S.L. All rights reserved."
+    }
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "hero_title": "Distribución Musical",
+  "hero_subtitle": "Lleva tu música a todas las plataformas digitales del mundo con nuestro servicio de distribución profesional",
+  
+  "services_global_title": "Distribución Global",
+  "services_global_description": "Distribuye tu música en más de 220 plataformas digitales.",
+  "services_global_list": [
+    "Spotify, Apple Music, YouTube Music",
+    "Amazon Music, Deezer, Tidal",
+    "Beatport, Traxsource, Juno Download",
+    "TikTok, Instagram, Facebook"
+  ],
+  
+  "services_management_title": "Gestión Profesional",
+  "services_management_description": "Herramientas profesionales para gestionar tus releases y regalías.",
+  "services_management_list": [
+    "Dashboard completo de estadísticas",
+    "Gestión de metadata avanzada",
+    "Reportes detallados de regalías",
+    "Soporte técnico especializado"
+  ],
+  
+  "features_title": "¿Por qué elegir Musicdibs?",
+  "features_list": [
+    {
+      "icon": "M13 10V3L4 14h7v7l9-11h-7z",
+      "title": "Rápido y Eficiente",
+      "desc": "Tu música estará disponible en todas las plataformas en 24-48 horas"
+    },
+    {
+      "icon": "M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z",
+      "title": "100% de Regalías",
+      "desc": "Mantén el 100% de tus derechos y regalías"
+    },
+    {
+      "icon": "M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z",
+      "title": "Analytics Avanzados",
+      "desc": "Accede a estadísticas detalladas y reportes en tiempo real"
+    }
+  ],
+  
+  "pricing_title": "Planes de Distribución",
+  
+  "pricing_basic_title": "Plan Basic",
+  "pricing_basic_price": "6,90€",
+  "pricing_basic_button": "Comprar",
+  "pricing_basic_features": [
+    "Cuota de inscripción sólo primer mes",
+    "Hasta 3 registros/mes",
+    "Acceso continuo a tus certificados",
+    "1 Promoción base/mes en TikTok",
+    "Soporte estándar"
+  ],
+  
+  "pricing_popular_label": "Más Popular",
+  "pricing_popular_title": "Plan Plus +",
+  "pricing_popular_price": "59,90€",
+  "pricing_popular_button": "Comprar",
+  "pricing_popular_features": [
+    "Protege tu catálogo completo (Hasta 100 registros/año)",
+    "Distribución Musical +220 DSPs",
+    "Genera dinero con las escuchas",
+    "Acceso continuo a certificados",
+    "2 NFT/mes*",
+    "2 Promoción Plus/mes en redes",
+    "Soporte prioritario",
+    "Ayuda ante disputas"
+  ],
+  
+  "cta_title": "¿Listo para distribuir tu música?",
+  "cta_subtitle": "Comienza hoy mismo y lleva tu música a todo el mundo",
+  "cta_button": "Comenzar Distribución"
+}

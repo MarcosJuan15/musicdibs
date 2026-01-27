@@ -39,7 +39,6 @@ export default function PromoteContent() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log("Datos de promoción:", formData);
     };
 
     return (

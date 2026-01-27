@@ -1,0 +1,130 @@
+{
+  "hero": {
+    "title_part1": "Frequently",
+    "title_part2": "Asked Questions",
+    "description": "Find answers to the most common questions about registering, protecting and distributing your music.",
+    "schema_name": "Frequently Asked Questions - MusicDIBS",
+    "schema_description": "We solve your doubts about music registration, blockchain protection and copyright at MusicDIBS",
+    "schema_question1": "What is Musicdibs?",
+    "schema_answer1": "Musicdibs is a platform that allows artists to register, distribute and monetize their music using blockchain technology to ensure legal protection of their works.",
+    "schema_question2": "How does registering a work work?",
+    "schema_answer2": "You upload your audio file, we generate a unique digital fingerprint and register it on the blockchain. You receive a registration certificate with legal validity."
+  },
+
+  "accordion": {
+    "section_title": "Most Frequently Asked Questions",
+    "section_subtitle": "We solve your doubts about music registration, blockchain protection and copyright",
+    
+    "items": [
+      {
+        "question": "Once registered, how can I prove the authorship of my work to a third party?",
+        "answer": "<div class='space-y-3'><p>The registration of the work generates a <strong>hash and a timestamp</strong>, where the identifying data is encrypted, which automatically links the author with his creation.</p><p>In the event of a legal dispute, anyone can validate this code and verify that you are the original author.</p><p><strong>Once certified, it is important not to make any changes to the original file</strong>, so as not to modify its digital fingerprint.</p></div>"
+      },
+      {
+        "question": "If I can register an already registered work, could anyone register a work as their own (even if it has been registered before)?",
+        "answer": "<div class='space-y-3'><p><strong>Yes, but there's no problem!</strong> What matters is <strong>who did it first and when</strong> (and that's exactly what appears in our registration certificates).</p><p>Every time we register something (even if repeated) a <strong>different time stamp</strong> is generated associated with:</p><ul class='list-disc list-inside ml-4 space-y-1'><li>The identity of who made the certification</li><li>The certified content</li><li>The moment it is made</li></ul><p>Since Musicdibs is a tool with worldwide validity and scope, it cannot know if someone has already registered something before another person in another registration system or another part of the world.</p><p>But as we say, that's not relevant, but rather <strong>WHO DID IT BEFORE in a reliable way?</strong>. And that's what you're guaranteed by using Musicdibs 😉</p></div>"
+      },
+      {
+        "question": "If I don't renew my subscription, will I lose my registrations?",
+        "answer": "<div class='space-y-3'><p><strong>Registrations (certificates) are permanent, they never expire</strong>, but if a subscription is not renewed:</p><ul class='list-disc list-inside ml-4 space-y-1'><li>You will lose access to the platform</li><li>You will not be able to manage your list of certificates and download them</li></ul><p>To access your account again and manage your list of certificates, you will have to renew your subscription again.</p><p><strong>From Musicdibs we recommend that you KEEP your plan as much as possible</strong>, since at this time the price is very attractive thanks to the effort we have made to offer a reduced and affordable price for everyone.</p><p>In the future we plan to add new functionalities to subscriptions, which will obviously probably mean an increase in price. <strong>If you keep your current plan now, you also ensure that you keep your current price.</strong></p></div>"
+      },
+      {
+        "question": "Can a minor register a work?",
+        "answer": "<div class='space-y-3'><p><strong>Minors can request</strong> through their parents or legal representatives the registration of their copyright.</p><p>Legal representatives must prove their relationship with the minor through the appropriate document:</p><ul class='list-disc list-inside ml-4 space-y-1'><li>Family book</li><li>Legal document that proves guardianship or legal representation of the minor</li></ul></div>"
+      },
+      {
+        "question": "Does registering my work on blockchain have legal validity?",
+        "answer": "<div class='space-y-3'><p><strong>The registration of your work on blockchain has legal validity in the 179 signatory countries of the Berne Convention.</strong></p><p>It is an alternative, fast and reliable means to:</p><ul class='list-disc list-inside ml-4 space-y-1'><li>Avoid plagiarism when sharing it on social networks</li><li>Protect your works when you share them with friends</li></ul><p>It is a bet on the future, which facilitates the process to compare different works and verify the identity of their original creator.</p></div>"
+      },
+      {
+        "question": "What type of works and files can I register?",
+        "answer": "<div class='space-y-4'><p>With Musicdibs you can register the copyright of <strong>any creative and artistic work</strong>:</p><div><p class='font-semibold text-purple-700'>Music:</p><ul class='list-disc list-inside ml-4 space-y-1 mt-1'><li>Songs</li><li>Lyrics</li><li>Sheet music</li><li>Sound recordings</li></ul></div><div><p class='font-semibold text-purple-700'>Audiovisual:</p><ul class='list-disc list-inside ml-4 space-y-1 mt-1'><li>Scripts</li><li>Treatments</li><li>Idea/synopsis</li><li>Video pieces</li><li>Storyboards</li></ul></div><div><p class='font-semibold text-purple-700'>Literary work:</p><ul class='list-disc list-inside ml-4 space-y-1 mt-1'><li>Manuscripts and drafts</li><li>Titles and names</li><li>Translations</li><li>Adaptations and derivatives</li></ul></div><p><strong>Accepted formats:</strong> You can register all types of files, both finished work in any digital audio or video format (mp3, WAV, AIFF, WMA, mp4, etc.) and text files (PDF, DOC) if they are sheet music, lyrics or scripts.</p><p><strong>Maximum size:</strong> 30Mb. If your work is larger, you must compress it.</p></div>"
+      },
+      {
+        "question": "What if one day Musicdibs \"disappears\"? Would the certificates lose their validity?",
+        "answer": "<div class='space-y-3'><p><strong>Nothing would happen to your registered works</strong> thanks to the decentralized and public technology we use.</p><p>Our infrastructure consists of:</p><ul class='list-disc list-inside ml-4 space-y-1'><li>A network with thousands of nodes in the cloud</li><li>Different distributed blockchains</li></ul><p>A technical expert could always access the verification of your certificate, regardless of Musicdibs.</p></div>"
+      },
+      {
+        "question": "What if someone registers my song in the central registry? Can I use my Musicdibs certificate to claim my authorship?",
+        "answer": "<div class='space-y-4'><p><strong>You should know that intellectual property is not like industrial property.</strong> In this sense, it is important to note that in Spain it is not mandatory to carry out an administrative act to be considered the author of a piece and it is enough to prove its previous creation.</p><div><p class='font-semibold text-purple-700'>According to article 1 of Royal Legislative Decree 1/1991 of April 12 on the Intellectual Property Law:</p><blockquote class='border-l-4 border-purple-500 pl-4 ml-4 italic text-gray-700 bg-purple-50 py-2 my-2'>\"The intellectual property of a literary, artistic or scientific work corresponds to the author by the mere fact of its creation.\"</blockquote></div><p>Therefore, <strong>the author, artist or creator has automatic protection</strong>, unlike Industrial Property (trademarks, patents, industrial designs,...) in which it is necessary to register to be considered holders of the rights.</p><p>If someone copies a song previously registered in Musicdibs, you can provide your registration as valid proof in a plagiarism complaint, since our registration generates a certificate that contains all the necessary information, both to identify the work in your name and to demonstrate the registration with its time stamp.</p><p><strong>With the Musicdibs certificate you will be able to prove that you previously created it and that therefore you have property rights over it.</strong></p></div>"
+      },
+      {
+        "question": "What happens to my certifications if I unsubscribe from the service?",
+        "answer": "<div class='space-y-3'><p><strong>Musicdibs ONLY uses robust public and decentralized blockchains</strong> (such as Ethereum, Polygon and Solana) that do not depend on iCommunity Labs and are supported by a large community of users.</p><p>This guarantees that <strong>certifications made through Musicdibs will always be accessible and will persist</strong>, even if:</p><ul class='list-disc list-inside ml-4 space-y-1'><li>The user unsubscribes</li><li>iCommunity Labs disappears in the future</li></ul><p>This makes certifications issued by Musicdibs <strong>totally available digital evidence for audits or technical expertise</strong> and with probative effects in dispute processes or similar.</p><p><strong>However, you must remember</strong> that to verify the certification of a document you must be in possession of the original document and, if the digital certification has not been made through Musicdibs, you must recreate the appropriate certification procedure (title, description, standard encryption algorithm, etc.) published by iCommunity Labs through its website.</p></div>"
+      },
+      {
+        "question": "Can I verify in Musicdibs songs that have been registered with other platforms?",
+        "answer": "<div class='space-y-3'><p><strong>No, we can only verify registrations of works made with Musicdibs.</strong></p><p>This is because we register and certify, not only the uploaded file with the content, but also <strong>the identity of the person who registers it</strong>.</p><p>Furthermore, you should know that you cannot actually do this with any other property registration system, since <strong>none are interconnected with the others</strong>.</p></div>"
+      },
+      {
+        "question": "Can I register works on behalf of other people with my account?",
+        "answer": "<div class='space-y-3'><p><strong>Unfortunately, registration on behalf of third parties is ONLY permitted and legally recognized for the exceptional case of minors.</strong></p><p>Musicdibs user accounts are <strong>personal and non-transferable</strong> and can belong to:</p><ul class='list-disc list-inside ml-4 space-y-1'><li>Individuals</li><li>Legally established entities (commercial, associations, etc.)</li></ul><p>You must keep in mind that to register a creation, the identity of the person or entity to whom the property of those rights will be granted must first be verified, and this is only possible if that same person or entity is the one who opened the account in Musicdibs and verified it with their official identity document.</p><p>This is precisely how possible identity theft or even property theft is avoided, since <strong>only the person or entity that registers is the one who owns the creation</strong>.</p><p><strong>We recommend</strong> that you ask those acquaintances to each open an account in Musicdibs with their data. It's very easy!</p></div>"
+      },
+      {
+        "question": "Can I register works in which I have used AI for their creation? What does registration in Musicdibs protect in these cases?",
+        "answer": "<div class='space-y-4'><p><strong>Yes, you can register your works in Musicdibs even if you have used AI for the music</strong>, as long as:</p><ul class='list-disc list-inside ml-4 space-y-1'><li><strong>You are the original author</strong> of the lyrics, idea or structure of the song</li><li>There has been <strong>your creative direction</strong> in the use of AI (for example, you chose the prompts, edited the result, adapted the melody, etc.)</li><li>The AI tool used legally allows you to use and commercially exploit the generated results</li></ul><p class='font-semibold text-purple-700'>What does registration in Musicdibs protect in these cases?</p><p>The registration gives you an <strong>authorship certificate with international legal validity</strong>, backed by a time stamp and blockchain technology.</p><p>This allows you to:</p><ul class='list-disc list-inside ml-4 space-y-1'><li>Prove that you created that work on a specific date</li><li>Defend your rights in case of plagiarism or dispute</li></ul><p><strong>However, you should keep in mind that:</strong></p><ul class='list-disc list-inside ml-4 space-y-1'><li>Musicdibs does not validate or supervise content generated by AI</li><li>When registering the work, it is recommended that <strong>you indicate in the description that AI was used as a tool</strong>, and that the creative authorship is yours</li></ul><p>And if you have doubts, we can help you draft an appropriate description for your AI-based work registrations.</p></div>"
+      },
+      {
+        "question": "Can I register partial creations and then register the definitive one?",
+        "answer": "<div class='space-y-3'><p><strong>YES, with Musicdibs this is possible and in fact it is recommended</strong>, to avoid someone plagiarizing you before finishing your work during the creation process.</p><p>Thanks to our reduced cost, especially the annual subscription, <strong>you can make as many partial registrations of your work as you want</strong>, which will also allow you to:</p><ul class='list-disc list-inside ml-4 space-y-1'><li>Share your creation with whoever you want</li><li>Have <strong>total guarantee</strong> that it is protected and in your name</li></ul></div>"
+      },
+      {
+        "question": "Are unused subscription credits cumulative when renewed annually?",
+        "answer": "<div class='space-y-3'><p><strong>NO.</strong> Subscription credits and special offers that are not used in the period <strong>do not accumulate</strong> when the next billing period is renewed.</p></div>"
+      },
+      {
+        "question": "Does my work registration have renewal costs?",
+        "answer": "<div class='space-y-3'><p><strong>No, you only pay for the initial registration.</strong> Once your work is registered, there are no additional renewal costs to maintain the certification.</p></div>"
+      },
+      {
+        "question": "What type of content can the NFTs from subscriptions be generated from and how to generate them?",
+        "answer": "<div class='space-y-4'><p>To generate an NFT of your registered works, we have prepared a video tutorial at the following link:</p><div class='bg-gray-50 p-4 rounded-lg'><a href='https://www.youtube.com/watch?v=a3WAlJ2Ynek' target='_blank' rel='noopener noreferrer' class='text-purple-600 hover:text-purple-800 font-medium break-all'>https://www.youtube.com/watch?v=a3WAlJ2Ynek</a></div><p><strong>For now, to generate NFTs we are only accepting audios</strong> in the formats:</p><ul class='list-disc list-inside ml-4 space-y-1'><li>mp3</li><li>wav</li><li>ogg</li></ul><p>This is because these are the formats supported by the Opensea marketplace, where we generate them and where we will send them to you (you will therefore need to have a wallet in Opensea to receive them).</p><p><strong>The possibility of also generating NFTs for videos will soon be opened</strong> (supported formats will be: mp4 and webm).</p></div>"
+      },
+      {
+        "question": "How long does my work registration last?",
+        "answer": "<div class='space-y-3'><p><strong>The registration on blockchain is permanent</strong>, and the duration of copyright protection is subject to the legislation of each country.</p></div>"
+      },
+      {
+        "question": "What are the valid identity documents to verify my identity?",
+        "answer": "<div class='space-y-4'><p>For your registrations to have legal validity, it is necessary to verify your identity with a <strong>valid official identification document</strong> in your country that includes:</p><ul class='list-disc list-inside ml-4 space-y-1'><li>Your photo</li><li>Your personal data</li></ul><p>In Spain and other European Union countries, you can use:</p><ul class='list-disc list-inside ml-4 space-y-1'><li>National Identity Document (DNI)</li><li>Passport</li></ul><p>For other countries, below is a list of the documents we accept:</p><div class='bg-gray-50 p-4 rounded-lg mt-2'><p class='text-sm text-gray-600'>* List of documents accepted by country available on our platform</p></div></div>"
+      },
+      {
+        "question": "How would the registration of a song be done when it belongs to two or more authors?",
+        "answer": "<div class='space-y-3'><p>The best way to register co-authorship or multi-ownership of a creation with Musicdibs is by <strong>making two registrations</strong>:</p><ul class='list-disc list-inside ml-4 space-y-1'><li><strong>One for the song</strong> (lyrics, sheet music, sound recording, videos, …)</li><li><strong>Another with all the author information</strong> (Name and identity document of each co-author)</li></ul><p>In summary, you would have to upload the music file and additionally upload a text or pdf file with the aforementioned data.</p><p><strong>Additionally, you must check the option</strong> \"I want this certification to be public\" in both registrations.</p><p>By registering in this way, you can verify both the registration of the song and the co-authorship document and <strong>the time stamp of the registrations guarantees their legal validity</strong>.</p></div>"
+      },
+      {
+        "question": "How to reduce the size of my file to upload it?",
+        "answer": "<div class='space-y-3'><p><strong>We only accept files with a weight less than 30MB.</strong> Therefore, if your file is larger, you must compress it.</p><p>To do this, we provide you with an explanatory tutorial on how to reduce the weight of your work.</p><p><strong>We remind you</strong> that for the registration of copyright <strong>the content is important and not its audiovisual quality</strong>, so there is no problem if when compressing it it is inferior.</p></div>"
+      },
+      {
+        "question": "How do monthly and annual subscriptions work?",
+        "answer": "<div class='space-y-3'><p>Both monthly and annual subscriptions <strong>are renewed automatically</strong> at the end of each contracted cycle.</p><p><strong>Example:</strong> If you register, for example, on November 15, the next billing cycle will be activated on December 15.</p><p>To cancel, you just have to go to your account profile:</p><ul class='list-disc list-inside ml-4 space-y-1'><li>\"Settings\"</li><li>\"Subscription\"</li><li>\"Cancel subscription\"</li></ul><p><strong>At least 24h before</strong> the renewal of the new cycle.</p><p>If a subscription is not renewed:</p><ul class='list-disc list-inside ml-4 space-y-1'><li>You will lose access to your list of certificates</li><li>You will not be able to download them</li></ul><p><strong>But registrations are not deleted</strong> and are always saved in your user account.</p><p>To access your account again and manage your list of certificates, you will have to renew your subscription again.</p></div>"
+      },
+      {
+        "question": "How do I cancel my subscription?",
+        "answer": "<div class='space-y-3'><p><strong>You just have to follow these steps:</strong></p><ul class='list-disc list-inside ml-4 space-y-1'><li>Go to your account profile in <strong>\"Settings\"</strong></li><li>Select <strong>\"Subscription\"</strong></li><li>Click on <strong>\"Cancel subscription\"</strong></li></ul><p><strong>Important:</strong> You must do this <strong>at least 24h before</strong> your current plan expires and a new subscription period begins.</p></div>"
+      }
+    ]
+  },
+
+  "contact": {
+    "benefit1_title": "Response in 24h",
+    "benefit1_description": "Our team will answer you in less than 24 hours.",
+    "benefit2_title": "Human Support",
+    "benefit2_description": "Attended by experts in intellectual property and music.",
+    "benefit3_title": "Personalized Help",
+    "benefit3_description": "We will guide you step by step throughout the process.",
+    "title": "Still have questions?",
+    "subtitle": "Our support team is ready to help you. <strong>Write to us!</strong>",
+    "contact_button": "Contact Support"
+  },
+
+      "metadata": {
+      "title": "Musicdibs Frequently Asked Questions | Music Registration and Blockchain FAQ 2024",
+      "description": "✅ 20+ Frequently Asked Questions answered about music registration, blockchain protection, distribution and copyright. Expert answers from Musicdibs.",
+      "keywords": "musicdibs faq, frequently asked questions music registration, blockchain music, song copyright, music distribution, work protection, song registration, musicdibs questions, music registration doubt",
+      "og_title": "Musicdibs FAQ - Frequently Asked Questions about Music Registration with Blockchain",
+      "og_description": "Answers to 20+ common questions about music registration, blockchain protection, distribution and copyright at Musicdibs",
+      "og_alt": "Musicdibs FAQ - Frequently Asked Questions about Music Registration and Blockchain Protection"
+    }
+}

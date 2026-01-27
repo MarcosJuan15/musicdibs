@@ -24,7 +24,6 @@ export default function RegisterWorkContent() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log("Datos de verificación:", formData);
     };
 
     if (verificationStep === "info") {

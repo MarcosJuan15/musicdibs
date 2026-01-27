@@ -1,102 +1,80 @@
+// src/components/home/HomeWhyChoose.jsx
 'use client';
 
 import { useState } from "react";
+import { Link } from "@/navigation"; // ← Link personalizado
 import { Shield, Zap, Globe, Ban } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 export default function HomeWhyChoose() {
     const [openModalIndex, setOpenModalIndex] = useState(null);
+    const t = useTranslations('home.why_choose');    // ← 'home.why_choose'
+const tCommon = useTranslations('common');
+
 
     const features = [
         {
             icon: <Shield className="w-8 h-8 text-white" />,
-            title: "Protección Legal Global",
-            description: "Validez jurídica internacional respaldada por blockchain",
+            title: t('feature1_title'),
+            description: t('feature1_description'),
             color: "from-pink-500 to-purple-600",
             modalContent: (
                 <>
-                    Cada registro en Musicdibs genera un certificado digital inmutable respaldado por tecnología Blockchain, válido como prueba legal de autoría. Este certificado cumple con normativas internacionales y nacionales, incluyendo el{" "}
-                    <a
-                        href="https://www.wipo.int/treaties/es/ip/berne/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-purple-600 font-semibold underline hover:opacity-80"
-                    >
-                        Convenio de Berna
-                    </a>
-                    , el{" "}
-                    <a
-                        href="https://www.wipo.int/treaties/es/ip/wct/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-purple-600 font-semibold underline hover:opacity-80"
-                    >
-                        Tratado de la OMPI
-                    </a>
-                    , la{" "}
-                    <a
-                        href="https://digital-strategy.ec.europa.eu/es/policies/copyright"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-purple-600 font-semibold underline hover:opacity-80"
-                    >
-                        Directiva sobre Derechos de Autor en la Era Digital
-                    </a>{" "}
-                    y regulaciones sobre Blockchain aplicadas a la propiedad intelectual.
+                    {t.rich('feature1_modal', {
+                        link1: (chunks) => (
+                            <a
+                                href="https://www.wipo.int/treaties/es/ip/berne/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-purple-600 font-semibold underline hover:opacity-80"
+                            >
+                                {chunks}
+                            </a>
+                        ),
+                        link2: (chunks) => (
+                            <a
+                                href="https://www.wipo.int/treaties/es/ip/wct/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-purple-600 font-semibold underline hover:opacity-80"
+                            >
+                                {chunks}
+                            </a>
+                        ),
+                        link3: (chunks) => (
+                            <a
+                                href="https://digital-strategy.ec.europa.eu/es/policies/copyright"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-purple-600 font-semibold underline hover:opacity-80"
+                            >
+                                {chunks}
+                            </a>
+                        ),
+                    })}
                 </>
-            ),
+            )
         },
         {
             icon: <Zap className="w-8 h-8 text-white" />,
-            title: "Registro Instantáneo",
-            description: "Protege tu obra en segundos, no en semanas. SIN burocracia.",
+            title: t('feature2_title'),
+            description: t('feature2_description'),
             color: "from-purple-500 to-blue-600",
-            modalContent: (
-                <>
-                    Protección al instante, sin complicaciones. Olvídate del papeleo y de los procesos lentos y costosos. Con Musicdibs, registrar tu música es{" "}
-                    <span className="text-purple-600 font-semibold">
-                        tan fácil como subir tu archivo: en solo segundos generamos una huella digital única,
-                    </span>{" "}
-                    y la registramos en blockchain{" "}
-                    <span className="text-purple-600 font-semibold">
-                        con validez legal internacional.
-                    </span>{" "}
-                    Sin intermediarios y por una fracción del coste de un registro tradicional.
-                </>
-            ),
+            modalContent: t('feature2_modal')
         },
         {
             icon: <Globe className="w-8 h-8 text-white" />,
-            title: "Distribución Mundial",
-            description: "Lanza en todas las plataformas digitales. GANA royalties",
+            title: t('feature3_title'),
+            description: t('feature3_description'),
             color: "from-blue-500 to-cyan-600",
-            modalContent: (
-                <>
-                    Distribución Mundial. Lanza tu música en las{" "}
-                    <span className="text-purple-600 font-semibold">
-                        plataformas digitales más importantes del mundo: Spotify, Apple Music, Amazon Music, YouTube Music
-                    </span>{" "}
-                    y muchas más, hasta 220.{" "}
-                    <span className="text-purple-600 font-semibold">
-                        Gana royalties desde el primer stream
-                    </span>{" "}
-                    y haz que tu talento cruce fronteras sin intermediarios ni comisiones ocultas. Controla todo desde una sola plataforma, con estadísticas en tiempo real y soporte personalizado.
-                </>
-            ),
+            modalContent: t('feature3_modal')
         },
         {
             icon: <Ban className="w-8 h-8 text-white" />,
-            title: "SIN Censura",
-            description: "Registra y vende tus creaciones con IA",
+            title: t('feature4_title'),
+            description: t('feature4_description'),
             color: "from-cyan-500 to-pink-600",
-            modalContent: (
-                <>
-                    Sin Censura. Sin límites. Solo libertad creativa. En Musicdibs creemos que el arte no debe tener fronteras. Por eso,{" "}
-                    <span className="text-purple-600 font-semibold">
-                        aceptamos registros de obras generadas con inteligencia artificial
-                    </span>{" "}
-                    o experimentales, sin restricciones ni filtros, siempre que tengas todos los derechos de las mismas y no sean plagios.
-                </>
-            ),
+            modalContent: t('feature4_modal')
         },
     ];
 
@@ -116,10 +94,10 @@ export default function HomeWhyChoose() {
 
             <div className="max-w-6xl mx-auto px-6 text-center">
                 <h2 id="why-choose-heading" className="text-4xl md:text-5xl font-bold text-white mb-4">
-                    ¿Por qué elegir Musicdibs?
+                    {t('title')}
                 </h2>
                 <p className="text-lg text-white/80 max-w-2xl mx-auto mb-16">
-                    Registra, distribuye y monetiza tus canciones en minutos. Genera ingresos reales con la solución digital más rápida y accesible creada para artistas independientes.
+                    {t('subtitle')}
                 </p>
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -149,6 +127,7 @@ export default function HomeWhyChoose() {
                         <button
                             onClick={() => setOpenModalIndex(null)}
                             className="absolute top-2 right-2 text-black text-xl font-bold"
+                            aria-label={tCommon('close')}
                         >
                             ✕
                         </button>

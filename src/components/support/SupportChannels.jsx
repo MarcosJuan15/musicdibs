@@ -1,26 +1,31 @@
-import { Mail, Phone, MessageCircle, Clock } from "lucide-react";
+'use client';
+
+import { Mail, Phone, Clock } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 export default function SupportChannels() {
+  const t = useTranslations('support.channels');
+  
   const supportChannels = [
     {
       icon: <Mail className="h-6 w-6" aria-hidden="true" />,
-      title: "Soporte por Email",
-      description: "info@musicdibs.com",
-      status: "Respuesta en 24-48h",
+      title: t('email_title'),
+      description: t('email_description'),
+      status: t('email_status'),
       statusColor: "bg-green-500",
-      action: "Enviar Email",
-      link: "mailto:info@musicdibs.com?subject=Soporte%20Musicdibs&body=Hola%20equipo%20Musicdibs,%20necesito%20ayuda%20con:",
+      action: t('email_action'),
+      link: t('email_link'),
       schemaType: "Email",
       responseTime: "P24H",
     },
     {
       icon: <Phone className="h-6 w-6" aria-hidden="true" />,
-      title: "Teléfono Directo",
-      description: "+34 900 123 456",
-      status: "Lun-Vie 9:00-18:00",
+      title: t('phone_title'),
+      description: t('phone_description'),
+      status: t('phone_status'),
       statusColor: "bg-blue-500",
-      action: "Llamar Ahora",
-      link: "tel:+34900123456",
+      action: t('phone_action'),
+      link: t('phone_link'),
       schemaType: "Telephone",
       hours: "Mo-Fr 09:00-18:00",
     },
@@ -31,16 +36,17 @@ export default function SupportChannels() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 id="canales-soporte" className="text-3xl md:text-4xl font-bold mb-4">
-            Canales de Soporte Directo
+            {t('section_title')}
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Múltiples formas de contactar con nuestro equipo de <strong>expertos en música y tecnología blockchain</strong>
+            {t.rich('section_description', {
+              strong: (chunks) => <strong>{chunks}</strong>
+            })}
           </p>
         </div>
 
-        {/* CONTENEDOR CON GRID MÁS ANCHO */}
         <div className="flex justify-center">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 w-full max-w-5xl" role="list" aria-label="Canales de soporte disponibles">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 w-full max-w-5xl" role="list" aria-label={t('channels_aria_label')}>
             {supportChannels.map((channel, index) => (
               <div
                 key={index}
@@ -78,7 +84,6 @@ export default function SupportChannels() {
                   {channel.action}
                 </a>
 
-                {/* Microdatos para cada canal */}
                 <meta itemProp="contactType" content={channel.title} />
                 <meta itemProp="areaServed" content="Global" />
                 {channel.responseTime && <meta itemProp="processingTime" content={channel.responseTime} />}
@@ -87,20 +92,21 @@ export default function SupportChannels() {
           </div>
         </div>
 
-        {/* Información adicional para SEO */}
         <div className="mt-12 text-center">
           <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-8 max-w-4xl mx-auto border border-blue-100">
-            <h3 className="text-2xl font-bold mb-4 text-gray-900">¿Necesitas ayuda específica?</h3>
+            <h3 className="text-2xl font-bold mb-4 text-gray-900">{t('help_title')}</h3>
             <p className="text-gray-700 mb-4">
-              Nuestro equipo especializado en <strong>registro musical, distribución digital y protección con blockchain</strong> puede ayudarte con:
+              {t.rich('help_description', {
+                strong: (chunks) => <strong>{chunks}</strong>
+              })}
             </p>
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-2 text-left text-gray-700 max-w-2xl mx-auto">
-              <li className="flex items-center gap-2">✅ Registro de obras musicales</li>
-              <li className="flex items-center gap-2">✅ Distribución en plataformas</li>
-              <li className="flex items-center gap-2">✅ Protección con blockchain</li>
-              <li className="flex items-center gap-2">✅ Derechos de autor y royalties</li>
-              <li className="flex items-center gap-2">✅ Problemas técnicos</li>
-              <li className="flex items-center gap-2">✅ Facturación y pagos</li>
+              <li className="flex items-center gap-2">✅ {t('help_item1')}</li>
+              <li className="flex items-center gap-2">✅ {t('help_item2')}</li>
+              <li className="flex items-center gap-2">✅ {t('help_item3')}</li>
+              <li className="flex items-center gap-2">✅ {t('help_item4')}</li>
+              <li className="flex items-center gap-2">✅ {t('help_item5')}</li>
+              <li className="flex items-center gap-2">✅ {t('help_item6')}</li>
             </ul>
           </div>
         </div>

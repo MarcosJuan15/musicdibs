@@ -1,6 +1,11 @@
+'use client';
+
 import { HelpCircle } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 export default function FAQHero() {
+    const t = useTranslations('faq.hero');
+    
     return (
         <section className="py-20 bg-gradient-to-br from-blue-900/10 via-purple-800/10 to-pink-600/10" 
                  itemScope 
@@ -12,39 +17,37 @@ export default function FAQHero() {
                     </div>
                 </div>
                 
-                {/* H1 Principal optimizado para SEO */}
                 <h1 className="text-4xl md:text-6xl font-bold mb-6" itemProp="headline">
-                    Preguntas Frecuentes sobre <span className="bg-gradient-to-br from-blue-900 via-purple-800 to-pink-600 bg-clip-text text-transparent block mt-2">Registro Musical</span>
+                    {t('title_part1')} <span className="bg-gradient-to-br from-blue-900 via-purple-800 to-pink-600 bg-clip-text text-transparent block mt-2">{t('title_part2')}</span>
                 </h1>
                 
                 <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-8" itemProp="description">
-                    Encuentra respuestas detalladas a las 20+ preguntas más comunes sobre registro, protección con blockchain, derechos de autor y suscripciones.
+                    {t('description')}
                 </p>
 
-                {/* Microdatos mejorados */}
                 <script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{
                         __html: JSON.stringify({
                             '@context': 'https://schema.org',
                             '@type': 'FAQPage',
-                            'name': 'Preguntas Frecuentes - MusicDIBS',
-                            'description': 'Respuestas a preguntas sobre registro musical, protección con blockchain, derechos de autor y suscripciones',
+                            'name': t('schema_name'),
+                            'description': t('schema_description'),
                             'mainEntity': [
                                 {
                                     '@type': 'Question',
-                                    'name': '¿Cómo demostrar autoría de mi obra registrada?',
+                                    'name': t('schema_question1'),
                                     'acceptedAnswer': {
                                         '@type': 'Answer',
-                                        'text': 'El registro genera un hash y marca de tiempo que vinculan al autor con su creación. Ante disputas legales, se puede validar el código para verificar la autoría original.'
+                                        'text': t('schema_answer1')
                                     }
                                 },
                                 {
                                     '@type': 'Question',
-                                    'name': '¿Qué validez legal tiene el registro en blockchain?',
+                                    'name': t('schema_question2'),
                                     'acceptedAnswer': {
                                         '@type': 'Answer',
-                                        'text': 'Tiene validez legal en los 179 países firmantes del Convenio de Berna. Es un medio alternativo, rápido y fiable para proteger obras musicales.'
+                                        'text': t('schema_answer2')
                                     }
                                 }
                             ],

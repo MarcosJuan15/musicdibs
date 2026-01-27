@@ -2,10 +2,12 @@
 
 import { useState } from "react";
 import { Eye, EyeOff } from "lucide-react";
-import Link from "next/link";
+import { Link } from "@/navigation";
 import { useRouter } from "next/navigation";
+import { useTranslations } from "next-intl";
 
 export default function LoginForm() {
+    const t = useTranslations('auth.login');
     const [showPassword, setShowPassword] = useState(false);
     const [formData, setFormData] = useState({
         email: '',
@@ -20,16 +22,16 @@ export default function LoginForm() {
 
         // Validación de email
         if (!formData.email) {
-            newErrors.email = 'El email es obligatorio';
+            newErrors.email = t('errors.email_required');
         } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-            newErrors.email = 'El formato del email no es válido';
+            newErrors.email = t('errors.email_invalid');
         }
 
         // Validación de contraseña
         if (!formData.password) {
-            newErrors.password = 'La contraseña es obligatoria';
+            newErrors.password = t('errors.password_required');
         } else if (formData.password.length < 6) {
-            newErrors.password = 'La contraseña debe tener al menos 6 caracteres';
+            newErrors.password = t('errors.password_min_length');
         }
 
         setErrors(newErrors);
@@ -46,10 +48,6 @@ export default function LoginForm() {
         }
 
         try {
-            console.log('Login data:', formData);
-            // Aquí iría tu lógica de login real
-            // await loginUser(formData);
-
             // Simulamos una llamada a la API
             await new Promise(resolve => setTimeout(resolve, 1000));
 
@@ -57,7 +55,7 @@ export default function LoginForm() {
             router.push('/dashboard');
         } catch (error) {
             console.error('Error en login:', error);
-            setErrors({ submit: 'Error al iniciar sesión. Por favor, intenta de nuevo.' });
+            setErrors({ submit: t('errors.submit') });
         } finally {
             setIsSubmitting(false);
         }
@@ -85,7 +83,7 @@ export default function LoginForm() {
         if (name === 'email' && formData.email && !/\S+@\S+\.\S+/.test(formData.email)) {
             setErrors({
                 ...errors,
-                email: 'El formato del email no es válido'
+                email: t('errors.email_invalid')
             });
         }
     };
@@ -97,7 +95,7 @@ export default function LoginForm() {
                 {/* Título */}
                 <div className="text-center mb-8 md:mb-10">
                     <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-                        Iniciar Sesión
+                        {t('title')}
                     </h2>
                 </div>
 
@@ -106,13 +104,13 @@ export default function LoginForm() {
                     {/* Email */}
                     <div className="space-y-2 md:space-y-3">
                         <label htmlFor="email-login" className="block text-base md:text-lg font-medium text-gray-700">
-                            Email
+                            {t('form.email')}
                         </label>
                         <input
                             id="email-login"
                             name="email"
                             type="email"
-                            placeholder="tu@email.com"
+                            placeholder={t('form.email_placeholder')}
                             className={`w-full px-4 py-3 md:px-5 md:py-4 text-base md:text-lg border-2 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors ${
                                 errors.email ? 'border-red-500 bg-red-50' : 'border-gray-300'
                             }`}
@@ -129,14 +127,14 @@ export default function LoginForm() {
                     {/* Contraseña */}
                     <div className="space-y-2 md:space-y-3">
                         <label htmlFor="password-login" className="block text-base md:text-lg font-medium text-gray-700">
-                            Contraseña
+                            {t('form.password')}
                         </label>
                         <div className="relative">
                             <input
                                 id="password-login"
                                 name="password"
                                 type={showPassword ? "text" : "password"}
-                                placeholder="Introduce tu contraseña"
+                                placeholder={t('form.password_placeholder')}
                                 className={`w-full px-4 py-3 md:px-5 md:py-4 text-base md:text-lg border-2 rounded-xl pr-14 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors ${
                                     errors.password ? 'border-red-500 bg-red-50' : 'border-gray-300'
                                 }`}
@@ -160,7 +158,7 @@ export default function LoginForm() {
                     {/* Forgot Password */}
                     <div className="flex justify-end">
                         <Link href="/forgot-password" className="text-blue-600 hover:text-blue-700 text-sm md:text-base font-medium transition-colors">
-                            ¿Olvidaste tu contraseña?
+                            {t('form.forgot_password')}
                         </Link>
                     </div>
 
@@ -177,14 +175,14 @@ export default function LoginForm() {
                         disabled={isSubmitting}
                         className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-colors font-medium text-lg"
                     >
-                        {isSubmitting ? 'Iniciando sesión...' : 'Iniciar Sesión'}
+                        {isSubmitting ? t('form.submitting') : t('form.submit')}
                     </button>
 
                     {/* Link Signup */}
                     <p className="text-center text-gray-600 text-sm md:text-base pt-4">
-                        ¿No tienes cuenta?{" "}
+                        {t('form.no_account')}{" "}
                         <Link href="/auth/signup" className="text-blue-600 hover:text-blue-700 font-bold transition-colors">
-                            Crear cuenta
+                            {t('form.create_account')}
                         </Link>
                     </p>
 
@@ -193,9 +191,9 @@ export default function LoginForm() {
                 {/* Contact */}
                 <div className="mt-10 pt-6 border-t border-gray-200">
                     <p className="text-center text-gray-500 text-xs md:text-base">
-                        ¿Necesitas ayuda?{" "}
+                        {t('help.need_help')}{" "}
                         <Link href="/support" className="text-blue-600 hover:text-blue-700 font-medium transition-colors">
-                            Contáctanos
+                            {t('help.contact_us')}
                         </Link>
                     </p>
                 </div>

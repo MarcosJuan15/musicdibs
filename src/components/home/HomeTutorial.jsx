@@ -1,52 +1,55 @@
+// src/components/home/HomeTutorial.jsx
 'use client';
 
 import { useState } from "react";
-import Link from "next/link";
+import { Link } from "@/navigation"; // ← Link personalizado
+import { useTranslations } from 'next-intl';
 
 export default function HomeTutorial() {
     const [currentVideo, setCurrentVideo] = useState(0);
+    const t = useTranslations('home.tutorial');      // ← 'home.tutorial'
+const tCommon = useTranslations('common');
+
 
     const videos = [
         {
             src: "https://www.youtube.com/embed/a4HMb8pV2hQ",
-            title: "Tutorial de Registro - MusicDIBS",
-            description: "Aprende a registrar tus obras musicales paso a paso"
+            title: t('video1_title'),
+            description: t('video1_description')
         },
         {
             src: "https://www.youtube.com/embed/YS8euOYAdp8",
-            title: "Tutorial de Distribución - MusicDIBS",
-            description: "Descubre cómo distribuir tu música en todas las plataformas"
+            title: t('video2_title'),
+            description: t('video2_description')
         },
     ];
 
     const steps = [
         {
             step: 1,
-            title: "Date de alta",
-            description: "Regístrate y verifica tu identidad para dar validez legal a tus registros.",
+            title: t('step1_title'),
+            description: t('step1_description'),
         },
         {
             step: 2,
-            title: "Registra tu canción",
-            description: (
-                <>
-                    Sube tu obra; generamos una huella digital y la registramos en blockchain en segundos. Descarga tu certificado de registro, con sello de tiempo.{" "}
+            title: t('step2_title'),
+            description: t.rich('step2_description', {
+                link: (chunks) => (
                     <Link
                         href="/certification"
                         target="_blank"
                         className="text-pink-300 hover:text-pink-200 underline transition-colors"
-                        aria-label="Ver ejemplo de certificado"
+                        aria-label={t('step2_link')}
                     >
-                        Ver ej. certificado
+                        {chunks}
                     </Link>
-                    .
-                </>
-            ),
+                )
+            }),
         },
         {
             step: 3,
-            title: "Distribuye tu música",
-            description: "Llega a Spotify, Apple Music, YouTube y más de 200 plataformas con un solo clic. Controla y monetiza tus lanzamientos desde tu panel.",
+            title: t('step3_title'),
+            description: t('step3_description'),
         },
     ];
 
@@ -73,21 +76,6 @@ export default function HomeTutorial() {
             itemType="https://schema.org/HowTo"
             aria-labelledby="tutorial-title"
         >
-            {/* Schema.org structured data */}
-            <div className="hidden">
-                <div itemScope itemType="https://schema.org/HowTo">
-                    <meta itemProp="name" content="Cómo registrar y distribuir tu música con MusicDIBS" />
-                    <meta itemProp="description" content="Tutorial paso a paso para registrar y distribuir tu música en todas las plataformas digitales" />
-                    {steps.map((step, index) => (
-                        <div key={step.step} itemScope itemType="https://schema.org/HowToStep">
-                            <meta itemProp="position" content={index + 1} />
-                            <meta itemProp="name" content={`Paso ${step.step}: ${step.title}`} />
-                            <div itemProp="text">{step.description}</div>
-                        </div>
-                    ))}
-                </div>
-            </div>
-
             <div className="container mx-auto px-4 relative z-10">
                 <div className="text-center mb-16">
                     <h2
@@ -95,10 +83,10 @@ export default function HomeTutorial() {
                         className="text-4xl md:text-5xl font-bold text-white mb-6"
                         itemProp="name"
                     >
-                        ¿Cómo funciona?
+                        {t('title')}
                     </h2>
                     <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-                        Ve los 2 tutoriales de registro y distribución y verás lo sencillo que es.
+                        {t('subtitle')}
                     </p>
                 </div>
 
@@ -111,12 +99,11 @@ export default function HomeTutorial() {
                     <meta itemProp="name" content={videos[currentVideo].title} />
                     <meta itemProp="description" content={videos[currentVideo].description} />
                     <meta itemProp="thumbnailUrl" content={`https://img.youtube.com/vi/${videos[currentVideo].src.split('/').pop()}/maxresdefault.jpg`} />
-                    <meta itemProp="uploadDate" content="2024-01-01" />
 
                     <button
                         onClick={prevVideo}
                         className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black transition-colors z-10"
-                        aria-label="Video anterior"
+                        aria-label={tCommon('previous')}
                     >
                         ◀
                     </button>
@@ -137,7 +124,7 @@ export default function HomeTutorial() {
                     <button
                         onClick={nextVideo}
                         className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black transition-colors z-10"
-                        aria-label="Siguiente video"
+                        aria-label={tCommon('next')}
                     >
                         ▶
                     </button>
@@ -190,14 +177,14 @@ export default function HomeTutorial() {
                 {/* Call to Action */}
                 <div className="text-center">
                     <h3 className="text-3xl md:text-4xl font-bold text-white mb-8 max-w-3xl mx-auto">
-                        Empieza hoy mismo a proteger y monetizar tu música
+                        {t('cta_title')}
                     </h3>
                     <button
                         className="bg-gradient-to-r from-pink-500 to-red-500 hover:from-pink-600 hover:to-red-600 text-white font-bold py-4 px-12 rounded-full text-lg shadow-lg transform hover:scale-105 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50"
                         onClick={scrollToPricing}
-                        aria-label="Comenzar a proteger mi música"
+                        aria-label={t('cta_button')}
                     >
-                        Comenzar ahora
+                        {t('cta_button')}
                     </button>
                 </div>
             </div>

@@ -1,0 +1,130 @@
+{
+  "hero": {
+    "title_part1": "Perguntas",
+    "title_part2": "Frequentes",
+    "description": "Encontre respostas para as dúvidas mais comuns sobre registro, proteção e distribuição da sua música.",
+    "schema_name": "Perguntas Frequentes - MusicDIBS",
+    "schema_description": "Resolvemos suas dúvidas sobre registro musical, proteção com blockchain e direitos autorais na MusicDIBS",
+    "schema_question1": "O que é Musicdibs?",
+    "schema_answer1": "Musicdibs é uma plataforma que permite aos artistas registrar, distribuir e monetizar sua música usando tecnologia blockchain para garantir a proteção legal de suas obras.",
+    "schema_question2": "Como funciona o registro de uma obra?",
+    "schema_answer2": "Você faz upload do seu arquivo de áudio, geramos uma impressão digital única e a registramos no blockchain. Você recebe um certificado de registro com validade legal."
+  },
+
+  "accordion": {
+    "section_title": "Perguntas Mais Frequentes",
+    "section_subtitle": "Resolvemos suas dúvidas sobre registro musical, proteção com blockchain e direitos autorais",
+    
+    "items": [
+      {
+        "question": "Uma vez registrada, como posso provar a autoria da minha obra perante um terceiro?",
+        "answer": "<div class='space-y-3'><p>O registro da obra gera um <strong>hash e uma marca de tempo</strong>, onde os dados identificativos são criptografados, vinculando automaticamente o autor à sua criação.</p><p>Em caso de disputa legal, qualquer pessoa poderá validar esse código e verificar que você é o autor original.</p><p><strong>Uma vez certificado, é importante não fazer alterações no arquivo original</strong>, para não modificar sua impressão digital.</p></div>"
+      },
+      {
+        "question": "Se posso registrar uma obra já registrada, então qualquer pessoa poderia registrar uma obra como sua (mesmo que já tenha sido registrada antes)?",
+        "answer": "<div class='space-y-3'><p><strong>Sim, mas não há problema!</strong> O importante é <strong>quem fez primeiro e quando</strong> (e isso é exatamente o que aparece em nossos certificados de registro).</p><p>Toda vez que registramos algo (mesmo que repetido) é gerado um <strong>carimbo de tempo diferente</strong> associado a:</p><ul class='list-disc list-inside ml-4 space-y-1'><li>A identidade de quem fez a certificação</li><li>O conteúdo certificado</li><li>O momento em que é feito</li></ul><p>O Musicdibs, por ser uma ferramenta com validade e alcance mundial, não pode saber se alguém já registrou algo antes de outra pessoa em outro sistema de registro ou outra parte do mundo.</p><p>Mas isso, como dizemos, não é relevante, mas sim <strong>QUEM FEZ ANTES de forma confiável?</strong>. E isso é o que você tem garantido usando Musicdibs 😉</p></div>"
+      },
+      {
+        "question": "Se não renovar minha assinatura, perderei meus registros?",
+        "answer": "<div class='space-y-3'><p><strong>Os registros (certificados) são permanentes, nunca expiram</strong>, mas se uma assinatura não for renovada:</p><ul class='list-disc list-inside ml-4 space-y-1'><li>Você perderá o acesso à plataforma</li><li>Não poderá gerenciar sua lista de certificados e baixá-los</li></ul><p>Para acessar sua conta novamente e gerenciar sua lista de certificados, você terá que renovar sua assinatura novamente.</p><p><strong>Do Musicdibs recomendamos que você MANTENHA seu plano o máximo possível</strong>, pois neste momento o preço é muito atrativo graças ao esforço que fizemos para oferecer um preço reduzido e acessível para todos.</p><p>No futuro, planejamos adicionar novas funcionalidades às assinaturas, o que obviamente provavelmente significará um aumento no preço. <strong>Se você mantiver seu plano atual agora, também garante que manterá seu preço atual.</strong></p></div>"
+      },
+      {
+        "question": "Um menor pode registrar uma obra?",
+        "answer": "<div class='space-y-3'><p><strong>Menores de idade podem solicitar</strong> através de seus pais ou representantes legais o registro de seu direito autoral.</p><p>Os representantes legais deverão comprovar sua relação com o menor por meio do documento oportuno:</p><ul class='list-disc list-inside ml-4 space-y-1'><li>Livro de família</li><li>Documento legal que comprove a tutela ou representação legal sobre o menor</li></ul></div>"
+      },
+      {
+        "question": "Registrar minha obra em blockchain tem validade legal?",
+        "answer": "<div class='space-y-3'><p><strong>A inscrição da sua obra em blockchain tem validade legal nos 179 países signatários da Convenção de Berna.</strong></p><p>É um meio alternativo, rápido e confiável para:</p><ul class='list-disc list-inside ml-4 space-y-1'><li>Evitar plágio ao compartilhá-lo nas redes sociais</li><li>Proteger suas obras quando as compartilha com amigos</li></ul><p>É uma aposta no futuro, que facilita o processo para comparar diferentes obras e verificar a identidade de seu criador original.</p></div>"
+      },
+      {
+        "question": "Que tipo de obras e arquivos posso registrar?",
+        "answer": "<div class='space-y-4'><p>Com o Musicdibs você pode registrar os direitos autorais de <strong>qualquer obra criativa e artística</strong>:</p><div><p class='font-semibold text-purple-700'>Música:</p><ul class='list-disc list-inside ml-4 space-y-1 mt-1'><li>Canções</li><li>Letras</li><li>Partituras</li><li>Gravações sonoras</li></ul></div><div><p class='font-semibold text-purple-700'>Audiovisual:</p><ul class='list-disc list-inside ml-4 space-y-1 mt-1'><li>Roteiros</li><li>Tratamentos</li><li>Ideia/sinopse</li><li>Peças de vídeo</li><li>Storyboards</li></ul></div><div><p class='font-semibold text-purple-700'>Obra literária:</p><ul class='list-disc list-inside ml-4 space-y-1 mt-1'><li>Manuscritos e rascunhos</li><li>Títulos e nomes</li><li>Traduções</li><li>Adaptações e derivados</li></ul></div><p><strong>Formatos aceitos:</strong> Você pode registrar todos os tipos de arquivos, tanto obra finalizada em qualquer formato de áudio digital ou vídeo (mp3, WAV, AIFF, WMA, mp4, etc) quanto arquivos de texto (PDF, DOC) se forem partituras, letras ou roteiros.</p><p><strong>Tamanho máximo:</strong> 30Mb. Se sua obra for maior, você deverá comprimi-la.</p></div>"
+      },
+      {
+        "question": "O que acontece se um dia o Musicdibs \"desaparecer\"? Os certificados perderiam sua validade?",
+        "answer": "<div class='space-y-3'><p><strong>Nada aconteceria com suas obras registradas</strong> graças à tecnologia descentralizada e pública que usamos.</p><p>Nossa infraestrutura é formada por:</p><ul class='list-disc list-inside ml-4 space-y-1'><li>Uma rede com milhares de nós na nuvem</li><li>Diferentes blockchains distribuídas</li></ul><p>Um perito técnico sempre poderia acessar a verificação do seu certificado, independentemente do Musicdibs.</p></div>"
+      },
+      {
+        "question": "O que acontece se alguém registrar minha música no registro central? Posso usar meu certificado no Musicdibs para reivindicar minha autoria?",
+        "answer": "<div class='space-y-4'><p><strong>Você deve saber que a propriedade intelectual não é como a industrial.</strong> Nesse sentido, é importante destacar que na Espanha não é obrigatório realizar um ato administrativo para ser considerado autor de uma peça e basta demonstrar sua criação prévia.</p><div><p class='font-semibold text-purple-700'>Segundo o artigo 1 do Real Decreto Legislativo 1/1991 de 12 de abril sobre a Lei de Propriedade Intelectual:</p><blockquote class='border-l-4 border-purple-500 pl-4 ml-4 italic text-gray-700 bg-purple-50 py-2 my-2'>\"A propriedade intelectual de uma obra literária, artística ou científica corresponde ao autor pelo simples fato de sua criação.\"</blockquote></div><p>Portanto, <strong>o autor, artista ou criador tem uma proteção automática</strong>, ao contrário da Propriedade Industrial (marcas, patentes, desenhos industriais,…) na qual é necessário registrar para ser considerado titular dos direitos.</p><p>Se alguém copiar uma música previamente registrada no Musicdibs, você pode aportar seu registro como prova válida em uma denúncia por plágio, já que em nosso registro se gera um certificado que contém toda a informação necessária, tanto para identificar a obra em seu nome quanto para demonstrar o registro com seu carimbo de tempo.</p><p><strong>Com o certificado do Musicdibs você poderá demonstrar que você previamente a criou e que portanto tem o direito de propriedade sobre ela.</strong></p></div>"
+      },
+      {
+        "question": "O que acontece com minhas certificações se eu cancelar o serviço?",
+        "answer": "<div class='space-y-3'><p><strong>O Musicdibs APENAS utiliza blockchains robustas públicas e descentralizadas</strong> (como por exemplo Ethereum, Polygon e Solana) que não dependem da iCommunity Labs e que estão suportadas por uma ampla comunidade de usuários.</p><p>Isso garante que <strong>as certificações realizadas através do Musicdibs sempre estarão acessíveis e persistirão</strong>, mesmo se:</p><ul class='list-disc list-inside ml-4 space-y-1'><li>O usuário cancelar</li><li>A iCommunity Labs desaparecer no futuro</li></ul><p>Isso converte as certificações emitidas pelo Musicdibs em <strong>evidências digitais totalmente disponíveis para auditorias ou perícias técnicas</strong> e com efeitos probatórios em processos de disputa ou similares.</p><p><strong>No entanto, você deve lembrar</strong> que para comprovar a certificação de um documento você deve estar na posse do documento original e, se a certificação digital não foi feita através do Musicdibs, deverá recriar o procedimento de certificação apropriado (título, descrição, algoritmo padrão de criptografia, etc.) publicado pela iCommunity Labs através de seu site.</p></div>"
+      },
+      {
+        "question": "Posso verificar no Musicdibs músicas que tenham sido registradas com outras plataformas?",
+        "answer": "<div class='space-y-3'><p><strong>Não, só podemos verificar registros de obras realizados com o Musicdibs.</strong></p><p>Isso se deve a que nós registramos e certificamos, não apenas o arquivo subido com o conteúdo, mas também <strong>a identidade de quem o registra</strong>.</p><p>Além disso, você deve saber que isso na realidade não pode com nenhum outro sistema de registro de propriedade, já que <strong>nenhum se encontra interconectado com o resto</strong>.</p></div>"
+      },
+      {
+        "question": "Posso registrar obras em nome de outras pessoas com minha conta?",
+        "answer": "<div class='space-y-3'><p><strong>Infelizmente o registro em nome de terceiros APENAS está permitido e reconhecido legalmente para o caso excepcional dos menores.</strong></p><p>As contas de usuário do Musicdibs são <strong>unipessoais e intransferíveis</strong> e podem pertencer a:</p><ul class='list-disc list-inside ml-4 space-y-1'><li>Pessoas</li><li>Entidades legalmente estabelecidas (mercantis, associações, etc.)</li></ul><p>Você deve ter em conta que para o registro de uma criação se deve verificar primeiro a identidade da pessoa ou entidade à qual se vai outorgar a propriedade desses direitos, e isso só é possível se essa mesma pessoa ou entidade é a que abriu a conta no Musicdibs e a verificou com seu documento oficial de identidade.</p><p>Dessa forma precisamente é como se evitam possíveis suplantações de identidade ou inclusive roubos de propriedade, já que <strong>só a pessoa ou entidade que registra é a que tem a propriedade da criação</strong>.</p><p><strong>Recomendamos</strong> que proponha a esses conhecidos que abram cada um deles uma conta no Musicdibs com seus dados. É muito simples!</p></div>"
+      },
+      {
+        "question": "Posso registrar obras nas quais tenha usado IA para sua criação? O que protege o registro no Musicdibs nestes casos?",
+        "answer": "<div class='space-y-4'><p><strong>Sim, você pode registrar suas obras no Musicdibs ainda que tenha usado IA para a musicalização</strong>, sempre que:</p><ul class='list-disc list-inside ml-4 space-y-1'><li><strong>Você seja o autor original</strong> da letra, da ideia ou da estrutura da canção</li><li>Tenha havido uma <strong>direção criativa sua</strong> no uso da IA (por exemplo, escolheu os prompts, editou o resultado, adaptou a melodia, etc.)</li><li>A ferramenta de IA utilizada lhe permita legalmente usar e explorar comercialmente os resultados gerados</li></ul><p class='font-semibold text-purple-700'>O que protege nestes casos o registro no Musicdibs?</p><p>O registro lhe outorga um <strong>certificado de autoria com validade legal internacional</strong>, respaldado com carimbo de tempo e tecnologia blockchain.</p><p>Isso lhe permite:</p><ul class='list-disc list-inside ml-4 space-y-1'><li>Provar que você criou essa obra em uma data específica</li><li>Defender seus direitos em caso de plágio ou disputa</li></ul><p><strong>No entanto, você deve ter em conta que:</strong></p><ul class='list-disc list-inside ml-4 space-y-1'><li>O Musicdibs não valida nem supervisiona o conteúdo gerado por IA</li><li>É recomendável que ao registrar a obra, <strong>indique na descrição que se usou IA como ferramenta</strong>, e que a autoria criativa é sua</li></ul><p>E se tiver dúvidas, podemos ajudá-lo a redigir uma descrição adequada para seu registro de obras baseadas em IA.</p></div>"
+      },
+      {
+        "question": "Posso registrar criações parciais e depois já registrar a definitiva?",
+        "answer": "<div class='space-y-3'><p><strong>SIM, com o Musicdibs isso é possível e de fato é o recomendável</strong>, para evitar que no processo de criação alguém lhe plagi antes de terminar sua obra.</p><p>Graças ao nosso custo reduzido, em especial o da assinatura anual, <strong>você pode fazer tantos registros parciais de sua obra quanto quiser</strong>, o que além disso lhe permitirá:</p><ul class='list-disc list-inside ml-4 space-y-1'><li>Ir compartilhando sua criação com quem quiser</li><li>Ter <strong>total garantia</strong> de que está protegida e em seu nome</li></ul></div>"
+      },
+      {
+        "question": "Os créditos das assinaturas não gastos, são acumuláveis quando se renova anualmente?",
+        "answer": "<div class='space-y-3'><p><strong>NÃO.</strong> Os créditos das assinaturas e ofertas especiais que não se gastem no período <strong>não se acumulam</strong> quando se renova o seguinte período de faturamento.</p></div>"
+      },
+      {
+        "question": "O registro da minha obra tem custos de renovação?",
+        "answer": "<div class='space-y-3'><p><strong>Não, só pagará pelo registro inicial.</strong> Uma vez registrada sua obra, não há custos adicionais de renovação para manter a certificação.</p></div>"
+      },
+      {
+        "question": "De que tipo de conteúdo se podem gerar os NFTs das assinaturas e como gerá-los?",
+        "answer": "<div class='space-y-4'><p>Para gerar um NFT de suas obras registradas lhe preparamos um videotutorial no seguinte enlace:</p><div class='bg-gray-50 p-4 rounded-lg'><a href='https://www.youtube.com/watch?v=a3WAlJ2Ynek' target='_blank' rel='noopener noreferrer' class='text-purple-600 hover:text-purple-800 font-medium break-all'>https://www.youtube.com/watch?v=a3WAlJ2Ynek</a></div><p><strong>Por enquanto para gerar NFTs estamos aceitando apenas áudios</strong> nos formatos:</p><ul class='list-disc list-inside ml-4 space-y-1'><li>mp3</li><li>wav</li><li>ogg</li></ul><p>Isso é assim porque estes são os formatos suportados pelo marketplace Opensea, que é onde os geramos e onde lhe enviaremos (precisará portanto ter uma wallet no Opensea para recebê-los).</p><p><strong>Em breve se abrirá a possibilidade de gerar também NFTs para vídeos</strong> (os formatos suportados serão: mp4 e webm).</p></div>"
+      },
+      {
+        "question": "Quanto dura o registro da minha obra?",
+        "answer": "<div class='space-y-3'><p><strong>O registro em blockchain é permanente</strong>, e a duração da proteção dos direitos autorais, está sujeita à legislação de cada país.</p></div>"
+      },
+      {
+        "question": "Quais são os documentos de identidade válidos para verificar minha identidade?",
+        "answer": "<div class='space-y-4'><p>Para que seus registros tenham validade legal é necessário verificar sua identidade com um <strong>documento de identificação oficial válido</strong> em seu país que inclua:</p><ul class='list-disc list-inside ml-4 space-y-1'><li>Sua foto</li><li>Seus dados pessoais</li></ul><p>Na Espanha e nos demais países da União Europeia, pode-se utilizar:</p><ul class='list-disc list-inside ml-4 space-y-1'><li>Documento Nacional de Identidade (DNI)</li><li>Passaporte</li></ul><p>Para outros países, abaixo há uma lista dos documentos que aceitamos:</p><div class='bg-gray-50 p-4 rounded-lg mt-2'><p class='text-sm text-gray-600'>* Lista de documentos aceitos por país disponível em nossa plataforma</p></div></div>"
+      },
+      {
+        "question": "Como se faria o registro de uma canção quando pertence a dois ou mais autores?",
+        "answer": "<div class='space-y-3'><p>A melhor maneira de registrar a coautoria ou multipropriedade de uma criação com o Musicdibs é <strong>fazendo dois registros</strong>:</p><ul class='list-disc list-inside ml-4 space-y-1'><li><strong>Um da canção</strong> (letra, partitura, gravação sonora, vídeos, …)</li><li><strong>Outro com todas as informações dos autores</strong> (Nome e documento de identidade de cada coautor)</li></ul><p>Resumindo, vocês teriam que subir o arquivo musical e adicionalmente subir um arquivo de texto ou pdf com os dados anteriormente indicados.</p><p><strong>Adicionalmente há que marcar a opção de</strong> \"Quero que esta certificação seja pública\" nos dois registros.</p><p>Registrando desta maneira vocês podem verificar o registro tanto da canção quanto do documento de coautoria e <strong>a marca de tempo dos registros garante sua validade legal</strong>.</p></div>"
+      },
+      {
+        "question": "Como reduzir o tamanho do meu arquivo para poder subi-lo?",
+        "answer": "<div class='space-y-3'><p><strong>Só admitimos arquivos com um peso inferior a 30MB.</strong> Por isso, em caso de que seu arquivo seja maior você deverá comprimi-lo.</p><p>Para isso, lhe proporcionamos um tutorial explicativo sobre como reduzir o peso de sua obra.</p><p><strong>Lembramos</strong> que para o registro de propriedade de direitos autorais <strong>o importante é o conteúdo e não sua qualidade audiovisual</strong>, pelo que não há nenhum problema se ao comprimi-la esta seja inferior.</p></div>"
+      },
+      {
+        "question": "Como funcionam as assinaturas mensais e anuais?",
+        "answer": "<div class='space-y-3'><p>Tanto a assinatura mensal como anual, <strong>se renovam de forma automática</strong> ao final de cada ciclo contratado.</p><p><strong>Exemplo:</strong> Se você se registrar por exemplo no dia 15 de novembro, o seguinte ciclo de cobrança se ativará no dia 15 de dezembro.</p><p>Para seu cancelamento, só tem que ir dentro de seu perfil de conta a:</p><ul class='list-disc list-inside ml-4 space-y-1'><li>\"Ajustes\"</li><li>\"Assinatura\"</li><li>\"Cancelar assinatura\"</li></ul><p><strong>Pelo menos 24h antes</strong> da renovação do novo ciclo.</p><p>Se uma assinatura não se renova:</p><ul class='list-disc list-inside ml-4 space-y-1'><li>Perderá o acesso à sua lista de certificados</li><li>Não poderá baixá-los</li></ul><p><strong>Mas os registros não se apagam</strong> e sempre se guardam em sua conta de usuário.</p><p>Para acessar de novo à sua conta e gerenciar sua lista de certificados, terá que voltar a renovar sua assinatura.</p></div>"
+      },
+      {
+        "question": "Como cancelo minha assinatura?",
+        "answer": "<div class='space-y-3'><p><strong>Só tem que seguir estes passos:</strong></p><ul class='list-disc list-inside ml-4 space-y-1'><li>Ir dentro de seu perfil de conta a <strong>\"Ajustes\"</strong></li><li>Selecionar <strong>\"Assinatura\"</strong></li><li>Clicar em <strong>\"Cancelar assinatura\"</strong></li></ul><p><strong>Importante:</strong> Isto você deverá fazê-lo com <strong>pelo menos 24h antes</strong> de que vença seu plano atual e comece um novo período de assinatura.</p></div>"
+      }
+    ]
+  },
+
+  "contact": {
+    "benefit1_title": "Resposta em 24h",
+    "benefit1_description": "Nossa equipe responderá em menos de 24 horas.",
+    "benefit2_title": "Suporte Humano",
+    "benefit2_description": "Atendido por especialistas em propriedade intelectual e música.",
+    "benefit3_title": "Ajuda Personalizada",
+    "benefit3_description": "Vamos guiá-lo passo a passo durante todo o processo.",
+    "title": "Ainda tem dúvidas?",
+    "subtitle": "Nossa equipe de suporte está pronta para ajudá-lo. <strong>Escreva para nós!</strong>",
+    "contact_button": "Contatar Suporte"
+  },
+
+      "metadata": {
+      "title": "Perguntas Frequentes Musicdibs | FAQ Registro Musical e Blockchain 2024",
+      "description": "✅ 20+ Perguntas Frequentes resolvidas sobre registro musical, proteção com blockchain, distribuição e direitos autorais. Respostas de especialistas da Musicdibs.",
+      "keywords": "faq musicdibs, perguntas frequentes registro musical, música blockchain, direitos autor canções, distribuição musical, proteção obras, registro canções, musicdibs perguntas, dúvida registro música",
+      "og_title": "FAQ Musicdibs - Perguntas Frequentes sobre Registro Musical com Blockchain",
+      "og_description": "Respostas para 20+ perguntas comuns sobre registro musical, proteção com blockchain, distribuição e direitos autorais na Musicdibs",
+      "og_alt": "Musicdibs FAQ - Perguntas Frequentes sobre Registro Musical e Proteção com Blockchain"
+    }
+}

@@ -1,8 +1,11 @@
 'use client';
 
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 
 export default function SupportTicket() {
+  const t = useTranslations('support.ticket');
+  
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -14,9 +17,6 @@ export default function SupportTicket() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Aquí iría la lógica para enviar el ticket
-    console.log("Ticket enviado:", formData);
-    // Podrías añadir aquí una llamada a tu API
   };
 
   return (
@@ -24,21 +24,20 @@ export default function SupportTicket() {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <h2 id="crear-ticket" className="text-3xl font-bold text-center mb-12">
-            Crear Ticket de Soporte
+            {t('section_title')}
           </h2>
 
           <div className="border-0 shadow-lg rounded-xl bg-white p-8" itemScope itemType="https://schema.org/ContactPage">
-            <h3 className="text-xl font-semibold mb-2">Describe tu consulta</h3>
+            <h3 className="text-xl font-semibold mb-2">{t('form_title')}</h3>
             <p className="text-gray-600 mb-6">
-              Completa el formulario y nuestro equipo te responderá lo antes posible
+              {t('form_description')}
             </p>
 
             <form onSubmit={handleSubmit} className="space-y-6" itemScope itemType="https://schema.org/ContactPoint">
-              {/* Nombre y Email */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <label htmlFor="name" className="text-sm font-medium">
-                    Nombre Completo *
+                    {t('name_label')} *
                   </label>
                   <input
                     id="name"
@@ -46,7 +45,7 @@ export default function SupportTicket() {
                     onChange={(e) =>
                       setFormData({ ...formData, name: e.target.value })
                     }
-                    placeholder="Tu nombre"
+                    placeholder={t('name_placeholder')}
                     required
                     className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     itemProp="name"
@@ -56,7 +55,7 @@ export default function SupportTicket() {
 
                 <div className="space-y-2">
                   <label htmlFor="email" className="text-sm font-medium">
-                    Email *
+                    {t('email_label')} *
                   </label>
                   <input
                     id="email"
@@ -65,7 +64,7 @@ export default function SupportTicket() {
                     onChange={(e) =>
                       setFormData({ ...formData, email: e.target.value })
                     }
-                    placeholder="tu@email.com"
+                    placeholder={t('email_placeholder')}
                     required
                     className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     itemProp="email"
@@ -74,11 +73,10 @@ export default function SupportTicket() {
                 </div>
               </div>
 
-              {/* Categoría y Prioridad */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <label htmlFor="category" className="text-sm font-medium">
-                    Categoría *
+                    {t('category_label')} *
                   </label>
                   <select
                     id="category"
@@ -90,19 +88,19 @@ export default function SupportTicket() {
                     required
                     aria-required="true"
                   >
-                    <option value="">Selecciona una categoría</option>
-                    <option value="registro">Registro de Obras</option>
-                    <option value="distribucion">Distribución</option>
-                    <option value="royalties">Royalties y Pagos</option>
-                    <option value="tecnico">Problema Técnico</option>
-                    <option value="cuenta">Gestión de Cuenta</option>
-                    <option value="otros">Otros</option>
+                    <option value="">{t('category_placeholder')}</option>
+                    <option value="registro">{t('category_option1')}</option>
+                    <option value="distribucion">{t('category_option2')}</option>
+                    <option value="royalties">{t('category_option3')}</option>
+                    <option value="tecnico">{t('category_option4')}</option>
+                    <option value="cuenta">{t('category_option5')}</option>
+                    <option value="otros">{t('category_option6')}</option>
                   </select>
                 </div>
 
                 <div className="space-y-2">
                   <label htmlFor="priority" className="text-sm font-medium">
-                    Prioridad *
+                    {t('priority_label')} *
                   </label>
                   <select
                     id="priority"
@@ -114,19 +112,18 @@ export default function SupportTicket() {
                     required
                     aria-required="true"
                   >
-                    <option value="">Selecciona prioridad</option>
-                    <option value="baja">Baja</option>
-                    <option value="media">Media</option>
-                    <option value="alta">Alta</option>
-                    <option value="urgente">Urgente</option>
+                    <option value="">{t('priority_placeholder')}</option>
+                    <option value="baja">{t('priority_option1')}</option>
+                    <option value="media">{t('priority_option2')}</option>
+                    <option value="alta">{t('priority_option3')}</option>
+                    <option value="urgente">{t('priority_option4')}</option>
                   </select>
                 </div>
               </div>
 
-              {/* Asunto */}
               <div className="space-y-2">
                 <label htmlFor="subject" className="text-sm font-medium">
-                  Asunto *
+                  {t('subject_label')} *
                 </label>
                 <input
                   id="subject"
@@ -134,17 +131,16 @@ export default function SupportTicket() {
                   onChange={(e) =>
                     setFormData({ ...formData, subject: e.target.value })
                   }
-                  placeholder="Resumen de tu consulta"
+                  placeholder={t('subject_placeholder')}
                   required
                   className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   aria-required="true"
                 />
               </div>
 
-              {/* Mensaje */}
               <div className="space-y-2">
                 <label htmlFor="message" className="text-sm font-medium">
-                  Mensaje *
+                  {t('message_label')} *
                 </label>
                 <textarea
                   id="message"
@@ -152,7 +148,7 @@ export default function SupportTicket() {
                   onChange={(e) =>
                     setFormData({ ...formData, message: e.target.value })
                   }
-                  placeholder="Describe detalladamente tu consulta o problema..."
+                  placeholder={t('message_placeholder')}
                   rows={6}
                   required
                   className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -161,13 +157,12 @@ export default function SupportTicket() {
                 />
               </div>
 
-              {/* Botón */}
               <button
                 type="submit"
                 className="w-full rounded-lg px-4 py-3 font-medium bg-gradient-to-r from-blue-600 to-pink-600 hover:opacity-90 transition text-white"
-                aria-label="Enviar ticket de soporte"
+                aria-label={t('submit_aria_label')}
               >
-                Enviar Ticket de Soporte
+                {t('submit_button')}
               </button>
             </form>
           </div>

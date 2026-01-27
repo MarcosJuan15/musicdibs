@@ -1,0 +1,60 @@
+{
+  "certification": {
+    "hero": {
+      "title": "Certificado de {span}Autenticidad Musical{/span}",
+      "description": "Verificación blockchain inmutable que garantiza la autenticidad, propiedad intelectual y registro temporal de tu obra musical.",
+      "schema": {
+        "name": "Certificado de Autenticidad Musical - SNEAKY WAYS LATIN",
+        "description": "Certificado digital de autenticidad y registro en blockchain para obra musical",
+        "author": "Artista Musical",
+        "license_url": "https://musicdibs.com/licenses",
+        "publisher_name": "MusicDIBS",
+        "publisher_url": "https://musicdibs.com",
+        "page_url": "https://musicdibs.com/certification"
+      }
+    },
+    "content": {
+      "certificate_data": {
+        "title": "SNEAKY WAYS LATIN",
+        "fileName": "sneaky-ways-latin-207042.mp3",
+        "fileSize": "5471085 bytes",
+        "description": "test music",
+        "date": "2025-03-24 11:57:23 464990805",
+        "transactionId": "0xe5570586bwfc32bf760ff9753d745112ac3c3b6431d45415971bfd93a917722",
+        "digitalFootprint": "cfpzy05fqR/aH1mcEEcrj+aqr2ocSfRisofRu16CPlm5fmxAg/pzolswyVOTLuHHqLjg0mKi+20hEi2lFs+rHcg==",
+        "algorithm": "base64 SHA-512"
+      },
+      "details": {
+        "filename": "Nombre del fichero",
+        "filesize": "Tamaño del fichero",
+        "description": "Descripción",
+        "date": "Fecha",
+        "transaction_id": "Identificador de la transacción",
+        "digital_footprint": "Huella digital del archivo",
+        "algorithm": "Algoritmo de huella digital"
+      },
+      "zoom": {
+        "out": "Reducir zoom",
+        "in": "Aumentar zoom",
+        "auto": "Zoom automático"
+      },
+      "pdf_url": "/certificates/CertificationMusicdibs.pdf",
+      "pdf_filename": "CertificationMusicdibs.pdf",
+      "pdf_preview_title": "Vista previa del certificado PDF",
+      "blockchain_url": "https://checker.icommunitylabs.com/check/polygon/0xe557b586badfe32bf760ff9753d745112ac3c3b6431d45415971bfd39a917722",
+      "buttons": {
+        "view_blockchain": "Ver en la blockchain",
+        "download_pdf": "Descargar certificado PDF"
+      },
+      "share": {
+        "title": "Compartir certificado",
+        "text": "Mira mi certificado de autenticidad en blockchain",
+        "copied_message": "Enlace copiado al portapapeles",
+        "linkedin": "Compartir en LinkedIn",
+        "whatsapp": "Compartir en WhatsApp",
+        "email": "Compartir por correo",
+        "copy": "Copiar enlace"
+      }
+    }
+  }
+}

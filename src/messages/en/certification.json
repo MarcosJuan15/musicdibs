@@ -1,0 +1,60 @@
+{
+  "certification": {
+    "hero": {
+      "title": "Certificate of {span}Musical Authenticity{/span}",
+      "description": "Immutable blockchain verification that guarantees the authenticity, intellectual property and temporal registration of your musical work.",
+      "schema": {
+        "name": "Musical Authenticity Certificate - SNEAKY WAYS LATIN",
+        "description": "Digital certificate of authenticity and blockchain registration for musical work",
+        "author": "Musical Artist",
+        "license_url": "https://musicdibs.com/licenses",
+        "publisher_name": "MusicDIBS",
+        "publisher_url": "https://musicdibs.com",
+        "page_url": "https://musicdibs.com/certification"
+      }
+    },
+    "content": {
+      "certificate_data": {
+        "title": "SNEAKY WAYS LATIN",
+        "fileName": "sneaky-ways-latin-207042.mp3",
+        "fileSize": "5471085 bytes",
+        "description": "test music",
+        "date": "2025-03-24 11:57:23 464990805",
+        "transactionId": "0xe5570586bwfc32bf760ff9753d745112ac3c3b6431d45415971bfd93a917722",
+        "digitalFootprint": "cfpzy05fqR/aH1mcEEcrj+aqr2ocSfRisofRu16CPlm5fmxAg/pzolswyVOTLuHHqLjg0mKi+20hEi2lFs+rHcg==",
+        "algorithm": "base64 SHA-512"
+      },
+      "details": {
+        "filename": "File name",
+        "filesize": "File size",
+        "description": "Description",
+        "date": "Date",
+        "transaction_id": "Transaction identifier",
+        "digital_footprint": "File digital footprint",
+        "algorithm": "Digital footprint algorithm"
+      },
+      "zoom": {
+        "out": "Zoom out",
+        "in": "Zoom in",
+        "auto": "Auto zoom"
+      },
+      "pdf_url": "/certificates/CertificationMusicdibs.pdf",
+      "pdf_filename": "CertificationMusicdibs.pdf",
+      "pdf_preview_title": "Certificate PDF preview",
+      "blockchain_url": "https://checker.icommunitylabs.com/check/polygon/0xe557b586badfe32bf760ff9753d745112ac3c3b6431d45415971bfd39a917722",
+      "buttons": {
+        "view_blockchain": "View on blockchain",
+        "download_pdf": "Download PDF certificate"
+      },
+      "share": {
+        "title": "Share certificate",
+        "text": "Check out my authenticity certificate on blockchain",
+        "copied_message": "Link copied to clipboard",
+        "linkedin": "Share on LinkedIn",
+        "whatsapp": "Share on WhatsApp",
+        "email": "Share via email",
+        "copy": "Copy link"
+      }
+    }
+  }
+}

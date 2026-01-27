@@ -1,223 +1,361 @@
-import React from 'react';
-import { Clock, AlertTriangle, CheckCircle, Phone, Mail } from 'lucide-react';
+"use client";
+import { useTranslations } from "next-intl";
+import { Clock, AlertTriangle, CheckCircle, Phone, Mail } from "lucide-react";
 
 export default function SLAContent() {
-  return (
-    <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8">
-      <div className="bg-white rounded-lg shadow-sm overflow-hidden border border-gray-200">
-        <div className="p-4 sm:p-6 md:p-8 lg:p-12">
-          
-          {/* Purpose Section */}
-          <section className="mb-8 sm:mb-10 md:mb-12">
-            <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 md:mb-6">
-              Propósito del SLA
-            </h2>
-            <div className="text-gray-700 leading-relaxed text-sm sm:text-base">
-              <p>
-                El propósito de este documento es indicar el nivel de servicio en términos de 
-                disponibilidad de los Servicios proporcionados por el sitio web de <strong>Musicdibs</strong>, 
-                perteneciente a <strong>iCommunity Labs & Tech SL</strong>, así como describir los 
-                procesos para reportar, catalogar, escalar y resolver incidentes en los servicios 
-                ofrecidos y sus correspondientes tiempos de respuesta.
-              </p>
-            </div>
-          </section>
+    const t = useTranslations("legal"); // Solo 'legal'
 
-          {/* Services Covered */}
-          <section className="mb-8 sm:mb-10 md:mb-12">
-            <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-4 flex items-center">
-              <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
-              Servicios Cubiertos
-            </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
-              <div className="bg-gray-50 rounded-lg p-3 sm:p-4">
-                <h4 className="font-semibold text-gray-900 mb-2 text-sm sm:text-base">Registro Descentralizado</h4>
-                <p className="text-gray-700 text-xs sm:text-sm">Propiedad intelectual para obras audiovisuales, escritas o gráficas</p>
-              </div>
-              <div className="bg-gray-50 rounded-lg p-3 sm:p-4">
-                <h4 className="font-semibold text-gray-900 mb-2 text-sm sm:text-base">Verificación de Registros</h4>
-                <p className="text-gray-700 text-xs sm:text-sm">Validación de autenticidad de obras registradas</p>
-              </div>
-              <div className="bg-gray-50 rounded-lg p-3 sm:p-4">
-                <h4 className="font-semibold text-gray-900 mb-2 text-sm sm:text-base">Generación de NFTs</h4>
-                <p className="text-gray-700 text-xs sm:text-sm">Creación de tokens no fungibles para obras registradas</p>
-              </div>
-              <div className="bg-gray-50 rounded-lg p-3 sm:p-4">
-                <h4 className="font-semibold text-gray-900 mb-2 text-sm sm:text-base">Promoción</h4>
-                <p className="text-gray-700 text-xs sm:text-sm">Difusión de obras en canales y redes sociales de la plataforma</p>
-              </div>
-            </div>
-          </section>
+    // Obtener todos los datos de service_level_agreement
+    const slaData = t.raw("service_level_agreement");
+    const sections = slaData.sections;
 
-          {/* SLA Categories */}
-          <section className="mb-8 sm:mb-10 md:mb-12">
-            <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-4 md:mb-6 flex items-center">
-              <Clock className="h-5 w-5 text-blue-500 mr-2 flex-shrink-0" />
-              Categorías de SLA Ofrecidas
-            </h3>
-            
-            {/* Versión Móvil - Cards (solo para móvil) */}
-            <div className="block sm:hidden space-y-4">
-              {[
-                {
-                  servicio: "Disponibilidad del Sistema",
-                  anual: "99.9%",
-                  mensual: "99.5%",
-                  unico: "99.0%"
-                },
-                {
-                  servicio: "Tiempo de Respuesta",
-                  anual: "< 2 segundos",
-                  mensual: "< 3 segundos", 
-                  unico: "< 5 segundos"
-                },
-                {
-                  servicio: "Soporte Técnico",
-                  anual: "24/7",
-                  mensual: "L-V 9:00-18:00",
-                  unico: "Email únicamente"
-                },
-                {
-                  servicio: "Tiempo Resolución Crítica",
-                  anual: "< 1 hora",
-                  mensual: "< 4 horas",
-                  unico: "< 24 horas"
-                }
-              ].map((item, index) => (
-                <div key={index} className="bg-gray-50 rounded-lg p-4 border border-gray-200">
-                  <h4 className="font-semibold text-gray-900 mb-3 text-sm">{item.servicio}</h4>
-                  <div className="grid grid-cols-3 gap-2 text-xs">
-                    <div className="text-center">
-                      <div className="font-semibold text-gray-600">Anual</div>
-                      <div className="text-green-600 font-bold mt-1">{item.anual}</div>
+    // Helper functions para acceder a los datos
+    const getArray = (key) => {
+        const path = key.split(".");
+        let value = sections;
+
+        for (const segment of path) {
+            if (value && typeof value === "object") {
+                value = value[segment];
+            } else {
+                return [];
+            }
+        }
+
+        return Array.isArray(value) ? value : [];
+    };
+
+    const getValue = (key, defaultValue = "") => {
+        const path = key.split(".");
+        let value = slaData;
+
+        for (const segment of path) {
+            if (value && typeof value === "object") {
+                value = value[segment];
+            } else {
+                return defaultValue;
+            }
+        }
+
+        return value || defaultValue;
+    };
+
+    // Obtener arrays específicos
+    const servicesCovered = getArray("services_covered.items");
+    const slaTableRows = getArray("sla_categories.table.rows");
+    const slaTableHeaders = getArray("sla_categories.table.headers");
+    const incidentItems = getArray("incident_management.items");
+    const contactItems = getArray("contact.items");
+
+    return (
+        <div
+            className="min-h-screen bg-gray-50"
+            itemScope
+            itemType="https://schema.org/WebPage"
+        >
+            <div
+                itemScope
+                itemType="https://schema.org/LegalDocument"
+                className="hidden"
+            >
+                <meta itemProp="name" content={getValue("schema.name")} />
+                <meta itemProp="description" content={getValue("schema.description")} />
+                <meta
+                    itemProp="dateModified"
+                    content={getValue("schema.date_modified")}
+                />
+                <meta itemProp="publisher" content={getValue("schema.publisher")} />
+            </div>
+
+            <div className="max-w-4xl mx-auto px-6 pt-24 pb-16">
+                <header className="text-center mb-16 bg-white rounded-lg shadow-sm p-8">
+                    <h1
+                        className="text-4xl md:text-5xl font-bold text-gray-900 mb-4"
+                        itemProp="headline"
+                    >
+                        {getValue("title")}
+                    </h1>
+                    <p className="text-gray-600 text-lg">
+                        {getValue("last_updated")}:{" "}
+                        <time
+                            dateTime={getValue("schema.date_modified")}
+                            itemProp="dateModified"
+                        >
+                            {getValue("last_updated_date")}
+                        </time>
+                    </p>
+                </header>
+
+                <div className="bg-white rounded-lg shadow-sm overflow-hidden">
+                    <div className="p-8 md:p-12 space-y-12">
+                        {/* Purpose Section */}
+                        <section aria-labelledby="proposito-acuerdo">
+                            <h2
+                                id="proposito-acuerdo"
+                                className="text-2xl font-bold text-gray-900 mb-6 pb-3 border-b border-gray-200"
+                            >
+                                {sections.purpose?.title}
+                            </h2>
+                            <div className="text-gray-700 leading-relaxed space-y-4">
+                                <p itemProp="text">
+                                    {sections.purpose?.content ? (
+                                        <span
+                                            dangerouslySetInnerHTML={{
+                                                __html: sections.purpose.content
+                                                    .replace(/{strong}/g, "<strong>")
+                                                    .replace(/{\/strong}/g, "</strong>"),
+                                            }}
+                                        />
+                                    ) : (
+                                        ""
+                                    )}
+                                </p>
+                            </div>
+                        </section>
+
+                        {/* Services Covered */}
+                        <section aria-labelledby="servicios-cubiertos">
+                            <h2
+                                id="servicios-cubiertos"
+                                className="text-2xl font-bold text-gray-900 mb-6 pb-3 border-b border-gray-200"
+                            >
+                                {sections.services_covered?.title}
+                            </h2>
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                {servicesCovered.map((service, index) => (
+                                    <div key={index} className="bg-gray-50 rounded-lg p-4">
+                                        <div className="flex items-center mb-2">
+                                            <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
+                                            <h3 className="font-semibold text-gray-900 text-base">
+                                                {service.title}
+                                            </h3>
+                                        </div>
+                                        {service.description && (
+                                            <p className="text-gray-700 text-sm pl-7">
+                                                {service.description}
+                                            </p>
+                                        )}
+                                    </div>
+                                ))}
+                            </div>
+                        </section>
+
+                        {/* SLA Categories */}
+                        <section aria-labelledby="categorias-sla">
+                            <h2
+                                id="categorias-sla"
+                                className="text-2xl font-bold text-gray-900 mb-6 pb-3 border-b border-gray-200"
+                            >
+                                {sections.sla_categories?.title}
+                            </h2>
+
+                            {/* Mobile Cards */}
+                            <div className="block sm:hidden space-y-4">
+                                {slaTableRows.map((item, index) => (
+                                    <div
+                                        key={index}
+                                        className="bg-gray-50 rounded-lg p-4 border border-gray-200"
+                                    >
+                                        <h3 className="font-semibold text-gray-900 mb-3 text-sm flex items-center">
+                                            <Clock className="h-4 w-4 text-blue-500 mr-2" />
+                                            {item.service}
+                                        </h3>
+                                        <div className="grid grid-cols-3 gap-2 text-xs">
+                                            <div className="text-center">
+                                                <div className="font-semibold text-gray-600">
+                                                    {slaTableHeaders[1] || "Anual"}
+                                                </div>
+                                                <div className="text-green-600 font-bold mt-1">
+                                                    {item.annual}
+                                                </div>
+                                            </div>
+                                            <div className="text-center">
+                                                <div className="font-semibold text-gray-600">
+                                                    {slaTableHeaders[2] || "Mensual"}
+                                                </div>
+                                                <div className="text-green-600 font-bold mt-1">
+                                                    {item.monthly}
+                                                </div>
+                                            </div>
+                                            <div className="text-center">
+                                                <div className="font-semibold text-gray-600">
+                                                    {slaTableHeaders[3] || "Único"}
+                                                </div>
+                                                <div className="text-blue-600 font-bold mt-1">
+                                                    {item.one_time}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+
+                            {/* Desktop Table */}
+                            <div className="hidden sm:block overflow-x-auto">
+                                <table className="w-full border-collapse border border-gray-300 rounded-lg">
+                                    <thead>
+                                        <tr className="bg-gray-100">
+                                            {slaTableHeaders.map((header, index) => (
+                                                <th
+                                                    key={index}
+                                                    className="border border-gray-300 p-3 md:p-4 text-left font-semibold text-sm md:text-base"
+                                                >
+                                                    {header}
+                                                </th>
+                                            ))}
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {slaTableRows.map((row, index) => (
+                                            <tr
+                                                key={index}
+                                                className={index % 2 === 0 ? "bg-gray-50" : ""}
+                                            >
+                                                <td className="border border-gray-300 p-3 md:p-4 font-medium text-sm md:text-base">
+                                                    {row.service}
+                                                </td>
+                                                <td className="border border-gray-300 p-3 md:p-4 text-green-600 font-semibold text-sm md:text-base">
+                                                    {row.annual}
+                                                </td>
+                                                <td className="border border-gray-300 p-3 md:p-4 text-green-600 font-semibold text-sm md:text-base">
+                                                    {row.monthly}
+                                                </td>
+                                                <td className="border border-gray-300 p-3 md:p-4 text-blue-600 font-semibold text-sm md:text-base">
+                                                    {row.one_time}
+                                                </td>
+                                            </tr>
+                                        ))}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+
+                        {/* Incident Management */}
+                        <section aria-labelledby="gestion-incidentes">
+                            <h2
+                                id="gestion-incidentes"
+                                className="text-2xl font-bold text-gray-900 mb-6 pb-3 border-b border-gray-200"
+                            >
+                                {sections.incident_management?.title}
+                            </h2>
+
+                            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6">
+                                {incidentItems.map((incident, index) => (
+                                    <div
+                                        key={index}
+                                        className={`text-center p-4 md:p-6 rounded-lg border ${index === 0
+                                                ? "bg-red-50 border-red-200"
+                                                : index === 1
+                                                    ? "bg-yellow-50 border-yellow-200"
+                                                    : "bg-blue-50 border-blue-200"
+                                            }`}
+                                    >
+                                        <div
+                                            className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center mx-auto mb-3 ${index === 0
+                                                    ? "bg-red-100"
+                                                    : index === 1
+                                                        ? "bg-yellow-100"
+                                                        : "bg-blue-100"
+                                                }`}
+                                        >
+                                            <AlertTriangle
+                                                className={`h-5 w-5 ${index === 0
+                                                        ? "text-red-600"
+                                                        : index === 1
+                                                            ? "text-yellow-600"
+                                                            : "text-blue-600"
+                                                    }`}
+                                            />
+                                        </div>
+                                        <h4 className="font-semibold text-gray-900 mb-2 text-base">
+                                            {incident.level}
+                                        </h4>
+                                        <p className="text-gray-700 text-sm mb-3">
+                                            {incident.description}
+                                        </p>
+                                        <p
+                                            className={`font-medium text-sm ${index === 0
+                                                    ? "text-red-600"
+                                                    : index === 1
+                                                        ? "text-yellow-600"
+                                                        : "text-blue-600"
+                                                }`}
+                                        >
+                                            Respuesta: {incident.response_time}
+                                        </p>
+                                    </div>
+                                ))}
+                            </div>
+                        </section>
+
+                        {/* Contact Information */}
+                        <section aria-labelledby="contacto-sla">
+                            <h2
+                                id="contacto-sla"
+                                className="text-2xl font-bold text-gray-900 mb-6 pb-3 border-b border-gray-200"
+                            >
+                                {sections.contact?.title}
+                            </h2>
+                            <div
+                                className="bg-gray-50 rounded-lg p-6"
+                                itemScope
+                                itemType="https://schema.org/Organization"
+                            >
+                                <p className="text-gray-700 mb-6" itemProp="description">
+                                    {sections.contact?.description}
+                                </p>
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <div className="flex items-center space-x-3 p-4 bg-white rounded-lg">
+                                        <Mail className="h-5 w-5 text-blue-500" />
+                                        <div>
+                                            <p className="font-medium text-gray-900 text-sm">
+                                                {contactItems[0]?.type}
+                                            </p>
+                                            <a
+                                                href={`mailto:${contactItems[0]?.value}`}
+                                                className="text-blue-600 hover:text-blue-700 text-sm"
+                                                itemProp="email"
+                                            >
+                                                {contactItems[0]?.value}
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div className="flex items-center space-x-3 p-4 bg-white rounded-lg">
+                                        <Phone className="h-5 w-5 text-blue-500" />
+                                        <div>
+                                            <p className="font-medium text-gray-900 text-sm">
+                                                {contactItems[1]?.type}
+                                            </p>
+                                            <a
+                                                href={`tel:${contactItems[1]?.value}`}
+                                                className="text-blue-600 hover:text-blue-700 text-sm"
+                                                itemProp="telephone"
+                                            >
+                                                {contactItems[1]?.value}
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        {/* Note Section */}
+                        <section aria-labelledby="nota-importante">
+                            <div className="border-t border-gray-200 pt-6">
+                                <p className="text-gray-700 leading-relaxed" itemProp="text">
+                                    <strong>{sections.note?.strong}</strong>{" "}
+                                    {sections.note?.content}
+                                </p>
+                            </div>
+                        </section>
                     </div>
-                    <div className="text-center">
-                      <div className="font-semibold text-gray-600">Mensual</div>
-                      <div className="text-green-600 font-bold mt-1">{item.mensual}</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="font-semibold text-gray-600">Único</div>
-                      <div className="text-blue-600 font-bold mt-1">{item.unico}</div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
 
-            {/* Versión Desktop - Tabla ORIGINAL (igual que antes) */}
-            <div className="hidden sm:block overflow-x-auto -mx-2 md:mx-0">
-              <table className="w-full border-collapse border border-gray-300 rounded-lg">
-                <thead>
-                  <tr className="bg-gray-100">
-                    <th className="border border-gray-300 p-3 md:p-4 text-left font-semibold text-sm md:text-base">Servicio</th>
-                    <th className="border border-gray-300 p-3 md:p-4 text-left font-semibold text-sm md:text-base">Anual</th>
-                    <th className="border border-gray-300 p-3 md:p-4 text-left font-semibold text-sm md:text-base">Mensual</th>
-                    <th className="border border-gray-300 p-3 md:p-4 text-left font-semibold text-sm md:text-base">Pago Único</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td className="border border-gray-300 p-3 md:p-4 font-medium text-sm md:text-base">Disponibilidad del Sistema</td>
-                    <td className="border border-gray-300 p-3 md:p-4 text-green-600 font-semibold text-sm md:text-base">99.9%</td>
-                    <td className="border border-gray-300 p-3 md:p-4 text-green-600 font-semibold text-sm md:text-base">99.5%</td>
-                    <td className="border border-gray-300 p-3 md:p-4 text-blue-600 font-semibold text-sm md:text-base">99.0%</td>
-                  </tr>
-                  <tr className="bg-gray-50">
-                    <td className="border border-gray-300 p-3 md:p-4 font-medium text-sm md:text-base">Tiempo de Respuesta</td>
-                    <td className="border border-gray-300 p-3 md:p-4 text-sm md:text-base">&lt; 2 segundos</td>
-                    <td className="border border-gray-300 p-3 md:p-4 text-sm md:text-base">&lt; 3 segundos</td>
-                    <td className="border border-gray-300 p-3 md:p-4 text-sm md:text-base">&lt; 5 segundos</td>
-                  </tr>
-                  <tr>
-                    <td className="border border-gray-300 p-3 md:p-4 font-medium text-sm md:text-base">Soporte Técnico</td>
-                    <td className="border border-gray-300 p-3 md:p-4 text-sm md:text-base">24/7</td>
-                    <td className="border border-gray-300 p-3 md:p-4 text-sm md:text-base">L-V 9:00-18:00</td>
-                    <td className="border border-gray-300 p-3 md:p-4 text-sm md:text-base">Email únicamente</td>
-                  </tr>
-                  <tr className="bg-gray-50">
-                    <td className="border border-gray-300 p-3 md:p-4 font-medium text-sm md:text-base">Tiempo Resolución Crítica</td>
-                    <td className="border border-gray-300 p-3 md:p-4 text-sm md:text-base">&lt; 1 hora</td>
-                    <td className="border border-gray-300 p-3 md:p-4 text-sm md:text-base">&lt; 4 horas</td>
-                    <td className="border border-gray-300 p-3 md:p-4 text-sm md:text-base">&lt; 24 horas</td>
-                  </tr>
-                </tbody>
-              </table>
+                    <footer className="text-center py-8 border-t border-gray-200 bg-gray-50">
+                        <p className="text-gray-500">{slaData.footer?.copyright}</p>
+                    </footer>
+                </div>
             </div>
-          </section>
-
-          {/* Incident Management */}
-          <section className="mb-8 sm:mb-10 md:mb-12">
-            <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-4 md:mb-6 flex items-center">
-              <AlertTriangle className="h-5 w-5 text-yellow-500 mr-2 flex-shrink-0" />
-              Gestión de Incidentes
-            </h3>
-            
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 md:gap-6">
-              <div className="text-center p-3 sm:p-4 md:p-6 bg-red-50 rounded-lg border border-red-200">
-                <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-2 sm:mb-3">
-                  <span className="text-red-600 font-bold text-xs sm:text-sm md:text-base">P1</span>
-                </div>
-                <h4 className="font-semibold text-gray-900 mb-2 text-sm sm:text-base">Crítico</h4>
-                <p className="text-gray-700 text-xs sm:text-sm leading-tight">Servicio completamente inoperativo</p>
-                <p className="text-red-600 mt-2 font-medium text-xs sm:text-sm">Respuesta: 15 min</p>
-              </div>
-              
-              <div className="text-center p-3 sm:p-4 md:p-6 bg-yellow-50 rounded-lg border border-yellow-200">
-                <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-2 sm:mb-3">
-                  <span className="text-yellow-600 font-bold text-xs sm:text-sm md:text-base">P2</span>
-                </div>
-                <h4 className="font-semibold text-gray-900 mb-2 text-sm sm:text-base">Alto</h4>
-                <p className="text-gray-700 text-xs sm:text-sm leading-tight">Funcionalidad principal afectada</p>
-                <p className="text-yellow-600 mt-2 font-medium text-xs sm:text-sm">Respuesta: 1 hora</p>
-              </div>
-              
-              <div className="text-center p-3 sm:p-4 md:p-6 bg-blue-50 rounded-lg border border-blue-200">
-                <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-2 sm:mb-3">
-                  <span className="text-blue-600 font-bold text-xs sm:text-sm md:text-base">P3</span>
-                </div>
-                <h4 className="font-semibold text-gray-900 mb-2 text-sm sm:text-base">Normal</h4>
-                <p className="text-gray-700 text-xs sm:text-sm leading-tight">Impacto menor en el servicio</p>
-                <p className="text-blue-600 mt-2 font-medium text-xs sm:text-sm">Respuesta: 4 horas</p>
-              </div>
-            </div>
-          </section>
-
-          {/* Contact Information */}
-          <section className="mb-6 sm:mb-8">
-            <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-4 md:mb-6">
-              Contacto para Soporte
-            </h3>
-            
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 md:gap-6">
-              <div className="flex items-center space-x-3 p-3 sm:p-4 bg-gray-50 rounded-lg">
-                <Mail className="h-4 w-4 sm:h-5 sm:w-5 text-blue-500 flex-shrink-0" />
-                <div>
-                  <p className="font-medium text-gray-900 text-sm sm:text-base">Email de Soporte</p>
-                  <p className="text-gray-700 text-xs sm:text-sm md:text-base">info@musicdibs.com</p>
-                </div>
-              </div>
-              
-              <div className="flex items-center space-x-3 p-3 sm:p-4 bg-gray-50 rounded-lg">
-                <Phone className="h-4 w-4 sm:h-5 sm:w-5 text-blue-500 flex-shrink-0" />
-                <div>
-                  <p className="font-medium text-gray-900 text-sm sm:text-base">Teléfono de Contacto</p>
-                  <p className="text-gray-700 text-xs sm:text-sm md:text-base">+34 900 123 456</p>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* Footer Note */}
-          <div className="border-t border-gray-200 pt-4 sm:pt-6">
-            <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
-              <strong>Nota:</strong> Este Acuerdo de Nivel de Servicio (SLA) será válido desde 
-              la fecha de inicio del contrato de prestación de servicios correspondiente hasta 
-              la fecha de terminación de la relación contractual para la prestación de los 
-              servicios cubiertos por este documento.
-            </p>
-          </div>
         </div>
-      </div>
-    </div>
-  );
+    );
 }

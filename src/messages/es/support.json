@@ -1,0 +1,86 @@
+{
+  "hero": {
+    "title_part1": "Centro de",
+    "title_part2": "Soporte",
+    "description": "Soporte técnico especializado 24/7 para <strong>registro musical, distribución y protección de derechos</strong> con tecnología blockchain.",
+    "schema_name": "Soporte Técnico Musicdibs",
+    "schema_description": "Servicio de soporte especializado en registro musical, distribución digital y protección de derechos de autor con blockchain",
+    "schema_service_type": "Soporte Técnico Musical",
+    "schema_phone": "+34-900-123-456",
+    "schema_email": "info@musicdibs.com",
+    "schema_sms": "+34-600-123-456"
+  },
+
+  "channels": {
+    "section_title": "Canales de Soporte Directo",
+    "section_description": "Múltiples formas de contactar con nuestro equipo de <strong>expertos en música y tecnología blockchain</strong>",
+    "channels_aria_label": "Canales de soporte disponibles",
+
+    "email_title": "Soporte por Email",
+    "email_description": "info@musicdibs.com",
+    "email_status": "Respuesta en 24-48h",
+    "email_action": "Enviar Email",
+    "email_link": "mailto:info@musicdibs.com?subject=Soporte%20Musicdibs&body=Hola%20equipo%20Musicdibs,%20necesito%20ayuda%20con:",
+
+    "phone_title": "Teléfono Directo",
+    "phone_description": "+34 900 123 456",
+    "phone_status": "Lun-Vie 9:00-18:00",
+    "phone_action": "Llamar Ahora",
+    "phone_link": "tel:+34900123456",
+
+    "help_title": "¿Necesitas ayuda específica?",
+    "help_description": "Nuestro equipo especializado en <strong>registro musical, distribución digital y protección con blockchain</strong> puede ayudarte con:",
+    "help_item1": "Registro de obras musicales",
+    "help_item2": "Distribución en plataformas",
+    "help_item3": "Protección con blockchain",
+    "help_item4": "Derechos de autor y royalties",
+    "help_item5": "Problemas técnicos",
+    "help_item6": "Facturación y pagos"
+  },
+
+  "ticket": {
+    "section_title": "Crear Ticket de Soporte",
+    "form_title": "Describe tu consulta",
+    "form_description": "Completa el formulario y nuestro equipo te responderá lo antes posible",
+
+    "name_label": "Nombre Completo",
+    "name_placeholder": "Tu nombre",
+
+    "email_label": "Email",
+    "email_placeholder": "tu@email.com",
+
+    "category_label": "Categoría",
+    "category_placeholder": "Selecciona una categoría",
+    "category_option1": "Registro de Obras",
+    "category_option2": "Distribución",
+    "category_option3": "Royalties y Pagos",
+    "category_option4": "Problema Técnico",
+    "category_option5": "Gestión de Cuenta",
+    "category_option6": "Otros",
+
+    "priority_label": "Prioridad",
+    "priority_placeholder": "Selecciona prioridad",
+    "priority_option1": "Baja",
+    "priority_option2": "Media",
+    "priority_option3": "Alta",
+    "priority_option4": "Urgente",
+
+    "subject_label": "Asunto",
+    "subject_placeholder": "Resumen de tu consulta",
+
+    "message_label": "Mensaje",
+    "message_placeholder": "Describe detalladamente tu consulta o problema...",
+
+    "submit_button": "Enviar Ticket de Soporte",
+    "submit_aria_label": "Enviar ticket de soporte"
+  },
+
+  "metadata": {
+    "title": "Soporte Musicdibs | Centro de Ayuda 24/7 - Registro y Distribución Musical 2024",
+    "description": "🎵 Soporte técnico especializado de Musicdibs. Ayuda inmediata con registro musical, distribución, blockchain y derechos de autor. Resolución 24/7 por expertos en música y tecnología.",
+    "keywords": "soporte musicdibs, ayuda registro musical, contacto musicdibs, tickets soporte, asistencia técnica distribución, soporte blockchain, derechos autor música, ayuda artistas, centro ayuda musicdibs, soporte técnico musical, consultas registro, problemas distribución, ayuda plataforma musicdibs",
+    "og_title": "Soporte Musicdibs - Centro de Ayuda 24/7 para Artistas Musicales",
+    "og_description": "Soporte especializado en registro musical, distribución y protección de derechos con blockchain. Ayuda inmediata 24/7 por expertos.",
+    "og_alt": "Musicdibs Soporte - Centro de Ayuda 24/7 para Artistas Musicales - Registro y Distribución"
+  }
+}

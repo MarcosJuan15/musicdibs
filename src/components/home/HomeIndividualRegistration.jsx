@@ -1,9 +1,12 @@
 'use client';
 
-import { useRouter } from "next/navigation";
+import { useRouter } from "@/navigation";
+import { Link } from "@/navigation";
+import { useTranslations } from "next-intl";
 
 export default function HomeIndividualRegistration() {
     const router = useRouter();
+    const t = useTranslations('home.individual_registration');
 
     const handlePurchase = () => {
         router.push("/auth/signup");
@@ -16,46 +19,39 @@ export default function HomeIndividualRegistration() {
             itemType="https://schema.org/Offer"
             aria-labelledby="individual-registration-title"
         >
-            {/* Schema.org structured data */}
-            <div itemScope itemType="https://schema.org/Product" className="hidden">
-                <meta itemProp="name" content="Registro Individual - MusicDIBS" />
-                <meta itemProp="description" content="Registro individual de obras musicales por 11,90€" />
-                <link itemProp="url" href="https://musicdibs.com/register/?prod=5157" />
-            </div>
-
             <div className="max-w-4xl mx-auto">
                 <h2 
                     id="individual-registration-title"
                     className="text-2xl font-bold mb-2"
                     itemProp="name"
                 >
-                    ¿REGISTROS INDIVIDUALES?
+                    {t('title')}
                 </h2>
                 <p className="mb-6 text-lg">
-                    También puedes registrar una obra por <strong itemProp="price">11,90€</strong>
+                    {t('subtitle')} <strong itemProp="price">{t('price')}</strong>
                 </p>
 
                 <button
                     onClick={handlePurchase}
                     className="bg-transparent border border-green-400 text-green-400 px-8 py-3 rounded-full hover:bg-green-400 hover:text-white transition-colors duration-300 font-semibold"
-                    aria-label="Comprar registro individual por 11,90€"
-                    itemProp="url"
+                    aria-label={`${t('buy')} registro individual por ${t('price')}`}
                 >
-                    Comprar
+                    {t('buy')}
                 </button>
 
                 <div className="mt-8 text-sm text-white/80 space-y-4">
                     <p>
-                        ¿Eres un profesional, empresa o academia?{" "}
-                        <a
-                            href="/support"
-                            className="text-green-300 underline hover:text-green-200 transition-colors"
-                            aria-label="Contactar para paquetes personalizados"
-                        >
-                            Contáctanos
-                        </a>{" "}
-                        y solicita detalles para paquetes personalizados o licenciamientos
-                        (marca blanca).
+                        {t.rich('contact_message', {
+                            contact: (chunks) => (
+                                <Link
+                                    href="/support"
+                                    className="text-green-300 underline hover:text-green-200 transition-colors"
+                                    aria-label={t('contact_us')}
+                                >
+                                    {chunks}
+                                </Link>
+                            )
+                        })}
                     </p>
 
                     <div 
@@ -66,12 +62,7 @@ export default function HomeIndividualRegistration() {
                     >
                         <meta itemProp="name" content="Condiciones de la oferta" />
                         <p itemProp="description">
-                            * Condiciones de la oferta
-                            <br />
-                            Impuestos NO incluidos (se aplicará el 21% de IVA para países UE). Las
-                            suscripciones mensuales y anuales se renuevan automáticamente al
-                            finalizar el período de suscripción. Más información en FAQ y en
-                            términos de uso y compra.
+                            {t('terms_note')}
                         </p>
                     </div>
                 </div>

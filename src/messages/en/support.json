@@ -1,0 +1,86 @@
+{
+  "hero": {
+    "title_part1": "Support",
+    "title_part2": "Center",
+    "description": "Specialized 24/7 technical support for <strong>music registration, distribution and rights protection</strong> with blockchain technology.",
+    "schema_name": "Musicdibs Technical Support",
+    "schema_description": "Specialized support service for music registration, digital distribution and copyright protection with blockchain",
+    "schema_service_type": "Music Technical Support",
+    "schema_phone": "+34-900-123-456",
+    "schema_email": "info@musicdibs.com",
+    "schema_sms": "+34-600-123-456"
+  },
+
+  "channels": {
+    "section_title": "Direct Support Channels",
+    "section_description": "Multiple ways to contact our team of <strong>music and blockchain technology experts</strong>",
+    "channels_aria_label": "Available support channels",
+
+    "email_title": "Email Support",
+    "email_description": "info@musicdibs.com",
+    "email_status": "Response in 24-48h",
+    "email_action": "Send Email",
+    "email_link": "mailto:info@musicdibs.com?subject=Musicdibs%20Support&body=Hello%20Musicdibs%20team,%20I%20need%20help%20with:",
+
+    "phone_title": "Direct Phone",
+    "phone_description": "+34 900 123 456",
+    "phone_status": "Mon-Fri 9:00-18:00",
+    "phone_action": "Call Now",
+    "phone_link": "tel:+34900123456",
+
+    "help_title": "Need specific help?",
+    "help_description": "Our specialized team in <strong>music registration, digital distribution and blockchain protection</strong> can help you with:",
+    "help_item1": "Music works registration",
+    "help_item2": "Platform distribution",
+    "help_item3": "Blockchain protection",
+    "help_item4": "Copyright and royalties",
+    "help_item5": "Technical issues",
+    "help_item6": "Billing and payments"
+  },
+
+  "ticket": {
+    "section_title": "Create Support Ticket",
+    "form_title": "Describe your query",
+    "form_description": "Complete the form and our team will respond as soon as possible",
+
+    "name_label": "Full Name",
+    "name_placeholder": "Your name",
+
+    "email_label": "Email",
+    "email_placeholder": "your@email.com",
+
+    "category_label": "Category",
+    "category_placeholder": "Select a category",
+    "category_option1": "Work Registration",
+    "category_option2": "Distribution",
+    "category_option3": "Royalties and Payments",
+    "category_option4": "Technical Problem",
+    "category_option5": "Account Management",
+    "category_option6": "Others",
+
+    "priority_label": "Priority",
+    "priority_placeholder": "Select priority",
+    "priority_option1": "Low",
+    "priority_option2": "Medium",
+    "priority_option3": "High",
+    "priority_option4": "Urgent",
+
+    "subject_label": "Subject",
+    "subject_placeholder": "Summary of your query",
+
+    "message_label": "Message",
+    "message_placeholder": "Describe your query or problem in detail...",
+
+    "submit_button": "Send Support Ticket",
+    "submit_aria_label": "Send support ticket"
+  },
+
+  "metadata": {
+    "title": "Musicdibs Support | 24/7 Help Center - Music Registration and Distribution 2024",
+    "description": "🎵 Specialized Musicdibs technical support. Immediate help with music registration, distribution, blockchain and copyright. 24/7 resolution by music and technology experts.",
+    "keywords": "musicdibs support, music registration help, contact musicdibs, support tickets, distribution technical assistance, blockchain support, music copyright, artist help, musicdibs help center, musical technical support, registration queries, distribution problems, musicdibs platform help",
+    "og_title": "Musicdibs Support - 24/7 Help Center for Musical Artists",
+    "og_description": "Specialized support for music registration, distribution and rights protection with blockchain. Immediate 24/7 help by experts.",
+    "og_alt": "Musicdibs Support - 24/7 Help Center for Musical Artists - Registration and Distribution"
+  }
+}

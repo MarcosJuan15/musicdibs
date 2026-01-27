@@ -13,12 +13,10 @@ export default function ShopContent() {
   ];
 
   const handleAddToCart = (pkg) => {
-    console.log('Añadiendo al carrito:', pkg);
     // Aquí iría la lógica para añadir al carrito
   };
 
   const goToCart = () => {
-    console.log('Ir al carrito');
     // Aquí iría la navegación al carrito
   };
 

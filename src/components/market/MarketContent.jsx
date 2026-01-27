@@ -79,17 +79,14 @@ export default function MarketContent() {
   };
 
   const handleBuySong = (song) => {
-    console.log("Comprando canción:", song);
     // Lógica para comprar canción
   };
 
   const handlePreviewSong = (song) => {
-    console.log("Previsualizando canción:", song);
     // Lógica para previsualizar canción
   };
 
   const handleApplyFilters = () => {
-    console.log({ selectedGenre, selectedPrice, onlyExclusive });
     // Lógica para aplicar filtros
   };
 

@@ -1,0 +1,69 @@
+{
+  "hero": {
+    "title_part1": "Our",
+    "title_part2": "Partners",
+    "description": "We collaborate with leading organizations to offer comprehensive intellectual property protection solutions and high-quality music services.",
+    "schema_name": "Musicdibs Partners",
+    "schema_description": "Strategic partner network of MusicDIBS"
+  },
+  
+  "why": {
+    "title": "Why Become a Musicdibs Partner?",
+    "benefits_aria_label": "Benefits of becoming a partner",
+    "benefits": [
+      {
+        "title": "Global Network",
+        "description": "Access to our worldwide network of creators, artists, and professionals in the music and audiovisual industry."
+      },
+      {
+        "title": "Blockchain Technology",
+        "description": "Integrate the most advanced blockchain technology for intellectual property protection into your organization."
+      },
+      {
+        "title": "Dedicated Support",
+        "description": "Count on a specialized team that will accompany you every step of the integration and operation."
+      }
+    ]
+  },
+  
+  "featured": {
+    "title": "Featured Partner",
+    "partner": {
+      "name": "DJP Music School",
+      "description": "Professional Music School",
+      "logo": "DJP",
+      "website": "https://djpmusicschool.com/",
+      "featured_badge": "Featured Partner",
+      "visit_button": "Visit",
+      "visit_website_aria": "Visit website of {name}",
+      "detailed_description": "DJP Music School is a leading educational institution specialized in professional music training. Through our strategic alliance, we offer their students and graduates privileged access to intellectual property protection services for their musical creations.",
+      "services_title": "Integrated Services:",
+      "services": [
+        "Composition registration",
+        "Student work protection"
+      ],
+      "benefits_title": "Benefits:",
+      "benefits": [
+        "Exclusive discounts",
+        "Specialized support"
+      ]
+    }
+  },
+  
+  "cta": {
+    "title": "Want to be our next Partner?",
+    "description": "Join our partner network and offer your community the best intellectual property protection solutions on the market.",
+    "contact_button": "Contact for Partnership",
+    "more_info_button": "More Information",
+    "more_info_aria": "More information about partnerships"
+  },
+
+      "metadata": {
+      "title": "Musicdibs Partners and Alliances | Strategic Collaborations in the Music Industry 2024",
+      "description": "🤝 Meet our strategic partners: iCommunity Labs, Blockchain España and industry leaders. Alliances that strengthen intellectual property protection and music distribution with blockchain technology.",
+      "keywords": "musicdibs partners, strategic music alliances, iCommunity Labs, Blockchain España, music industry collaborations, blockchain technology partners, music distribution alliances, intellectual property protection partners, musicdibs ecosystem, web3 music partners, strategic partners, technological alliances music",
+      "og_title": "Partners and Strategic Alliances - Musicdibs",
+      "og_description": "Meet our strategic partners in blockchain technology, music distribution and intellectual property protection. Join our collaboration network.",
+      "og_alt": "Musicdibs Partners - Strategic Alliances in the Music Industry with Blockchain Technology"
+    }
+}

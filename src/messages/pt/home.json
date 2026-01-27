@@ -1,0 +1,145 @@
+{
+  "navbar": {
+    "distribution": "Distribuição",
+    "distribution_access": "Acesso à Plataforma",
+    "distribution_info": "Informação",
+    "market": "Market",
+    "news": "Notícias",
+    "dibs_token": "Token DIBS",
+    "verification": "Verificador",
+    "faq": "FAQ",
+    "pricing": "Preços",
+    "support": "Suporte",
+    "login": "Aceder",
+    "language": "Idioma",
+    "spanish": "Espanhol",
+    "english": "Inglês",
+    "portuguese": "Português"
+  },
+
+  "hero": {
+    "title_part1": "A tua obra,",
+    "title_part2": "só tua",
+    "subtitle_part1": "Regista, promove e distribui a tua música com",
+    "subtitle_highlight": "validade legal em TODO o mundo",
+    "subtitle_link": "+info",
+    "start_now": "Começar Agora",
+    "see_how_it_works": "Ver Como Funciona"
+  },
+
+  "artists_banner": {
+    "title_part1": "MAIS DE 100.000 ARTISTAS JÁ",
+    "title_part2": "USAM MUSICDIBS!",
+    "subtitle": "Impulsionando o futuro da música urbana com tecnologia blockchain",
+    "artists_registered": "Artistas Registados",
+    "works_protected": "Obras Protegidas",
+    "countries_reached": "Países Alcançados",
+    "join_now": "Junte-se Agora",
+    "see_testimonials": "Ver Testemunhos"
+  },
+
+  "distribution": {
+    "title": "Distribuição e Promoção",
+    "subtitle": "Leva a tua música para todo o mundo e conecta-te com milhões de fãs",
+    "world_distribution_title": "Distribuição Mundial",
+    "world_distribution_description": "Desdobra as tuas obras a nível mundial em todas as plataformas digitais +220 DSPs e GANHA Royalties",
+    "social_promotion_title": "Promoção nas Redes Sociais",
+    "social_promotion_description": "Promove-te nas nossas redes sociais com ¡+300.000 seguidores!",
+    "marketplace_title": "Marketplace",
+    "marketplace_description": "Vende as tuas criações no nosso market e GANHA dinheiro",
+    "nfts_marketing_title": "NFTs & Marketing",
+    "nfts_marketing_description": "Gera NFTs para oferecer aos teus seguidores como parte das tuas campanhas de marketing"
+  },
+
+  "individual_registration": {
+    "title": "REGISTOS INDIVIDUAIS?",
+    "subtitle": "Também podes registar uma obra por",
+    "price": "€11,90",
+    "contact_message": "És um profissional, empresa ou academia? <contact>Contacta-nos</contact> e solicita detalhes para pacotes personalizados ou licenciamentos (marca branca).",
+    "terms_note": "* Condições da oferta\nImpostos NÃO incluídos (será aplicado 21% de IVA para países UE). As subscrições mensais e anuais renovam-se automaticamente ao finalizar o período de subscrição. Mais informações em FAQ e em termos de uso e compra.",
+    "buy": "Comprar",
+    "contact_us": "Contacta-nos"
+  },
+
+  "marquee": {
+    "line1": "🎵 DISTRIBUI A TUA MÚSICA EM +200 PLATAFORMAS 🎵",
+    "line2": "🔥 MANTÉM 100% DOS TEUS ROYALTIES - SEM COMISSÕES OCULTAS 🔥",
+    "line3": "⚡ A TUA MÚSICA ONLINE EM 24-48 HORAS ⚡",
+    "line4": "💫 PLANO PLUS: €59,90/ANO - ATÉ 100 REGISTOS 💫"
+  },
+
+  "testimonials": {
+    "title": "O que dizem os profissionais sobre Musicdibs",
+    "subtitle": "Descobre por que milhares de artistas confiam em nós",
+    "join_message": "Junta-te aos mais de 100.000 artistas que já protegem a sua música com Musicdibs"
+  },
+  
+"tutorial": {
+  "title": "Como funciona?",
+  "subtitle": "Vê os 2 tutoriais de registo e distribución e verás o quão simples é.",
+  "video1_title": "Tutorial de Registo - MusicDIBS",
+  "video1_description": "Aprende a registar as tuas obras musicais passo a passo",
+  "video2_title": "Tutorial de Distribuição - MusicDIBS",
+  "video2_description": "Descobre como distribuir a tua música em todas as plataformas",
+  "step1_title": "Regista-te",
+  "step1_description": "Regista-te e verifica a tua identidade para dar validade legal aos teus registos.",
+  "step2_title": "Regista a tua canção",
+  "step2_description": "Envia a tua obra; geramos uma impressão digital e registamo-la na blockchain em segundos. Descarrega o teu certificado de registo, com carimbo de tempo. <link>Ver exemplo de certificado.</link>",
+  "step2_link": "Ver exemplo de certificado",
+  "step3_title": "Distribui a tua música",
+  "step3_description": "Chega ao Spotify, Apple Music, YouTube e mais de 200 plataformas com um só clique. Controla e monetiza os teus lançamentos desde o teu painel.",
+  "cta_title": "Começa hoje mesmo a proteger e monetizar a tua música",
+  "cta_button": "Começar Agora"
+},
+  
+  "why_choose": {
+    "title": "Por que escolher Musicdibs?",
+    "subtitle": "Regista, distribui e monetiza as tuas canções em minutos. Gera rendimentos reais com a solução digital mais rápida e acessível criada para artistas independentes.",
+    "feature1_title": "Proteção Legal Global",
+    "feature1_description": "Validade jurídica internacional respaldada por blockchain",
+    "feature1_modal": "Cada registo no Musicdibs gera um certificado digital imutável respaldado por tecnologia Blockchain, válido como prova legal de autoria. Este certificado cumpre com regulamentações internacionais e nacionais, incluindo a Convenção de Berna, o Tratado da OMPI, a Diretiva sobre Direitos de Autor na Era Digital e regulamentações sobre Blockchain aplicadas à propriedade intelectual.",
+    "feature2_title": "Registo Instantâneo",
+    "feature2_description": "Protege a tua obra em segundos, não em semanas. SEM burocracia.",
+    "feature2_modal": "Proteção instantânea, sem complicações. Esquece a papelada e os processos lentos e caros. Com Musicdibs, registar a tua música é tão fácil como enviar o teu ficheiro: em apenas segundos geramos uma impressão digital única, e registamo-la na blockchain com validade legal internacional. Sem intermediários e por uma fração do custo de um registo tradicional.",
+    "feature3_title": "Distribuição Mundial",
+    "feature3_description": "Lançamento em todas as plataformas digitais. GANHA royalties",
+    "feature3_modal": "Distribuição Mundial. Lança a tua música nas plataformas digitais mais importantes do mundo: Spotify, Apple Music, Amazon Music, YouTube Music e muitas mais, até 220. Ganha royalties desde a primeira stream e faz o teu talento cruzar fronteiras sem intermediários nem comissões ocultas. Controla tudo a partir de uma única plataforma, com estatísticas em tempo real e suporte personalizado.",
+    "feature4_title": "SEM Censura",
+    "feature4_description": "Regista e vende as tuas criações com IA",
+    "feature4_modal": "Sem Censura. Sem limites. Apenas liberdade criativa. Na Musicdibs acreditamos que a arte não deve ter fronteiras. Por isso, aceitamos registos de obras geradas com inteligência artificial ou experimentais, sem restrições nem filtros, desde que tenhas todos os direitos das mesmas e não sejam plágios."
+  },
+  
+  "pricing": {
+    "title": "Preços",
+    "subtitle": "Poupa grandes custos que terias com serviços separados oferecidos pelo mercado, contratando o nosso plano Plus+!",
+    "basic_title": "Basic",
+    "plus_title": "Plano Plus+",
+    "basic_price": "€6,90",
+    "basic_period": "/ mês",
+    "basic_enrollment_fee": "e €6,90 taxa de inscrição",
+    "plus_price": "€59,90",
+    "plus_period": "/ ano",
+    "plus_special_offer": "Taxa de registo + 4 meses GRÁTIS",
+    "additional_note": "* Os serviços de promoção e NFTs estão sujeitos a disponibilidade e termos específicos.",
+    "buy": "Comprar",
+    
+    "basic_features": [
+      "Taxa de inscrição apenas primeiro mês",
+      "Até 3 registos/mês",
+      "Acesso contínuo aos teus certificados",
+      "1 Promoção base/mês no TikTok (+245k seguidores)*",
+      "Suporte padrão"
+    ],
+    "plus_features": [
+      "Protege todo o teu catálogo (Até 100 registos por ano, SEM custos extras)",
+      "Distribuição Musical +220 DSPs (Spotify, Apple Music, ...)",
+      "Gera dinheiro com as reproduções das tuas canções",
+      "Acesso contínuo a certificados",
+      "2 NFT/mês*",
+      "2 Promoção Plus/mês no TikTok (+245k seguidores) – Instagram (+100k)*",
+      "Market MusicDibs – Promove e vende as tuas obras",
+      "Suporte prioritário",
+      "Ajuda em disputas"
+    ]
+  }
+}

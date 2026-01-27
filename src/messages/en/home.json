@@ -1,0 +1,145 @@
+{
+  "navbar": {
+    "distribution": "Distribution",
+    "distribution_access": "Platform Access",
+    "distribution_info": "Information",
+    "market": "Market",
+    "news": "News",
+    "dibs_token": "DIBS Token",
+    "verification": "Verifier",
+    "faq": "FAQ",
+    "pricing": "Pricing",
+    "support": "Support",
+    "login": "Login",
+    "language": "Language",
+    "spanish": "Spanish",
+    "english": "English",
+    "portuguese": "Portuguese"
+  },
+
+  "hero": {
+    "title_part1": "Your work,",
+    "title_part2": "only yours",
+    "subtitle_part1": "Register, promote and distribute your music with",
+    "subtitle_highlight": "legal validity ALL over the world",
+    "subtitle_link": "+info",
+    "start_now": "Get Started Now",
+    "see_how_it_works": "See How It Works"
+  },
+
+  "artists_banner": {
+    "title_part1": "OVER 100,000 ARTISTS ALREADY",
+    "title_part2": "USE MUSICDIBS!",
+    "subtitle": "Driving the future of urban music with blockchain technology",
+    "artists_registered": "Registered Artists",
+    "works_protected": "Protected Works",
+    "countries_reached": "Countries Reached",
+    "join_now": "Join Now",
+    "see_testimonials": "See Testimonials"
+  },
+
+  "distribution": {
+    "title": "Distribution and Promotion",
+    "subtitle": "Take your music to the entire world and connect with millions of fans",
+    "world_distribution_title": "Worldwide Distribution",
+    "world_distribution_description": "Deploy your works worldwide on all digital platforms +220 DSPs and EARN Royalties",
+    "social_promotion_title": "Social Media Promotion",
+    "social_promotion_description": "Promote yourself on our social media with ¡+300,000 followers!",
+    "marketplace_title": "Marketplace",
+    "marketplace_description": "Sell your creations on our market and EARN money",
+    "nfts_marketing_title": "NFTs & Marketing",
+    "nfts_marketing_description": "Generate NFTs to offer them to your followers as part of your marketing campaigns"
+  },
+
+  "individual_registration": {
+    "title": "INDIVIDUAL REGISTRATIONS?",
+    "subtitle": "You can also register a work for",
+    "price": "€11.90",
+    "contact_message": "Are you a professional, company or academy? <contact>Contact us</contact> and request details for custom packages or white-label licensing.",
+    "terms_note": "* Offer conditions\nTaxes NOT included (21% VAT will be applied for EU countries). Monthly and annual subscriptions are automatically renewed at the end of the subscription period. More information in FAQ and in terms of use and purchase.",
+    "buy": "Buy",
+    "contact_us": "Contact Us"
+  },
+
+  "marquee": {
+    "line1": "🎵 DISTRIBUTE YOUR MUSIC ON +200 PLATFORMS 🎵",
+    "line2": "🔥 KEEP 100% OF YOUR ROYALTIES - NO HIDDEN FEES 🔥",
+    "line3": "⚡ YOUR MUSIC ONLINE IN 24-48 HOURS ⚡",
+    "line4": "💫 PLUS PLAN: €59.90/YEAR - UP TO 100 REGISTRATIONS 💫"
+  },
+
+  "testimonials": {
+    "title": "What professionals say about Musicdibs",
+    "subtitle": "Discover why thousands of artists trust us",
+    "join_message": "Join over 100,000 artists who already protect their music with Musicdibs"
+  },
+  
+"tutorial": {
+  "title": "How does it work?",
+  "subtitle": "Watch the 2 registration and distribution tutorials and see how simple it is.",
+  "video1_title": "Registration Tutorial - MusicDIBS",
+  "video1_description": "Learn to register your musical works step by step",
+  "video2_title": "Distribution Tutorial - MusicDIBS",
+  "video2_description": "Discover how to distribute your music on all platforms",
+  "step1_title": "Sign up",
+  "step1_description": "Register and verify your identity to give legal validity to your registrations.",
+  "step2_title": "Register your song",
+  "step2_description": "Upload your work; we generate a digital fingerprint and register it on blockchain in seconds. Download your registration certificate, with timestamp. <link>See example certificate.</link>",
+  "step2_link": "See example certificate",
+  "step3_title": "Distribute your music",
+  "step3_description": "Reach Spotify, Apple Music, YouTube and over 200 platforms with a single click. Control and monetize your releases from your dashboard.",
+  "cta_title": "Start protecting and monetizing your music today",
+  "cta_button": "Get Started Now"
+},
+  
+  "why_choose": {
+    "title": "Why choose Musicdibs?",
+    "subtitle": "Register, distribute and monetize your songs in minutes. Generate real income with the fastest and most accessible digital solution created for independent artists.",
+    "feature1_title": "Global Legal Protection",
+    "feature1_description": "International legal validity backed by blockchain",
+    "feature1_modal": "Each registration in Musicdibs generates an immutable digital certificate backed by Blockchain technology, valid as legal proof of authorship. This certificate complies with international and national regulations, including the Berne Convention, the WIPO Treaty, the Digital Copyright Directive and regulations on Blockchain applied to intellectual property.",
+    "feature2_title": "Instant Registration",
+    "feature2_description": "Protect your work in seconds, not weeks. WITHOUT bureaucracy.",
+    "feature2_modal": "Instant protection, without complications. Forget about paperwork and slow, expensive processes. With Musicdibs, registering your music is as easy as uploading your file: in just seconds we generate a unique digital fingerprint, and register it on blockchain with international legal validity. Without intermediaries and for a fraction of the cost of a traditional registration.",
+    "feature3_title": "Worldwide Distribution",
+    "feature3_description": "Launch on all digital platforms. EARN royalties",
+    "feature3_modal": "Worldwide Distribution. Launch your music on the most important digital platforms in the world: Spotify, Apple Music, Amazon Music, YouTube Music and many more, up to 220. Earn royalties from the first stream and make your talent cross borders without intermediaries or hidden commissions. Control everything from a single platform, with real-time statistics and personalized support.",
+    "feature4_title": "NO Censorship",
+    "feature4_description": "Register and sell your AI creations",
+    "feature4_modal": "No Censorship. No limits. Only creative freedom. At Musicdibs we believe that art should have no borders. That's why we accept registrations of works generated with artificial intelligence or experimental, without restrictions or filters, as long as you have all the rights to them and they are not plagiarized."
+  },
+  
+  "pricing": {
+    "title": "Pricing",
+    "subtitle": "Save big costs you would have with separate services offered by the market by contracting our Plus+ plan!",
+    "basic_title": "Basic",
+    "plus_title": "Plus+ Plan",
+    "basic_price": "€6.90",
+    "basic_period": "/ month",
+    "basic_enrollment_fee": "and €6.90 enrollment fee",
+    "plus_price": "€59.90",
+    "plus_period": "/ year",
+    "plus_special_offer": "Registration fee + 4 months FREE",
+    "additional_note": "* Promotion and NFT services are subject to availability and specific terms.",
+    "buy": "Buy",
+    
+    "basic_features": [
+      "Enrollment fee only first month",
+      "Up to 3 registrations/month",
+      "Continuous access to your certificates",
+      "1 Basic promotion/month on TikTok (+245k followers)*",
+      "Standard support"
+    ],
+    "plus_features": [
+      "Protect your entire catalog (Up to 100 registrations per year, NO extra costs)",
+      "Music Distribution +220 DSPs (Spotify, Apple Music, ...)",
+      "Earn money with your song plays",
+      "Continuous access to certificates",
+      "2 NFT/month*",
+      "2 Plus promotion/month on TikTok (+245k followers) – Instagram (+100k)*",
+      "Market MusicDibs – Promote and sell your works",
+      "Priority support",
+      "Dispute assistance"
+    ]
+  }
+}

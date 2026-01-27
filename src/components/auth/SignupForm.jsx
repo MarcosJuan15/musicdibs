@@ -2,10 +2,12 @@
 
 import { useState, useEffect } from "react";
 import { Eye, EyeOff, Check, X, AlertCircle } from "lucide-react";
-import Link from "next/link";
+import { Link } from "@/navigation";
 import { useRouter } from "next/navigation";
+import { useTranslations } from "next-intl";
 
 export default function SignupForm() {
+    const t = useTranslations('auth.signup');
     const [showPassword, setShowPassword] = useState(false);
     const [showConfirmPassword, setShowConfirmPassword] = useState(false);
     const [formData, setFormData] = useState({
@@ -50,34 +52,34 @@ export default function SignupForm() {
 
         // Validación de username
         if (!formData.username.trim()) {
-            newErrors.username = "El nombre de usuario es obligatorio";
+            newErrors.username = t('errors.username_required');
         } else if (formData.username.length < 3) {
-            newErrors.username = "Mínimo 3 caracteres";
+            newErrors.username = t('errors.username_min_length');
         } else if (!/^[a-zA-Z0-9_]+$/.test(formData.username)) {
-            newErrors.username = "Solo letras, números y guiones bajos";
+            newErrors.username = t('errors.username_invalid');
         }
 
         // Validación de email
         if (!formData.email) {
-            newErrors.email = 'El email es obligatorio';
+            newErrors.email = t('errors.email_required');
         } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-            newErrors.email = 'El formato del email no es válido';
+            newErrors.email = t('errors.email_invalid');
         }
 
         // Validación de contraseña
         if (!formData.password) {
-            newErrors.password = 'La contraseña es obligatoria';
+            newErrors.password = t('errors.password_required');
         } else if (formData.password.length < 8) {
-            newErrors.password = 'Mínimo 8 caracteres';
+            newErrors.password = t('errors.password_min_length');
         } else if (passwordStrength < 60) {
-            newErrors.password = 'La contraseña es muy débil';
+            newErrors.password = t('errors.password_weak');
         }
 
         // Validación de confirmación de contraseña
         if (!formData.confirmPassword) {
-            newErrors.confirmPassword = 'Confirma tu contraseña';
+            newErrors.confirmPassword = t('errors.confirm_password_required');
         } else if (formData.password !== formData.confirmPassword) {
-            newErrors.confirmPassword = 'Las contraseñas no coinciden';
+            newErrors.confirmPassword = t('errors.password_mismatch');
         }
 
         setErrors(newErrors);
@@ -102,10 +104,6 @@ export default function SignupForm() {
         }
 
         try {
-            console.log('Signup data:', formData);
-            // Aquí iría tu lógica de registro real
-            // await registerUser(formData);
-
             // Simulamos una llamada a la API
             await new Promise(resolve => setTimeout(resolve, 1000));
 
@@ -113,7 +111,7 @@ export default function SignupForm() {
             router.push('/dashboard');
         } catch (error) {
             console.error('Error en registro:', error);
-            setErrors({ submit: 'Error al crear la cuenta. Por favor, intenta de nuevo.' });
+            setErrors({ submit: t('errors.submit') });
         } finally {
             setIsSubmitting(false);
         }
@@ -143,7 +141,7 @@ export default function SignupForm() {
         if (name === 'email' && formData.email && !/\S+@\S+\.\S+/.test(formData.email)) {
             setErrors({
                 ...errors,
-                email: 'El formato del email no es válido'
+                email: t('errors.email_invalid')
             });
         }
     };
@@ -155,9 +153,9 @@ export default function SignupForm() {
     };
 
     const getPasswordStrengthText = () => {
-        if (passwordStrength < 40) return 'Muy débil';
-        if (passwordStrength < 80) return 'Moderada';
-        return 'Fuerte';
+        if (passwordStrength < 40) return t('password_strength.very_weak');
+        if (passwordStrength < 80) return t('password_strength.moderate');
+        return t('password_strength.strong');
     };
 
     return (
@@ -167,7 +165,7 @@ export default function SignupForm() {
                 {/* Título */}
                 <div className="text-center mb-8 md:mb-10">
                     <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-                        Crear Cuenta
+                        {t('title')}
                     </h2>
                 </div>
 
@@ -176,13 +174,13 @@ export default function SignupForm() {
                     {/* Username */}
                     <div className="space-y-2 md:space-y-3">
                         <label htmlFor="username-signup" className="block text-base md:text-lg font-medium text-gray-700">
-                            Nombre de Usuario
+                            {t('form.username')}
                         </label>
                         <input
                             id="username-signup"
                             name="username"
                             type="text"
-                            placeholder="Elige un nombre de usuario"
+                            placeholder={t('form.username_placeholder')}
                             className={`w-full px-4 py-3 md:px-5 md:py-4 text-base md:text-lg border-2 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all ${
                                 errors.username && touched.username ? 'border-red-500 bg-red-50' : 'border-gray-300'
                             }`}
@@ -202,13 +200,13 @@ export default function SignupForm() {
                     {/* Email */}
                     <div className="space-y-2 md:space-y-3">
                         <label htmlFor="email-signup" className="block text-base md:text-lg font-medium text-gray-700">
-                            Email
+                            {t('form.email')}
                         </label>
                         <input
                             id="email-signup"
                             name="email"
                             type="email"
-                            placeholder="tu@email.com"
+                            placeholder={t('form.email_placeholder')}
                             className={`w-full px-4 py-3 md:px-5 md:py-4 text-base md:text-lg border-2 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all ${
                                 errors.email && touched.email ? 'border-red-500 bg-red-50' : 'border-gray-300'
                             }`}
@@ -228,14 +226,14 @@ export default function SignupForm() {
                     {/* Contraseña */}
                     <div className="space-y-3 md:space-y-4">
                         <label htmlFor="password-signup" className="block text-base md:text-lg font-medium text-gray-700">
-                            Contraseña
+                            {t('form.password')}
                         </label>
                         <div className="relative">
                             <input
                                 id="password-signup"
                                 name="password"
                                 type={showPassword ? "text" : "password"}
-                                placeholder="Crea una contraseña segura"
+                                placeholder={t('form.password_placeholder')}
                                 className={`w-full px-4 py-3 md:px-5 md:py-4 text-base md:text-lg border-2 rounded-xl pr-14 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all ${
                                     errors.password && touched.password ? 'border-red-500 bg-red-50' : 'border-gray-300'
                                 }`}
@@ -257,7 +255,7 @@ export default function SignupForm() {
                         {formData.password && (
                             <div className="space-y-2">
                                 <div className="flex justify-between items-center text-sm">
-                                    <span className="text-gray-600">Fortaleza de la contraseña:</span>
+                                    <span className="text-gray-600">{t('password_strength.label')}:</span>
                                     <span className={`font-medium ${
                                         passwordStrength < 40 ? 'text-red-500' : 
                                         passwordStrength < 80 ? 'text-yellow-500' : 'text-green-500'
@@ -285,11 +283,7 @@ export default function SignupForm() {
                                             <X className="h-4 w-4 text-red-500" />
                                         )}
                                         <span className={isValid ? 'text-green-600' : 'text-gray-500'}>
-                                            {key === 'length' && 'Mínimo 8 caracteres'}
-                                            {key === 'uppercase' && 'Al menos una mayúscula'}
-                                            {key === 'lowercase' && 'Al menos una minúscula'}
-                                            {key === 'number' && 'Al menos un número'}
-                                            {key === 'symbol' && 'Al menos un símbolo'}
+                                            {t(`password_strength.${key}`)}
                                         </span>
                                     </div>
                                 ))}
@@ -307,14 +301,14 @@ export default function SignupForm() {
                     {/* Confirmar Contraseña */}
                     <div className="space-y-2 md:space-y-3">
                         <label htmlFor="confirm-password" className="block text-base md:text-lg font-medium text-gray-700">
-                            Confirmar Contraseña
+                            {t('form.confirm_password')}
                         </label>
                         <div className="relative">
                             <input
                                 id="confirm-password"
                                 name="confirmPassword"
                                 type={showConfirmPassword ? "text" : "password"}
-                                placeholder="Confirma tu contraseña"
+                                placeholder={t('form.confirm_password_placeholder')}
                                 className={`w-full px-4 py-3 md:px-5 md:py-4 text-base md:text-lg border-2 rounded-xl pr-14 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all ${
                                     errors.confirmPassword && touched.confirmPassword ? 'border-red-500 bg-red-50' : 
                                     formData.confirmPassword && formData.password === formData.confirmPassword ? 'border-green-500 bg-green-50' : 'border-gray-300'
@@ -364,19 +358,19 @@ export default function SignupForm() {
                         {isSubmitting ? (
                             <div className="flex items-center justify-center gap-2">
                                 <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                                Creando cuenta...
+                                {t('form.submitting')}
                             </div>
                         ) : (
-                            'Crear Cuenta'
+                            t('form.submit')
                         )}
                     </button>
 
                     {/* Link Login */}
                     <div className="text-center pt-4">
                         <p className="text-gray-600 text-sm md:text-base">
-                            ¿Ya tienes cuenta?{" "}
+                            {t('form.have_account')}{" "}
                             <Link href="/auth/login" className="text-blue-600 hover:text-blue-700 font-bold transition-colors">
-                                Iniciar sesión
+                                {t('form.login')}
                             </Link>
                         </p>
                     </div>
@@ -384,13 +378,13 @@ export default function SignupForm() {
                     {/* Términos y Condiciones */}
                     <div className="text-center pt-4">
                         <p className="text-gray-500 text-xs md:text-sm">
-                            Al crear una cuenta, aceptas nuestros{" "}
+                            {t('form.terms_text')}{" "}
                             <Link href="/terms-and-conditions" className="text-blue-600 hover:text-blue-700 transition-colors">
-                                Términos y Condiciones
+                                {t('form.terms_link')}
                             </Link>{" "}
-                            y{" "}
+                            {t('form.and')}{" "}
                             <Link href="/privacy-policy" className="text-blue-600 hover:text-blue-700 transition-colors">
-                                Política de Privacidad
+                                {t('form.privacy_link')}
                             </Link>
                         </p>
                     </div>
@@ -400,9 +394,9 @@ export default function SignupForm() {
                 {/* Contact */}
                 <div className="mt-10 pt-6 border-t border-gray-200">
                     <p className="text-center text-gray-500 text-xs md:text-base">
-                        ¿Necesitas ayuda?{" "}
+                        {t('help.need_help')}{" "}
                         <Link href="/support" className="text-blue-600 hover:text-blue-700 font-medium transition-colors">
-                            Contáctanos
+                            {t('help.contact_us')}
                         </Link>
                     </p>
                 </div>

@@ -42,7 +42,6 @@ export default function SettingsContent({ user }) {
     };
 
     const handleSaveChanges = (section) => {
-        console.log(`Guardando cambios de ${section}:`, formData);
         // Aquí iría la lógica para guardar en tu API
     };
 

@@ -40,7 +40,6 @@ export default function NFTContent() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log("Datos del NFT:", formData);
     };
 
     return (

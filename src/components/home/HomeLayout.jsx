@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Script from "next/script";
-import HomePromoBanner from './HomePromoBanner';
 import HomeNavbar from './HomeNavbar';
 import HomeHero from './HomeHero';
 import HomeWhyChoose from './HomeWhyChoose';
@@ -14,7 +13,6 @@ import HomePricing from './HomePricing';
 import HomeMarquee from './HomeMarquee';
 import HomeIndividualRegistration from './HomeIndividualRegistration';
 import HomeTutorial from './HomeTutorial';
-import HomePromoPopup from './HomePromoPopup';  // ¡IMPORTANTE! Asegúrate de que esto existe
 import Footer from '@/components/common/Footer';
 
 // Structured Data MEJORADO para SEO
