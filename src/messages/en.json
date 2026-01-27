@@ -5,6 +5,97 @@
   "Navigation": {
     "home": "Home"
   },
+  "support": {
+    "metadata": {
+      "title": "Support - MusicDibs",
+      "description": "MusicDibs support center",
+      "keywords": "support, help, contact, faq",
+      "og_title": "Support - MusicDibs",
+      "og_description": "MusicDibs support center",
+      "og_alt": "Support image"
+    },
+    "hero": {
+      "title": "Need help?",
+      "subtitle": "We are here to help you",
+      "schema_name": "MusicDibs Support",
+      "schema_description": "MusicDibs technical support and customer service",
+      "schema_service_type": "Technical support and customer service",
+      "schema_phone": "+1 123 456 7890",
+      "schema_email": "support@musicdibs.com",
+      "schema_sms": "+1 234 567 8901"
+    }
+  },
+  "partners": {
+    "metadata": {
+      "title": "Partners - MusicDibs",
+      "description": "Become a MusicDibs partner",
+      "keywords": "partners, alliances, business",
+      "og_title": "Partners - MusicDibs",
+      "og_description": "Become a MusicDibs partner",
+      "og_alt": "Partners image"
+    },
+    "hero": {
+      "title": "Become a Partner",
+      "subtitle": "Join our network of strategic alliances"
+    }
+  },
+  "faq": {
+    "metadata": {
+      "title": "FAQ - MusicDibs",
+      "description": "Frequently asked questions",
+      "keywords": "faq, questions, help",
+      "og_title": "FAQ - MusicDibs",
+      "og_description": "Frequently asked questions",
+      "og_alt": "FAQ image"
+    },
+    "hero": {
+      "title": "Frequently Asked Questions",
+      "subtitle": "Find answers to common questions"
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "Login",
+      "button": "Sign In"
+    },
+    "signup": {
+      "title": "Sign Up",
+      "button": "Create Account"
+    }
+  },
+  "market": {
+    "title": "Market"
+  },
+  "shop": {
+    "title": "Shop"
+  },
+  "certification": {
+    "title": "Certification"
+  },
+  "dibs-token": {
+    "title": "DIBS Token"
+  },
+  "distribution": {
+    "title": "Distribution"
+  },
+  "privacy": {
+    "title": "Privacy Policy"
+  },
+  "terms": {
+    "title": "Terms and Conditions"
+  },
+  "tech": {
+    "title": "Tech & Legal"
+  },
+  "verification": {
+    "title": "Verification"
+  },
+  "sla": {
+    "title": "SLA"
+  },
+  "cookie-policy": {
+    "title": "Cookie Policy"
+  },
   "Common": {
     "loading": "Loading...",
     "error": "An error occurred"

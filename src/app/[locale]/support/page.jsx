@@ -1,109 +1,69 @@
+// src/app/[locale]/support/page.jsx - VERSIÓN SIMPLIFICADA
 import SupportHero from '@/components/support/SupportHero';
 import SupportChannels from '@/components/support/SupportChannels';
 import SupportTicket from '@/components/support/SupportTicket';
 import Navbar from '@/components/common/Navbar';
 import Footer from '@/components/common/Footer';
-import { getTranslations } from 'next-intl/server';
 
-// Función para generar metadatos dinámicos según el idioma
-export async function generateMetadata({ params: { locale } }) {
-  const t = await getTranslations({ locale, namespace: 'support.metadata' });
-
-  return {
-    metadataBase: new URL('https://musicdibs.com'),
-    title: t('title'),
-    description: t('description'),
-    keywords: t('keywords'),
-    authors: [{ name: 'Musicdibs' }],
-    creator: 'Musicdibs',
-    publisher: 'Musicdibs',
-    category: 'Customer Support',
-    classification: 'Technical Support Service',
-    openGraph: {
-      title: t('og_title'),
-      description: t('og_description'),
-      type: 'website',
-      url: '/support',
-      siteName: 'Musicdibs',
-      locale: locale === 'es' ? 'es_ES' : locale === 'en' ? 'en_US' : 'pt_PT',
-      images: [
-        {
-          url: '/assets/images/og-support.png',
-          width: 1200,
-          height: 630,
-          alt: t('og_alt'),
-        },
-      ],
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title: t('og_title'),
-      description: t('og_description'),
-      images: ['/assets/images/og-support.png'],
-      creator: '@musicdibs',
-    },
-    robots: {
-      index: true,
-      follow: true,
-      googleBot: {
-        index: true,
-        follow: true,
-        'max-video-preview': -1,
-        'max-image-preview': 'large',
-        'max-snippet': -1,
+// Metadatos fijos sin traducciones
+export const metadata = {
+  title: 'Support - Musicdibs',
+  description: 'MusicDibs support center. Help, FAQs and contact.',
+  keywords: 'support, help, contact, faq',
+  openGraph: {
+    title: 'Support - Musicdibs',
+    description: 'MusicDibs support center. Help, FAQs and contact.',
+    type: 'website',
+    url: '/support',
+    images: [
+      {
+        url: '/assets/images/og-support.png',
+        width: 1200,
+        height: 630,
+        alt: 'Musicdibs support image',
       },
-    },
-    alternates: {
-      canonical: '/support',
-      languages: {
-        'es': '/es/support',
-        'en': '/en/support',
-        'pt': '/pt/support',
-      },
-    },
-    other: {
-      'support-type': 'technical-music',
-      'availability': '24/7',
-      'response-time': '24h',
-    }
-  };
-}
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Support - Musicdibs',
+    description: 'MusicDibs support center. Help, FAQs and contact.',
+    images: ['/assets/images/og-support.png'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
-// Schema.org dinámico según idioma
-function getCustomerServiceSchema(locale, t) {
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'Service',
-    'name': t('schema_name'),
-    'description': t('schema_description'),
-    'provider': {
-      '@type': 'Organization',
-      'name': 'Musicdibs',
-      'url': 'https://musicdibs.com'
-    },
-    'areaServed': 'Global',
-    'serviceType': t('schema_service_type'),
-    'availableChannel': {
-      '@type': 'ServiceChannel',
-      'serviceUrl': 'https://musicdibs.com/support',
-      'servicePhone': t('schema_phone'),
-      'serviceEmail': t('schema_email'),
-      'serviceSmsNumber': t('schema_sms')
-    },
-    'hoursAvailable': {
-      '@type': 'OpeningHoursSpecification',
-      'opens': '00:00',
-      'closes': '23:59',
-      'dayOfWeek': ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
-    }
-  };
-}
+// Schema.org fijo
+const customerServiceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  'name': 'MusicDibs Support',
+  'description': 'MusicDibs technical support and customer service',
+  'provider': {
+    '@type': 'Organization',
+    'name': 'Musicdibs',
+    'url': 'https://musicdibs.com'
+  },
+  'areaServed': 'Global',
+  'serviceType': 'Technical support and customer service',
+  'availableChannel': {
+    '@type': 'ServiceChannel',
+    'serviceUrl': 'https://musicdibs.com/support',
+    'servicePhone': '+1 123 456 7890',
+    'serviceEmail': 'support@musicdibs.com',
+  },
+  'hoursAvailable': {
+    '@type': 'OpeningHoursSpecification',
+    'opens': '00:00',
+    'closes': '23:59',
+    'dayOfWeek': ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+  }
+};
 
-export default async function Support({ params }) {
-  const { locale } = params;
-  const t = await getTranslations({ locale, namespace: 'support.hero' });
-  const customerServiceSchema = getCustomerServiceSchema(locale, t);
-
+export default async function Support() {
   return (
     <>
       <script

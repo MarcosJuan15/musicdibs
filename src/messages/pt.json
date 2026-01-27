@@ -5,6 +5,97 @@
   "Navigation": {
     "home": "Início"
   },
+  "support": {
+    "metadata": {
+      "title": "Suporte - MusicDibs",
+      "description": "Centro de suporte da MusicDibs",
+      "keywords": "suporte, ajuda, contato, perguntas frequentes",
+      "og_title": "Suporte - MusicDibs",
+      "og_description": "Centro de suporte da MusicDibs",
+      "og_alt": "Imagem de suporte"
+    },
+    "hero": {
+      "title": "Precisa de ajuda?",
+      "subtitle": "Estamos aqui para ajudá-lo",
+      "schema_name": "Suporte MusicDibs",
+      "schema_description": "Serviço de suporte técnico e atendimento ao cliente da MusicDibs",
+      "schema_service_type": "Suporte técnico e atendimento ao cliente",
+      "schema_phone": "+55 11 1234 5678",
+      "schema_email": "suporte@musicdibs.com",
+      "schema_sms": "+55 11 98765 4321"
+    }
+  },
+  "partners": {
+    "metadata": {
+      "title": "Parceiros - MusicDibs",
+      "description": "Torne-se um parceiro da MusicDibs",
+      "keywords": "parceiros, alianças, negócio",
+      "og_title": "Parceiros - MusicDibs",
+      "og_description": "Torne-se um parceiro da MusicDibs",
+      "og_alt": "Imagem de parceiros"
+    },
+    "hero": {
+      "title": "Torne-se um Parceiro",
+      "subtitle": "Junte-se à nossa rede de alianças estratégicas"
+    }
+  },
+  "faq": {
+    "metadata": {
+      "title": "Perguntas Frequentes - MusicDibs",
+      "description": "Perguntas frequentes",
+      "keywords": "perguntas frequentes, perguntas, ajuda",
+      "og_title": "Perguntas Frequentes - MusicDibs",
+      "og_description": "Perguntas frequentes",
+      "og_alt": "Imagem de perguntas frequentes"
+    },
+    "hero": {
+      "title": "Perguntas Frequentes",
+      "subtitle": "Encontre respostas para perguntas comuns"
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "Iniciar Sessão",
+      "button": "Acessar"
+    },
+    "signup": {
+      "title": "Registrar-se",
+      "button": "Criar Conta"
+    }
+  },
+  "market": {
+    "title": "Mercado"
+  },
+  "shop": {
+    "title": "Loja"
+  },
+  "certification": {
+    "title": "Certificação"
+  },
+  "dibs-token": {
+    "title": "Token DIBS"
+  },
+  "distribution": {
+    "title": "Distribuição"
+  },
+  "privacy": {
+    "title": "Política de Privacidade"
+  },
+  "terms": {
+    "title": "Termos e Condições"
+  },
+  "tech": {
+    "title": "Tecnologia e Legal"
+  },
+  "verification": {
+    "title": "Verificação"
+  },
+  "sla": {
+    "title": "SLA"
+  },
+  "cookie-policy": {
+    "title": "Política de Cookies"
+  },
   "Common": {
     "loading": "Carregando...",
     "error": "Ocorreu um erro"

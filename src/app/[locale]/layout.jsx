@@ -1,38 +1,29 @@
-// src/app/[locale]/layout.jsx
-import { NextIntlClientProvider } from 'next-intl';
-import { getMessages } from 'next-intl/server';
-import { notFound } from 'next/navigation';
+// src/app/[locale]/layout.jsx - CON STATIC RENDERING
+import { setRequestLocale } from 'next-intl/server';
+import { Inter } from 'next/font/google';
 
-// Define los idiomas soportados usando la configuración centralizada
-import { routing } from '@/i18n/routing';
+const inter = Inter({ subsets: ['latin'] });
+
+// Esto genera las rutas estáticas
+export function generateStaticParams() {
+  return [
+    { locale: 'en' },
+    { locale: 'es' }, 
+    { locale: 'pt' }
+  ];
+}
 
 export default async function LocaleLayout({ children, params }) {
-  // Extraer el locale de params
-  const { locale } = await params;
+  const { locale } = params;
   
-  // Validar que el locale sea soportado
-  if (!routing.locales.includes(locale)) {
-    notFound();
-  }
-
-  // Obtener mensajes para el locale
-  const messages = await getMessages({ locale });
-
+  // Esto habilita el renderizado estático
+  setRequestLocale(locale);
+  
   return (
-    <html lang={locale}>
+    <html lang={locale} className={inter.className}>
       <body>
-        <NextIntlClientProvider 
-          locale={locale} 
-          messages={messages}
-        >
-          {children}
-        </NextIntlClientProvider>
+        {children}
       </body>
     </html>
   );
-}
-
-// Generar rutas estáticas
-export function generateStaticParams() {
-  return routing.locales.map((locale) => ({ locale }));
 }

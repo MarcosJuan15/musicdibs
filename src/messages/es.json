@@ -5,6 +5,97 @@
   "Navigation": {
     "home": "Inicio"
   },
+  "support": {
+    "metadata": {
+      "title": "Soporte - MusicDibs",
+      "description": "Centro de soporte de MusicDibs",
+      "keywords": "soporte, ayuda, contacto, preguntas frecuentes",
+      "og_title": "Soporte - MusicDibs",
+      "og_description": "Centro de soporte de MusicDibs",
+      "og_alt": "Imagen de soporte"
+    },
+    "hero": {
+      "title": "¿Necesitas ayuda?",
+      "subtitle": "Estamos aquí para ayudarte",
+      "schema_name": "Soporte MusicDibs",
+      "schema_description": "Servicio de soporte técnico y atención al cliente de MusicDibs",
+      "schema_service_type": "Soporte técnico y atención al cliente",
+      "schema_phone": "+34 123 456 789",
+      "schema_email": "soporte@musicdibs.com",
+      "schema_sms": "+34 612 345 678"
+    }
+  },
+  "partners": {
+    "metadata": {
+      "title": "Socios - MusicDibs",
+      "description": "Conviértete en socio de MusicDibs",
+      "keywords": "socios, alianzas, negocio",
+      "og_title": "Socios - MusicDibs",
+      "og_description": "Conviértete en socio de MusicDibs",
+      "og_alt": "Imagen de socios"
+    },
+    "hero": {
+      "title": "Conviértete en Socio",
+      "subtitle": "Únete a nuestra red de alianzas estratégicas"
+    }
+  },
+  "faq": {
+    "metadata": {
+      "title": "Preguntas Frecuentes - MusicDibs",
+      "description": "Preguntas frecuentes",
+      "keywords": "preguntas frecuentes, preguntas, ayuda",
+      "og_title": "Preguntas Frecuentes - MusicDibs",
+      "og_description": "Preguntas frecuentes",
+      "og_alt": "Imagen de preguntas frecuentes"
+    },
+    "hero": {
+      "title": "Preguntas Frecuentes",
+      "subtitle": "Encuentra respuestas a preguntas comunes"
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "Iniciar Sesión",
+      "button": "Acceder"
+    },
+    "signup": {
+      "title": "Registrarse",
+      "button": "Crear Cuenta"
+    }
+  },
+  "market": {
+    "title": "Mercado"
+  },
+  "shop": {
+    "title": "Tienda"
+  },
+  "certification": {
+    "title": "Certificación"
+  },
+  "dibs-token": {
+    "title": "Token DIBS"
+  },
+  "distribution": {
+    "title": "Distribución"
+  },
+  "privacy": {
+    "title": "Política de Privacidad"
+  },
+  "terms": {
+    "title": "Términos y Condiciones"
+  },
+  "tech": {
+    "title": "Tecnología y Legal"
+  },
+  "verification": {
+    "title": "Verificación"
+  },
+  "sla": {
+    "title": "SLA"
+  },
+  "cookie-policy": {
+    "title": "Política de Cookies"
+  },
   "Common": {
     "loading": "Cargando...",
     "error": "Ocurrió un error"
