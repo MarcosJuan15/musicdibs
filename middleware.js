@@ -1,20 +1,11 @@
-// middleware.js en la raíz del proyecto
+// middleware.js
 import createMiddleware from 'next-intl/middleware';
-import { routing } from './src/i18n/routing'; // Importa la configuración centralizada
 
-export default createMiddleware(routing);
+export default createMiddleware({
+  locales: ['en', 'es', 'pt'],
+  defaultLocale: 'en'
+});
 
 export const config = {
-  matcher: [
-    // Enable a redirect to a matching locale at the root
-    '/',
-    
-    // Set a cookie to remember the previous locale for
-    // all requests that have a locale prefix
-    '/(es|en|pt)/:path*',
-    
-    // Enable redirects that add missing locales
-    // (e.g. `/pathnames` -> `/en/pathnames`)
-    '/((?!_next|_vercel|.*\\..*).*)'
-  ]
+  matcher: ['/((?!api|_next|_vercel|.*\\..*).*)']
 };

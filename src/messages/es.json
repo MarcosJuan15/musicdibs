@@ -1,0 +1,12 @@
+{
+  "Home": {
+    "title": "MusicDibs"
+  },
+  "Navigation": {
+    "home": "Inicio"
+  },
+  "Common": {
+    "loading": "Cargando...",
+    "error": "Ocurrió un error"
+  }
+}

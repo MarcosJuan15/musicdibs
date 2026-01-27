@@ -1,24 +1,14 @@
-// next.config.js
-const withNextIntl = require('next-intl/plugin')('./src/i18n/request.js');
+// next.config.js - CONFIGURACIÓN SIMPLIFICADA
+const withNextIntl = require('next-intl/plugin')('./src/i18n.js');
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Configuración para eliminar advertencias
   experimental: {
     webpackBuildWorker: true,
   },
-  
-  // Configuración de imágenes
+  // Configuración opcional para imágenes si usas next/image
   images: {
-    unoptimized: true, // Temporalmente para debug
-  },
-  
-  // Desactiva verificación de tipos y ESLint temporalmente
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-  eslint: {
-    ignoreDuringBuilds: true,
+    unoptimized: true, // Temporal para evitar errores
   }
 };
 
